@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+import villaImg from "../assets/img/6095992D-D263-4976-A332-E5392ACA3C17.jpeg";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const title = "Contact";
+---
+<BaseLayout title={title}>
+ <Image
+      src={villaImg}
+      alt="Villa Sonneville, maison galerie d'art à Roubaix"
+      layout='constrained'
+      class="md:block w-full h-auto" />
+
+    <div class="max-w-3xl py-10 mx-13">
+      <!-- Titre -->
+      <h2 class="text-2xl mb-8">Pour l'acquisition de votre œuvre, nous privilégions le contact humain.</h2>
+
+      <!-- Chemin avec points -->
+      <ol class="relative border-l border-gray-200">
+        <!-- Étape 1 -->
+        <li class="mb-10 ml-6">
+          <!-- Point -->
+          <span
+            class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white">
+            <span class="h-3 w-3 rounded-full bg-blue-300"></span>
+          </span>
+          <!-- Contenu -->
+          <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">1. Premier contact</h3>
+          <p class="text-gray-600">
+            Faisons connaissance ! Nous sommes à votre disposition pour vous accompagner dans votre projet d’acquisition
+            d’une œuvre d’art:
+          </p>
+          <p class="text-gray-600 mt-2">
+            • par mail :
+            <a href="mailto:villasonneville@icloud.com" class="text-blue-600 underline">villasonneville@icloud.com</a>
+            <br />
+            • par téléphone, Laurence :
+            <a href="tel:+33643566355" class="text-blue-600 underline">+33 6 43 56 63 55</a>
+          </p>
+        </li>
+
+        <!-- Étape 2 -->
+        <li class="mb-10 ml-6">
+          <span
+            class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white">
+            <span class="h-3 w-3 rounded-full bg-blue-400"></span>
+          </span>
+          <h3 class="mb-1 text-lg font-semibold text-gray-900">2. Visite sur rendez-vous</h3>
+          <p class="text-gray-600">Nous serons ravies de vous accueillir et de vous rencontrer à Villa Sonneville</p>
+        </li>
+
+        <!-- Étape 3
+        <li class="mb-10 ml-6">
+          <span
+            class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white">
+            <span class="h-3 w-3 rounded-full bg-blue-500"></span>
+          </span>
+          <h3 class="mb-1 text-lg font-semibold text-gray-900">3. Visioconférence</h3>
+          <p class="text-gray-600">
+            Vous n’habitez pas la Métropole lilloise ? Prenons rendez-vous en visioconférence. Ainsi, vous pouvez
+            visualiser les œuvres à distance, presque comme un rendez-vous en chair et en os
+          </p>
+        </li> -->
+
+        <!-- Étape 4 -->
+        <li class="mb-10 ml-6">
+          <span
+            class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white">
+            <span class="h-3 w-3 rounded-full bg-blue-500"></span>
+          </span>
+          <h3 class="mb-1 text-lg font-semibold text-gray-900">3. Encadrement</h3>
+          <p class="text-gray-600">
+            Si vous le souhaitez, nous vous proposons l’encadrement qui sublimera votre œuvre avec UH5, société
+            d’encadrement d’art. UH5 est reconnue pour la qualité esthétique et technique de ses encadrements assurant
+            la parfaite conservation des œuvres.
+          </p>
+        </li>
+
+        <!-- Étape 5 -->
+        <li class="ml-6">
+          <span
+            class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white">
+            <span class="h-3 w-3 rounded-full bg-blue-600"></span>
+          </span>
+          <h3 class="mb-1 text-lg font-semibold text-gray-900">4. Paiement et livraison</h3>
+          <p class="text-gray-600">
+            Ensemble, nous pourrons échanger sur les moyens de paiement qui vous conviendront ainsi que des modalités de
+            livraison. Le paiement en ligne est disponible via l’envoi d’un lien sécurisé avec notre banque.
+          </p>
+        </li>
+      </ol>
+    </div>
+</BaseLayout>

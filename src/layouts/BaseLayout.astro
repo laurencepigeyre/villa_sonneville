@@ -1,0 +1,49 @@
+---
+const { title } = Astro.props;
+import stylesUrl from "../styles/global.css?url";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
+// import { fade,slide } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- <ClientRouter /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="locale" content="fr_FR" />
+    <meta property="title" content="Galerie d'art - Villa Sonnneville" />
+    <meta
+      name="description"
+      content="Villa Sonneville, maison-galerie d’art à Roubaix : expositions, résidences et événements culturels dans une demeure historique d'exception des années 1920."
+    />
+    <!-- Favicon classique -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <!-- PNG haute résolution -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <!-- Apple Touch Icon (iPhone/iPad) -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>Villa Sonneville - {title}</title>
+    <link rel="preload" href={stylesUrl} as="style" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href={stylesUrl} />
+    <Font cssVariable="--font-montserrat" preload />
+  </head>
+  <!-- transition:animate={fade({ duration: '0.2s' })} -->
+  <body class="font-montserrat pt-16">
+    <NavBar />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+    <script>
+      import "../scripts/burger-menu.js";
+    </script>
+  </body>
+</html>

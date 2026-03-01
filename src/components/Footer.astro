@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import instagramIcon from "../assets/img/instagram.svg";
+import linkedinIcon from "../assets/img/linkedin.png";
+import NewsletterForm from "./NewsletterForm.astro";
+---
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+<NewsletterForm />
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+<footer class="py-8">
+  <div class="text-sm text-gray-500 text-center">
+    <p>
+      <span class="font-semibold">VILLA SONNEVILLE</span><br />
+      52 avenue André Chénier<br />
+      Roubaix
+    </p>
+
+    <a href="tel:+33643566355">
+      <p>+33 6 43 56 63 55</p>
+    </a>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-6 flex items-center justify-center gap-4 mt-5">
+<a
+  href="https://www.instagram.com/villa_sonneville"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+>
+  <Image
+    src={instagramIcon}
+    alt="Instagram"
+    layout="constrained"
+    class="w-10 h-10 grayscale transition-transform duration-300 hover:scale-110 "
+  />
+</a>
+
+<a
+  href="https://www.linkedin.com/company/villasonneville"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="LinkedIn"
+>
+  <Image
+    src={linkedinIcon}
+    alt="LinkedIn"
+    layout="constrained"
+    class="w-10 h-10 opacity-50 transition-transform duration-300 hover:scale-110"
+  />
+</a>
+
+  </div>
+</footer>

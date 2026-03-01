@@ -1,0 +1,197 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/img/logo.webp";
+
+// Récupération dynamique des artistes depuis /src/pages/artiste/
+const modules = import.meta.glob("../pages/artiste/*.astro");
+
+// On charge tous les modules
+const artistPages = await Promise.all(
+  Object.values(modules).map((loader) => loader()),
+);
+
+// Transformation en liste exploitable
+const artists = artistPages
+  .map((page) => {
+    const url = page.url; // ex : /artiste/cedric-carre
+    const slug = url.split("/").filter(Boolean).pop() || "";
+
+    // Si le fichier artiste contient : export const title = "Cédric Carré"
+    const name =
+      page.title ||
+      slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
+    return { url, name };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<nav
+  class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-sm"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="shrink-0">
+        <a href="/" class="flex items-center">
+          <Image
+            src={logo}
+            alt="Logo"
+            class="h-12 w-auto"
+            layout="constrained"
+          />
+        </a>
+      </div>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex md:items-center md:space-x-6">
+        <!-- Dropdown Artistes -->
+        <div class="relative">
+          <button
+            id="dropdown-toggle"
+            class="text-gray-700 hover:text-gray-900 flex items-center gap-1"
+          >
+            Artistes
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <div
+            id="dropdown-menu"
+            class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden opacity-0 invisible transition-all duration-200 ease-out"
+          >
+            {
+              artists.map((artist) => (
+                <a
+                  href={artist.url}
+                  class="block px-4 py-2 hover:bg-gray-100 text-gray-700"
+                >
+                  {artist.name}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+
+        <a href="/about" class="text-gray-700 hover:text-gray-900">
+          À propos
+        </a>
+        <a href="/contact" class="text-gray-700 hover:text-gray-900">
+          Contact
+        </a>
+        <a
+          href="https://www.villasonneville.com/fr"
+          class="text-gray-700 hover:text-gray-900"
+        >
+          Chambres d'hôtes
+        </a>
+        <a href="https://uh5.fr/" class="text-gray-700 hover:text-gray-900">
+          UH5
+        </a>
+      </div>
+
+      <!-- Mobile burger -->
+      <div class="md:hidden">
+        <button
+          id="nav-toggle"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100"
+        >
+          <span class="sr-only">Ouvrir le menu</span>
+
+          <!-- Icon: hamburger -->
+          <svg
+            id="icon-open"
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+
+          <!-- Icon: close -->
+          <svg
+            id="icon-close"
+            class="h-6 w-6 hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-sm">
+      <!-- Dropdown mobile -->
+      <details class="px-3 py-2 rounded-md text-gray-700 bg-white">
+        <summary class="cursor-pointer text-base font-medium">
+          Artistes
+        </summary>
+        <div class="pl-4 mt-2 space-y-1">
+          {
+            artists.map((artist) => (
+              <a
+                href={artist.url}
+                class="block py-1 text-gray-700 hover:bg-gray-100 rounded"
+              >
+                {artist.name}
+              </a>
+            ))
+          }
+        </div>
+      </details>
+
+      <a
+        href="/about"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
+      >
+        À propos
+      </a>
+      <a
+        href="/contact"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
+      >
+        Contact
+      </a>
+      <a
+        href="https://www.villasonneville.com/fr"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
+      >
+        Chambres d'hôtes
+      </a>
+      <a
+        href="https://uh5.fr/"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100"
+      >
+        UH5
+      </a>
+    </div>
+  </div>
+</nav>

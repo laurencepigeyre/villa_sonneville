@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const title = "À propos";
+import { Image } from "astro:assets";
+import villaImg from "../assets/img/HD2-H_DSC9872-Villa-Sonneville-Vue-Bureau-CloseUp-Angelica.jpeg";
+---
+
+<BaseLayout title={title}>
+  <section class="bg-white text-gray-800  m-13" >
+    <div class="md:px-20 ">
+      <!-- Titre -->
+      <h1 class="text-4xl font-bold md:text-5xl mb-8">
+        Villa Sonneville, vivre l'art comme un collectionneur
+      </h1>
+
+      <!-- Introduction -->
+      <p class="text-lg leading-relaxed mb-10">
+        La Villa Sonneville est une maison-galerie unique située au cœur de
+        Roubaix. Pensée comme un lieu de rencontre entre l’architecture, l’art
+        contemporain et la création vivante, elle offre un espace intime où
+        artistes, visiteurs et habitants peuvent dialoguer autrement avec l’art.
+      </p>
+
+      <!-- Image principale -->
+      <Image
+        src={villaImg}
+        alt="Villa Sonneville, maison galerie d'art à Roubaix"
+        class="w-full h-auto rounded-lg shadow-lg mb-12"
+        layout='constrained'
+      />
+
+      <!-- Section Histoire -->
+      <h2 class="text-3xl font-semibold mb-4">Une maison chargée d’histoire</h2>
+      <p class="text-lg leading-relaxed mb-10">
+        Construite au début du XXᵉ siècle, la Villa Sonneville témoigne du riche
+        passé textile de Roubaix. Restaurée avec soin, elle conserve son charme
+        d’origine tout en accueillant des espaces repensés pour l’exposition, la
+        création et la médiation artistique.
+      </p>
+
+      <!-- Section Mission -->
+      <h2 class="text-3xl font-semibold mb-4">Un lieu dédié à la création</h2>
+      <p class="text-lg leading-relaxed mb-10">
+        La Villa Sonneville soutient les artistes émergents et confirmés à
+        travers des expositions, résidences, ateliers et rencontres. Chaque
+        projet est conçu pour favoriser l’expérimentation, la transmission et
+        l’ouverture à tous les publics.
+      </p>
+
+      <!-- Section Vision -->
+      <h2 class="text-3xl font-semibold mb-4">
+        Une vision : l’art comme expérience
+      </h2>
+      <p class="text-lg leading-relaxed mb-10">
+        Plus qu’une galerie, la Villa Sonneville est un espace de vie
+        artistique. Elle invite à ralentir, observer, ressentir et échanger.
+        Loin des formats traditionnels, elle propose une approche sensible et
+        accessible de l’art contemporain.
+      </p>
+
+      <!-- Section Contact -->
+    </div>
+  </section>
+</BaseLayout>

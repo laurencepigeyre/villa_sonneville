@@ -1,0 +1,100 @@
+---
+export interface Props {
+  image: any;
+  alt: string;
+  title: string;
+  year: string;
+  technique: string;
+  dimensions: string;
+  reference?: string;
+  format?: string;
+  price?: string;
+  contactUrl?: string;
+  variant?: "full" | "thumb";
+}
+
+import { Image } from "astro:assets";
+
+const {
+  image,
+  alt,
+  title,
+  year,
+  technique,
+  dimensions,
+  format = "",
+  price = "",
+  contactUrl = "/contact",
+  reference = "",
+  variant = "full",
+} = Astro.props;
+
+const formatStyles: Record<string, string> = {
+  "Très Grand Format": "bg-indigo-200/60 border-indigo-300",
+  "Grand Format": "bg-lime-200/60 border-lime-300",
+  "Moyen Format": "bg-orange-200/60 border-orange-300",
+  "Petit Format": "bg-sky-200/60 border-sky-300",
+};
+const formatClass = formatStyles[format] ?? "bg-zinc-200/60 border-zinc-300";
+
+// Variant-specific settings
+const isThumb = variant === "thumb";
+---
+<div class="m-13">
+  {
+    image && (
+        <Image
+          src={image}
+          alt={alt}
+          format="webp"
+          widths={[320,480,768,1024,1280,1600,1920]}
+sizes="(max-width: 600px) 40vw, (max-width: 1200px) 50vw, 33vw"
+
+
+          layout="constrained"
+          width={image.width}
+          height={image.height}
+          quality={60}
+          class="w-full h-auto"
+        />
+    )
+  }
+
+  <div class="w-full p-8">
+    <h1 class="text-3xl pb-3 italic">{title}</h1>
+    <p>
+      {year}<br />
+      {technique}<br />
+      {dimensions}<br />
+      {reference && <>Réf. {reference}</>}
+    </p>
+
+    {
+      format && (
+        <div
+          class={`px-3 py-1 border rounded-full text-sm mt-3 w-fit ${formatClass}`}
+        >
+          {format}
+        </div>
+      )
+    }
+
+    {
+      price && (
+        <>
+          <br />
+          Prix : {price}
+        </>
+      )
+    }
+
+    <br />
+
+    <a
+      href={contactUrl}
+      class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300"
+    >
+      Cette œuvre m'intéresse <span class="text-lg">→</span>
+    </a>
+  </div>
+</div>

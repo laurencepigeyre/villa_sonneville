@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import villaImg from "../assets/img/V-Villa-Sonneville-Bedroom-IMG_9365.webp";
+---
+<hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+<div class="flex flex-col md:flex-row mx-13 my-10 ">
+<Image
+  src={villaImg}
+  alt="Villa Sonneville"
+  width={villaImg.width}
+  height={villaImg.height}
+  format="webp"
+  quality={60}
+  widths={[320, 480, 640, 768, 1024]}
+  sizes="(max-width: 768px) 100vw, 50vw"
+  layout="constrained"
+  class="w-full rounded-lg object-cover"
+/>
+
+
+  <div class="flex flex-col md:px-7 p-3">
+    <h1 class="text-2xl py-3">Séjour Arty à Villa Sonneville</h1>
+
+    <p>
+      Plongez dans le charme de l’architecture des années 1920 alliée à
+      l'élégance et au confort contemporains pour une expérience unique au cœur
+      de Roubaix. Villa Sonneville est le point de départ idéal pour découvrir
+      la ville et ses environs. Un séjour mémorable dans le cadre exceptionnel
+      d'une maison d'art.
+    </p>
+
+    <div>
+      <a
+        href="https://www.villasonneville.com/fr/chambre/lavilla"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300"
+      >
+        Réserver
+        <span class="text-lg">→</span>
+      </a>
+    </div>
+  </div>
+</div>

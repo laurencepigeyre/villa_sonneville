@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+
+const {
+  reverse = false, // true → md:flex-row-reverse
+  image, // import via Astro Assets
+  caption = "",
+  date = "",
+  title = "",
+  subtitle = "",
+  category = "",
+  description = "",
+  link = "#",
+  linkLabel = "Découvrir",
+} = Astro.props;
+
+const flexDirection = reverse ? "md:flex-row-reverse" : "md:flex-row";
+---
+
+<div class={`flex flex-col ${flexDirection} items-center m-10`}>
+  <!-- Image -->
+  <div class="w-full md:w-1/2 px-3 flex justify-center flex-col">
+    {
+      image && (
+        <Image
+          src={image}
+          alt={title}
+          width={image.width}
+          height={image.height}
+          format="webp"
+          quality={60}
+          widths={[320, 480, 640, 768, 1024]}
+          sizes="(max-width: 768px) 100vw, 308px"
+          layout="constrained"
+          class="w-full h-auto rounded-lg"
+        />
+      )
+    }
+
+    {
+      caption && (
+        <figcaption class="text-gray-500 text-sm py-3">{caption}</figcaption>
+      )
+    }
+  </div>
+
+  <!-- Texte -->
+  <div class="w-full md:w-1/2 p-4 sm:p-6 md:p-8">
+    {date && <p>{date}</p>}
+
+    {title && <h1 class="text-4xl font-bold">{title}</h1>}
+
+    {subtitle && <h2 class="text-2xl">{subtitle}</h2>}
+
+    {category && <p class="uppercase tracking-wide text-sm">{category}</p>}
+
+    {description && <p class="mt-4 whitespace-pre-line">{description}</p>}
+
+    <a
+      href={link}
+      class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300"
+    >
+      {linkLabel}
+      <span class="text-lg">→</span>
+    </a>
+  </div>
+</div>

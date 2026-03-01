@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroBanner from "../components/HeroBanner.astro";
+import heroImg from "../assets/img/HD-H_DSC9840-Villa-Sonneville-Vue-.jpeg";
+import EventBlock from "../components/EventBlock.astro";
+import img3 from "../assets/img/image3.webp";
+import img1 from "../assets/img/image1.webp";
+import img2 from "../assets/img/image2.webp";
+import SejourArty from "../components/SejourArty.astro";    
+const title = "Accueil";
+---
+
+<BaseLayout title={title}>
+  <HeroBanner
+    image={heroImg}
+    title="VILLA SONNEVILLE"
+    subtitle="Maison - Galerie d'art • Chambres d'hôtes"
+    alt="Photo de la Villa Sonneville, galerie d'art à Roubaix"
+  />
+  <EventBlock
+    reverse={true}
+    image={img3}
+    caption="Photo : Laurence Pigeyre"
+    date="11 déc. 2025 - 25 avr. 2026"
+    title="Ellipses"
+    subtitle="Cédric Carré"
+    category="PEINTURE, GRAVURE"
+    description={`Voyage dans l'œuvre du peintre Cédric Carré au travers d'une sélection et d'une mise en espace de Sylvette Gaudichon, comme dans une collection privée, en dialogue avec les céramiques de Jean-Claude Legrand.
+    
+Visite sur RDV`}
+    link="/artiste/cedric-carre"
+    linkLabel="Découvrir les œuvres"
+  />
+  <EventBlock
+    reverse={false}
+    image={img1}
+    caption="Jean-Claude Legrand, Couple, Oxydes et engobes sur grès, 16,5 x 59 x 9,2 cm — Photo Michel Lefrancq"
+    date="11 déc. 2025 - 25 avr. 2026"
+    title="Carrés de terre"
+    subtitle="Jean-Claude Legrand"
+    category="CÉRAMIQUE"
+    description={`Résidente permanente à Villa Sonneville, la galerie de céramique contemporaine Le Fil rouge présente une série d'œuvres du céramiste Jean-Claude Legrand.
+
+Visite sur RDV`}
+    link="/artiste/jean-claude-legrand"
+    linkLabel="Découvrir les œuvres"
+  />
+  <EventBlock
+    reverse={true}
+    image={img2}
+    caption=""
+    date="11 déc. 2025 - 25 avr. 2026"
+    title="Plagistes"
+    subtitle="Christophe Boulanger"
+    category="DESSIN, LIVRE D'ART"
+    description={`Avec Plagistes, anthologie joyeuse de 10 ans de farniente à croquer les foules des plages, Christophe Boulanger nous offre une sélection parmi plus de 800 dessins sous forme de livre d'art en édition limitée à 150 exemplaires.
+Christophe a choisi Villa Sonneville pour le lancement de son ouvrage.`}
+    link="/artiste/christophe-boulanger"
+    linkLabel="Découvrir les œuvres"
+  />
+<SejourArty />
+</BaseLayout>

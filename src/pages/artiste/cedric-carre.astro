@@ -1,0 +1,413 @@
+---
+export const title = "Cédric Carré";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroBanner from "../../components/HeroBanner.astro";
+import heroImg from "../../assets/img/MD-JPG-PORTRAIT-01-HORIZONTAL-CEDRIC_CARRE_3024x2268px-72DPI.webp";
+import Citation from "../../components/Citation.astro";
+
+import ArtworkCardFull from "../../components/ArtworkCardFull.astro";
+import Fleur from "../../assets/img/23_HDJPG-Villa-Sonneville-Fleurs-05-XXL-Cedric-Carre.jpg";
+import ArtworkCard from "../../components/ArtworkCard.astro";
+import ImgFleur1 from "../../assets/img/10-HD-JPEG-Villa-sonneville-fleur-01-cedric-carre_recadre_DSC10136.webp";
+import ImgFleur2 from "../../assets/img/21-HDJPG-Villa-Sonneville-Fleurs-03-Jaune-Cedric_Carre-IMG_8203.webp";
+import ImgFleur3 from "../../assets/img/22-HDJPG-Villa-Sonneville-Fleurs-04-Rose-Cedric-Carre-IMG_8203.webp";
+import ArtworkGridCard from "../../components/ArtworkGridCard.astro";
+
+import Img01 from "../../assets/img/01_Villa-sonneville-bassine-01-73x60-Cedric-Carre-recadre-IMG_8183.webp";
+import Img02 from "../../assets/img/02_Villa-sonneville-bassine-02-73x60-Cedric-Carre-recadre-IMG_8182.webp";
+import Img03 from "../../assets/img/03_Villa-sonneville-bassine-03-73x60-Cedric-Carre-recadre-IMG_8181.webp";
+import Img04 from "../../assets/img/04_Villa-sonneville-bassine-04-73x60-Cedric-Carre-recadre-IMG_8180.webp";
+import Img05 from "../../assets/img/05_Villa-sonneville-bassine-05-73x60-Cedric-Carre-recadre-IMG_8178.webp";
+import Img06 from "../../assets/img/06_Villa-sonneville-bassine-06-73x60-Cedric-Carre-recadre-IMG_8179.webp";
+import Img07 from "../../assets/img/07_Villa-sonneville-bassine-07-73x60-Cedric-Carre-recadre-IMG_8179.webp";
+import Img08 from "../../assets/img/14-HDJPG-Villa-Sonneville-BassineEncadree_Cedric-Carre_DSC9933.webp";
+import Img09 from "../../assets/img/17-HDJPG-Villa-Sonneville-Gravure-bassine-01-Cedric-Carre_DSC9926.webp";
+import Img10 from "../../assets/img/20-HDJPG-Villa-Sonneville-Gravure-Stade-01-Cedric-Carre_DSC9956.webp";
+import Img11 from "../../assets/img/16-HDJPG-Villa-Sonneville-Fleur-02-Cedric-Carre_DSC9913.webp";
+import Img12 from "../../assets/img/19-HDJPG-Villa-Sonneville-Stade-bleu-Cedric-Carre_DSC9805.webp";
+import Img13 from "../../assets/img/18-HDJPG-villa-sonneville-Grand-stade-diptyque-noir_Cedric-Carre_DSC9800.jpeg.sb-bf34cfc8-KVYMyd.webp";
+import Img14 from "../../assets/img/09-Villa-sonneville-bassine-grande-bassine-01-Inv449-195x130-recadre-Cedric-Carre_DSC9946.webp";
+import Img15 from "../../assets/img/08_villa-sonneville-bassine-grande-bassine-02-195x130-Cedric-Carre-recadre-02DSC9939.webp";
+import Img16 from "../../assets/img/11-HD-JPEG-Villa-sonneville-Grue-01-Cedric-Carre_recadre_DSC10123.webp";
+import Img17 from "../../assets/img/12-HD-JPEG-Villa-Sonneville-Grue-02-Cedric-Carre_recadre_DSC10127.webp";
+import Img18 from "../../assets/img/13-HD-JPEG-Villa-Sonneville-Grue-02-Cedric-Carre_recadre_DSC10132.webp";
+import Img19 from "../../assets/img/01-VENISE-INV984-2009-chassis-Cedric-Carre-27x35-Villa-Sonneville_IMG_8923.jpeg";
+import Img20 from "../../assets/img/02-VENISE-INV958-02-09-Bois-Cedric-Carre-27x35-Villa-Sonneville_IMG_8925.jpeg";
+import Img21 from "../../assets/img/03-VENISE-INV3727-2022-25-chassis-41x33cm_IMG_8929.jpeg";
+import Img22 from "../../assets/img/04-VENISE-INV3190-2020-24-chassis-Cedric-Carre_IMG_8932.jpeg";
+import Img23 from "../../assets/img/05-VENISE-INV982-2009-chassis-27x35cm_Cedric-Carre_IMG_8934.jpeg";
+import Img24 from "../../assets/img/06-A-FLEUR-INV3354-92x73cm-Cedric-Carre-_IMG_8913.jpeg";
+import Img25 from "../../assets/img/A-fleur-INV3354-Cedric-Carre_IMG_8277.jpg";
+---
+
+<BaseLayout>
+  <HeroBanner image={heroImg} title="CÉDRIC CARRÉ" subtitle="Peinture" alt="Portrait de Cédric Carré"/>
+  <Citation
+    text={`La peinture c’est quelqu’un qui entre chez toi par la fenêtre et qui dit : je t’attendais.`}
+    author="Cédric Carré"
+  />
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+  <!-- a fleur  -->
+  <section>
+    <!-- À fleur - InvXXXX - Très grand format (Image Full) -->
+    <ArtworkCardFull
+      image={Fleur}
+      alt="À fleur, huile sur toile, Cédric Carré, Villa Sonneville"
+      title="À fleur"
+      year="2020 - 2024"
+      technique="Huile sur toile"
+      dimensions="200 x 300 cm"
+      format="Très Grand Format"
+      price="7 000€"
+    /><!-- À fleur - InvXXXX (Image Full) -->
+    <!-- À fleur - Inv355 (Image à gauche) -->
+    <ArtworkCard
+      image={ImgFleur1}
+      alt="À fleur, huile sur toile, Cédric Carré, Villa Sonneville"
+      title="À fleur"
+      reference="Inv355"
+      year="1999 - 2003"
+      technique="Huile sur toile marouflée sur bois"
+      dimensions="24x19 cm"
+      format="Petit Format"
+      price="590€"
+    /> <!-- À fleur - Inv355 (Image à gauche) -->
+    <!-- À fleur - Inv3342 (image à droite) -->
+    <ArtworkCard
+      image={Img24}
+      alt="À fleur, huile sur toile, Cédric Carré, Villa Sonneville"
+      title="À fleur"
+      reference="Inv3342"
+      year="2024 - 2025"
+      technique="Huile sur toile"
+      dimensions="92x73 cm"
+      format="Moyen Format"
+      price="2 200€"
+      reverse={true}
+    /><!-- À fleur - Inv3342 (image à droite) -->
+    <!-- À fleur - Inv2679 (Image à gauche) -->
+    <ArtworkCard
+      image={ImgFleur3}
+      alt="À fleur, huile sur toile, Cédric Carré, Villa Sonneville"
+      title="À fleur"
+      reference="Inv2679"
+      year="2022 - 2023"
+      technique="Huile sur toile"
+      dimensions="92x73 cm"
+      format="Moyen Format"
+      price="2 200€"
+    /><!-- À fleur - Inv2679 (Image à gauche) -->
+    <!-- À fleur - Inv3354 (Image à droite) -->
+    <ArtworkCard
+      image={Img25}
+      alt="À fleur, huile sur toile, Cédric Carré, Villa Sonneville"
+      title="À fleur"
+      reference="Inv3354"
+      year="2022 - 2023"
+      technique="Huile sur toile"
+      dimensions="92x73 cm"
+      format="Moyen Format"
+      price="2 200€"
+      reverse={true}
+    /><!-- À fleur - Inv3354 (Image à droite) -->
+  </section>
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+  <!-- GRAND STADE (Diptyque noir) Inv3845-3846 -->
+  <ArtworkCardFull
+    image={Img13}
+    alt="Grand stade dit noir (diptyque), huile sur toile, Cédric Carré, Villa Sonneville"
+    title="GRAND STADE (Diptyque noir)"
+    year="2023 - 2024" 
+    technique="Huile sur toile"
+    dimensions="146 x 228 cm"
+    reference="Inv3845-3846"
+    format="Très Grand Format"
+    price="5 300€ (avec encadrement) "
+  /><!-- GRAND STADE (Diptyque noir) Inv3845-3846 -->
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+  <!-- CARTE (bleue noire) Inv3269 -->
+  <ArtworkCardFull
+    image={Img12}
+    alt="CARTE (bleue noire), huile sur toile, Cédric Carré, Villa Sonneville"
+    title="CARTE (bleue noire)"
+    year="2020 - 2025"
+    technique="Huile sur toile"
+    dimensions="114 x 146 cm"
+    reference="Inv3269"
+    format="Grand Format"
+    price="3 800€ (avec encadrement)"
+  /><!-- CARTE (bleue noire) Inv3269 -->
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+  <!-- Tour de Babel - Inv2897 -->
+  <ArtworkCardFull
+    image={Img11}
+    alt="Tour de Babel, huile sur toile, Cédric Carré, Villa Sonneville"
+    title="Tour de Babel"
+    year="2011 - 2023"
+    technique="Huile sur toile"
+    dimensions="150 x 150 cm"
+    reference="Inv2897"
+    format="Grand Format"
+    price="4 100€"
+  /><!-- Tour de Babel - Inv2897 -->
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+  <!-- Bassines -->
+  <section>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-8">
+      <!-- CARD 0 -->
+      <ArtworkGridCard
+        image={Img01}
+        alt="Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB01"
+        title="PAYSAGE (bassine)"
+        year="2023 - 2024"
+        technique="Huile sur toile"
+        dimensions="73x60 cm"
+        reference="CC-B01"
+        format="Moyen Format"
+        price="1 800€"
+      />
+
+      <!-- CARD 1 -->
+      <ArtworkGridCard
+        image={Img02}
+        alt="Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB02"
+        title="PAYSAGE (bassine)"
+        year="2023 - 2024"
+        technique="Huile sur toile"
+        dimensions="73x60 cm"
+        reference="CC-B02"
+        format="Moyen Format"
+        price="1 800€"
+      />
+
+      <!-- CARD 2 -->
+      <ArtworkGridCard
+        image={Img03}
+        alt="Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB03"
+        title="PAYSAGE (bassine)"
+        year="2023 - 2024"
+        technique="Huile sur toile"
+        dimensions="73x60 cm"
+        reference="CC-B03"
+        format="Moyen Format"
+        price="1 800€"
+      />
+
+      <!-- CARD 3 -->
+      <ArtworkGridCard
+        image={Img04}
+        alt="Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB04"
+        title="PAYSAGE (bassine)"
+        year="2023 - 2024"
+        technique="Huile sur toile"
+        dimensions="73x60 cm"
+        reference="CC-B04"
+        format="Moyen Format"
+        price="1 800€"
+      />
+
+      <!-- CARD 4 -->
+      <ArtworkGridCard
+        image={Img05}
+        alt="Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB05"
+        title="PAYSAGE (bassine)"
+        year="2023 - 2024"
+        technique="Huile sur toile"
+        dimensions="73x60 cm"
+        reference="CC-B05"
+        format="Moyen Format"
+        price="1 800€"
+      />
+
+      <!-- CARD 5 -->
+      <ArtworkGridCard
+        image={Img06}
+        alt="Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB06"
+        title="PAYSAGE (bassine)"
+        year="2023 - 2024"
+        technique="Huile sur toile"
+        dimensions="73x60 cm"
+        reference="CC-B06"
+        format="Moyen Format"
+        price="1 800€"
+      />
+
+      <!-- CARD 6 -->
+      <ArtworkGridCard
+        image={Img07}
+        alt="Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB07"
+        title="PAYSAGE (bassine)"
+        year="2023 - 2024"
+        technique="Huile sur toile"
+        dimensions="73x60 cm"
+        reference="CC-B07"
+        format="Moyen Format"
+        price="1 800€"
+      />
+
+      <!-- CARD 7 -->
+      <ArtworkGridCard
+        image={Img08}
+        alt="Paysage (Bassine), Huile sur toile, encadrement d'art, Cedric Carre, Villa Sonneville, refB08"
+        title="PAYSAGE (bassine)"
+        year=""
+        technique="Huile sur toile — Encadrement d'art"
+        dimensions=""
+        reference="CC-B08"
+        format="Moyen Format"
+        price="2 100€ (encadrement inclus)"
+      />
+
+      <!-- CARD 8 -->
+      <ArtworkGridCard
+        image={Img09}
+        alt="Gravure Bassine, eau-forte, Cedric Carre, Villa Sonneville, refG01"
+        title="PAYSAGE (bassine)"
+        year=""
+        technique="Eau-forte papier — Encadrement d'art noyer massif italien — Verre musée anti-reflet"
+        dimensions=""
+        reference="CC-G01"
+        format="Petit Format"
+        price="480€ (avec encadrement)"
+      />
+
+      <!-- CARD 9 -->
+      <ArtworkGridCard
+        image={Img10}
+        alt="Gravure Stade, eau-forte, Cedric Carre, Villa Sonneville, refG02"
+        title="STADE"
+        year=""
+        technique="Eau-forte papier — Encadrement d'art noyer massif italien — Verre musée anti-reflet"
+        dimensions=""
+        reference="CC-G02"
+        format="Petit Format"
+        price="460€ (avec encadrement)"
+      />
+    </div>
+    <ArtworkCardFull
+      image={Img14}
+      alt="PAYSAGE (Bassine), huile sur toile, Cédric Carré, Villa Sonneville"
+      title="PAYSAGE (Bassine)"
+      year="2002 - 2008"
+      technique="Huile sur toile"
+      dimensions="97 x 130 cm"
+      reference="Inv910"
+      format="Grand Format"
+      price="4 400€"
+      contactUrl="/contact"
+    />
+    <ArtworkCard
+      image={Img15}
+      alt="PAYSAGE (Bassine), huile sur toile"
+      title="PAYSAGE (Bassine)"
+      year="2023 - 2024"
+      technique="Huile sur toile"
+      dimensions="195 x 130 cm"
+      reference="Inv449"
+      format="Grand Format"
+      price="4 500€"
+      contactUrl="/contact"
+      reverse={true}
+    />
+  </section>
+  <!-- venise -->
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+  <section>
+    <!-- venise - Inv954 - gauche -->
+    <ArtworkCard
+      image={Img16}
+      alt="Venise, Huile sur toile, Cédric Carré, Villa Sonneville"
+      title="VENISE"
+      year="2022 - 2025"
+      technique="Huile sur toile marouflée sur bois"
+      dimensions="24x33 cm"
+      reference="Inv954"
+      price="770€"
+      format="Petit Format"
+      contactUrl="/contact"
+    /><!-- venise - Inv954 - gauche -->
+    <!-- venise - Inv3190 - OK - droite -->
+    <ArtworkCard
+      image={Img22}
+      alt="Venise, Huile sur toile, Cédric Carré, Villa Sonneville"
+      title="VENISE"
+      year="2020-2024"
+      technique="Huile sur toile"
+      dimensions="30x40 cm"
+      reference="Inv3190"
+      price="930€"
+      format="Petit Format"
+      contactUrl="/contact"
+      reverse={true}
+    /><!-- venise - Inv3190 - OK - droite -->
+    <!-- venise - Inv958 - OK - gauche -->
+    <ArtworkCard
+  image={Img20}
+  alt="Venise, Huile sur toile, Cédric Carré, Villa Sonneville"
+  title="VENISE"
+  year="2002 - 2009"
+  reference="Inv958"
+  technique="Huile sur toile marouflée sur bois"
+  dimensions="27x33 cm"
+  format="Petit Format"
+  price="800€"
+  contactUrl="/contact"
+  reverse={false}
+/><!-- venise - Inv958 - gauche-->
+<!-- venise - Inv984 - OK - gauche -->
+    <ArtworkCard
+      image={Img19}
+      alt="Venise, Huile sur toile, Cédric Carré, Villa Sonneville"
+      title="SANS TITRE"
+      year="2009"
+      technique="Huile sur toile"
+      dimensions="27x35 cm"
+      reference="Inv984"
+      price="800€"
+      format="Petit Format"
+      contactUrl="/contact"
+      reverse={true}
+    /><!-- venise - Inv984 - OK - gauche -->
+<!-- venise - Inv3727 - OK - droite -->
+    <ArtworkCard
+      image={Img21}
+      alt="Venise, Huile sur toile, Cédric Carré, Villa Sonneville"
+      title="VENISE"
+      year="2022-2025"
+      technique="Huile sur toile"
+      dimensions="33x41 cm"
+      reference="Inv3727"
+      price="980€"
+      format="Petit Format"
+      contactUrl="/contact"
+      reverse={false}
+    /><!-- venise - Inv3727 - OK - droite -->
+  <!-- venise - Inv982 OK - droite -->
+    <ArtworkCard
+      image={Img23}
+      alt="Venise, Huile sur toile, Cédric Carré, Villa Sonneville"
+      title="VENISE"
+      year="2009"
+      technique="Huile sur toile"
+      dimensions="27x35 cm"
+      reference="Inv982"
+      price="800€"
+      format="Petit Format"
+      contactUrl="/contact"
+      reverse={true}
+    /><!-- venise - Inv984 - OK - droite -->
+<!-- venise - Inv956 - droite -->
+<ArtworkCard
+  image={Img18}
+  alt="Venise, Huile sur toile, Cédric Carré, Villa Sonneville"
+  title="VENISE"
+  year="2002 - 2009"
+  technique="Huile sur toile"
+  dimensions="24x30 cm"
+  reference="Inv956"
+  format="Petit Format"
+  price="Vendu"
+  contactUrl="/contact"
+/><!-- venise - Inv956 - droite -->
+  </section>
+</BaseLayout>

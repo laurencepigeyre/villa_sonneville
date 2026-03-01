@@ -1,0 +1,252 @@
+---
+export const title = "Christophe Boulanger";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Citation from "../../components/Citation.astro";
+import HeroBanner from "../../components/HeroBanner.astro";
+import Portrait from "../../assets/img/PORTRAIT-Christophe-Boulanger-Atelier-01\ \(1\).webp";
+import Plagistes from "../../assets/img/Christophe-Boulanger-Plagistes-Couverture.webp";
+import { Image } from "astro:assets";
+import ArtworkCard from "../../components/ArtworkCard.astro";
+
+// Import des images optimisées Astro
+import imgD01 from "../../assets/img/01_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D01-IMG_8140.webp";
+import imgD02 from "../../assets/img/02_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D02-IMG_8143.webp";
+import imgD03 from "../../assets/img/03_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D03-IMG_8146.webp";
+import imgD04 from "../../assets/img/04_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D04-IMG_8167.webp";
+import imgD05 from "../../assets/img/05_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D05-IMG_8169.webp";
+import imgD06 from "../../assets/img/06_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D06-IMG_8171.webp";
+import imgD07 from "../../assets/img/07_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D07-IMG_8144.webp";
+import imgD08 from "../../assets/img/08_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D08-IMG_8148.webp";
+import imgD09 from "../../assets/img/09_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D09-IMG_8152.webp";
+import imgD10 from "../../assets/img/10_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D10-IMG_8153.webp";
+import imgD11 from "../../assets/img/11_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D11-IMG_8156.webp";
+import imgD12 from "../../assets/img/13_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D13-IMG_8159.webp";
+import imgD14 from "../../assets/img/14_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D14-IMG_8161.webp";
+import imgD13 from "../../assets/img/13_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D13-IMG_8159.webp";
+---
+
+<BaseLayout title={title}>
+  <HeroBanner
+    image={Portrait}
+    alt="Portrait de Christophe Boulanger"
+    title="Christophe Boulanger"
+    subtitle="Artiste multidisciplinaire"
+  />
+
+  <Citation
+    text="Moi qui suis agité, j'ai appris à prendre le temps de regarder les gens avec tendresse. J'ai appris à dessiner sur les genoux avec deux fois rien. J'ai ré-appris à jouer, gratis. J'ai appris à croquer vite sans même avoir besoin de regarder le papier. "
+    author="Christophe Boulanger"
+  />
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+  <div class="m-13">
+    {
+      Plagistes && (
+        <Image
+          src={Plagistes}
+          alt="Plagistes, Christophe Boulanger"
+          format="webp"
+          widths={[320, 480, 768, 1024, 1280, 1600, 1920]}
+          sizes="(max-width: 600px) 40vw, (max-width: 1200px) 50vw, 33vw"
+          layout="constrained"
+          width={Plagistes.width}
+          height={Plagistes.height}
+          quality={60}
+          class="w-full h-auto"
+        />
+      )
+    }
+
+    <div class="w-full p-8">
+      <h1 class="text-3xl pb-3 italic">Plagistes</h1>
+      <p>
+        Avec <span class="italic">Plagistes</span>, Christophe nous offre une
+        anthologie joyeuse de 10 ans de farniente à croquer les foules des
+        plages, sélection de 160 dessins parmi plus de 800 croquis réalisés sur
+        le motif. Une édition d'artiste en 150 exemplaires. Une sélection de
+        dessins originaux sont également proposés pour une édition <span
+          class="italic">augmentée</span
+        >
+      </p><br />
+      <span class="font-bold">Édition limitée à 150 exemplaires</span>
+      <br />
+      160 dessins inédits <br />
+      Format 21 x 30 cm <br />
+      Livre relié-cousu
+      <br />
+      Prix : 40€ (hors frais de port)
+      <br />
+
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300"
+      >
+        Acheter ce livre <span class="text-lg">→</span>
+      </a>
+    </div>
+  </div>
+  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+  <ArtworkCard
+    image={imgD01}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Tchin-Tchin"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D01"
+    price="130€"
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+    image={imgD02}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Bambin aux brassards"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D02"
+    price="130€"
+    reverse={true}
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+    image={imgD03}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Footballeur"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D03"
+    price="130€"
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+    image={imgD04}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Tête rouge I"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D04"
+    price="130€"
+    reverse={true}
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+    image={imgD05}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Tête rouge II"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D05"
+    price="130€"
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+    image={imgD06}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Tête rouge III"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D06"
+    price="130€"
+    reverse={true}
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+    image={imgD07}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Costaud"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D07"
+    price="130€"
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+    image={imgD08}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Barbe rouge"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D08"
+    price="130€"
+    reverse={true}
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+    image={imgD09}
+    alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+    title="Costaud au poil !"
+    year="2025"
+    technique="Encre, aquarelle, pastel sur papier"
+    dimensions="30 x 40 cm"
+    reference="CB-D09"
+    price="130€"
+    contactUrl="/contact"
+  />
+  <ArtworkCard
+  image={imgD10}
+  alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+  title="Les deux amis"
+  year="2025"
+  technique="Encre, aquarelle, pastel sur papier"
+  dimensions="30 x 40 cm"
+  reference="CB-D10"
+  price="130€"
+  reverse={true}
+  contactUrl="/contact"
+/>
+
+  <ArtworkCard
+  image={imgD11}
+  alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+  title="Marin à la casquette"
+  year="2025"
+  technique="Encre, aquarelle, pastel sur papier"
+  dimensions="30 x 40 cm"
+  reference="CB-D11"
+  price="130€"
+  contactUrl="/contact"
+/>
+
+<ArtworkCard
+  image={imgD12}
+  alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+  title="Le pêcheur de moules"
+  year="2025"
+  technique="Encre, aquarelle, pastel sur papier"
+  dimensions="30 x 40 cm"
+  reference="CB-D12"
+  price="130€"
+  reverse={true}
+  contactUrl="/contact"
+/>
+<ArtworkCard
+  image={imgD14}
+  alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+  title="Le mangeur d’huître"
+  year="2025"
+  technique="Encre, aquarelle, pastel sur papier"
+  dimensions="30 x 40 cm"
+  reference="CB-D14"
+  price="130€"
+  contactUrl="/contact"
+/>
+<ArtworkCard
+  image={imgD13}
+  alt="Plagiste, dessin original, Christophe Boulanger, Villa Sonneville"
+  title="Bambin aux brassards jaunes"
+  year="2025"
+  technique="Encre, aquarelle, pastel sur papier"
+  dimensions="30 x 40 cm"
+  reference="CB-D13"
+  price="130€"
+  reverse={true}
+  contactUrl="/contact"
+/>
+
+</BaseLayout>
