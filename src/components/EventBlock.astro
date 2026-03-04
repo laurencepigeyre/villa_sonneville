@@ -12,6 +12,7 @@ const {
   description = "",
   link = "#",
   linkLabel = "Découvrir",
+  target = "_self", // allows _blank
 } = Astro.props;
 
 const flexDirection = reverse ? "md:flex-row-reverse" : "md:flex-row";
@@ -54,10 +55,11 @@ const flexDirection = reverse ? "md:flex-row-reverse" : "md:flex-row";
 
     {category && <p class="uppercase tracking-wide text-sm">{category}</p>}
 
-    {description && <p class="mt-4 whitespace-pre-line">{description}</p>}
+    {description && <p class="mt-4 whitespace-pre-line" set:html={description}></p>}
 
     <a
       href={link}
+      target={target}
       class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300"
     >
       {linkLabel}
