@@ -6,6 +6,7 @@ import EventBlock from "../components/EventBlock.astro";
 import img3 from "../assets/img/image3.jpg";
 import img1 from "../assets/img/image1.jpeg";
 import img2 from "../assets/img/image2.webp";
+import imgPrintemps from "../assets/img/printemps.jpg";
 import SejourArty from "../components/SejourArty.astro";    
 const title = "Accueil";
 ---
@@ -58,5 +59,27 @@ Christophe a choisi Villa Sonneville pour le lancement de son ouvrage.`}
     link="/artiste/christophe-boulanger"
     linkLabel="Découvrir les œuvres"
   />
+  <EventBlock
+    reverse={false}
+    image={imgPrintemps}
+    caption="Photo : Áris Messínis, agence France-Presse"
+    date="Samedi 28 mars 2026, Enfants : 14h-16h, Adultes & Ados : 16h30-19h30"
+    title="Le Printemps des Poètes"
+    subtitle="Ateliers d'autolouange Enfants et Adultes & ados "
+    category="POÉSIE"
+    description={`Dans le cadre du Printemps des Poètes qui a pour thème Liberté. Force vive, déployée, Villa Sonneville accueille un événement exceptionnel : deux ateliers poétiques de découverte de l'autolouange.
+
+Durant ces ateliers, vous découvrirez cette pratique comme lieu de libération d'une parole qui monte en direct du cœur à la plume.
+
+Les ateliers sont animés par Marie Milis et Florence Cadot.
+
+Par l'écriture et le collage vous serez à l'écoute d'une poétique spontanée qui vous parle de vous !
+
+Cet événement est proposé par Villa Sonneville et L'Institut de l'Autolouange.
+
+Samedi 28 mars 2026 : Enfants : 14h-16h, Adultes & Ados : 16h30-19h30
+
+Contactez-nous pour tous renseignements et inscriptions. ` }
+  link="https://www.institutdelautolouange.com/" linkLabel="En savoir plus sur l'Autolouange" target="_blank"/>
 <SejourArty />
 </BaseLayout>
