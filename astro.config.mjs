@@ -8,7 +8,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  experimental: {
+  
     fonts: [
       {
         name: "Montserrat",
@@ -28,5 +28,4 @@ export default defineConfig({
         },
       },
     ],
-  },
-});
+  });
