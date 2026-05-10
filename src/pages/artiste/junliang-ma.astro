@@ -1,503 +1,340 @@
 ---
-export const title = 'Junliang MA';
+export const title = 'Junliang Ma';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Citation from '../../components/Citation.astro';
 import HeroBanner from '../../components/HeroBanner.astro';
 import TabNav from '../../components/TabNav.astro';
-import Portrait from '../../assets/img/PORTRAIT-Christophe-Boulanger-Atelier-01\ \(1\).webp';
-import Plagistes from '../../assets/img/Christophe-Boulanger-Plagistes-Couverture.webp';
+import Hero from '../../assets/img/hero-junliangma.jpg';
 import { Image } from 'astro:assets';
 import ArtworkCard from '../../components/ArtworkCard.astro';
 
-import imgD01 from '../../assets/img/01_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D01-IMG_8140.webp';
-import imgD02 from '../../assets/img/02_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D02-IMG_8143.webp';
-import imgD03 from '../../assets/img/03_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D03-IMG_8146.webp';
-import imgD04 from '../../assets/img/04_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D04-IMG_8167.webp';
-import imgD05 from '../../assets/img/05_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D05-IMG_8169.webp';
-import imgD06 from '../../assets/img/06_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D06-IMG_8171.webp';
-import imgD07 from '../../assets/img/07_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D07-IMG_8144.webp';
-import imgD08 from '../../assets/img/08_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D08-IMG_8148.webp';
-import imgD09 from '../../assets/img/09_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D09-IMG_8152.webp';
-import imgD10 from '../../assets/img/10_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D10-IMG_8153.webp';
-import imgD11 from '../../assets/img/11_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D11-IMG_8156.webp';
-import imgD12 from '../../assets/img/13_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D13-IMG_8159.webp';
-import imgD14 from '../../assets/img/14_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D14-IMG_8161.webp';
-import imgD13 from '../../assets/img/13_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D13-IMG_8159.webp';
+import imgC01 from '../../assets/img/Junliang-MA-C01-Pic-Camoufle-n3.jpg';
+import imgC02 from '../../assets/img/Junliang-MA-C02-Pic-Camoufle-n8.jpg';
+import imgC03 from '../../assets/img/Junliang-MA-C03-Pic-Camoufle-n9.jpg';
+import imgC04 from '../../assets/img/Junliang-MA-C04-Jardin-n1.jpg';
+import imgC05 from '../../assets/img/Junliang-MA-C05-Une-Chute-de-1m70-n1.jpg';
+import imgC06 from '../../assets/img/Junliang-MA-C06-Une-Chute-de-1m70-n2.jpg';
+import imgC07 from '../../assets/img/Junliang-MA-C07-La-Dechirure-2025-n3.jpg';
+import imgC08 from '../../assets/img/Junliang-MA-C08-La-Dechirure-2025-n4.jpg';
+import imgC09 from '../../assets/img/Junliang-MA-C09-La-Dechirure-2025-n5.jpg';
+import imgC10 from '../../assets/img/Junliang-MA-C10-La-Dechirure-2026-n1.jpg';
+import imgC11 from '../../assets/img/Junliang-MA-C11-La-Dechirure-2026-n2.jpg';
+import imgC12 from '../../assets/img/Junliang-MA-C12-La-Dechirure-2026-n3.jpg';
+import imgC13 from '../../assets/img/Junliang-MA-C13-La-Dechirure-2026-n4.jpg';
+import imgC14 from '../../assets/img/Junliang-MA-C14-Ma-Memoire-n18.jpg';
+import imgC15 from '../../assets/img/Junliang-MA-C15-Ma-Memoire-n21.jpg';
+import imgC16 from '../../assets/img/Junliang-MA-C16-Coupelles-ensemble.jpg';
+import imgC17 from '../../assets/img/Junliang-MA-C17-Saladier-vue1.jpg';
+import imgC18 from '../../assets/img/Junliang-MA-C18-Vase.jpg';
 ---
 
 <BaseLayout title={title}>
-  <HeroBanner
-    image={Portrait}
-    alt="Portrait de Junliang MA"
-    title="Junliang MA"
-    subtitle="Artiste multidisciplinaire"
-  />
+  <HeroBanner image={Hero} alt="Portrait de Junliang Ma" title="Junliang Ma" subtitle="Céramiste" />
 
   <Citation
-    text="Moi qui suis agité, j'ai appris à prendre le temps de regarder les gens avec tendresse. J'ai appris à dessiner sur les genoux avec deux fois rien. J'ai ré-appris à jouer, gratis. J'ai appris à croquer vite sans même avoir besoin de regarder le papier. "
-    author="Junliang MA"
+    text="Mon approche a été de me familiariser avec la céramique traditionnelle chinoise tout d'abord par la maîtrise de ses techniques. Par ce travail, j'ai acquis la capacité d'entendre la parole de ce matériau."
+    author="Junliang Ma"
   />
 
   <!-- ─── Barre d'onglets ──────────────────────────────────────────── -->
   <TabNav
     tabs={[
-      { label: 'Remue-Ménines', key: 'remue-menines' },
-
-      { label: 'Plagistes', key: 'plagistes' },
+      { label: 'Œuvres', key: 'oeuvres' },
       { label: 'Biographie', key: 'bio' },
     ]}
-    defaultKey="remue-menines"
-    groupId="cb"
+    defaultKey="oeuvres"
+    groupId="jlm"
   />
 
   <!-- ═══ PANNEAU BIOGRAPHIE ═══════════════════════════════════════ -->
-  <div data-tab-panel="bio" data-tab-group="cb" class="hidden">
+  <div data-tab-panel="bio" data-tab-group="jlm" class="hidden">
     <div class="mx-5 lg:mx-32 py-10 prose prose-lg max-w-none">
-      <h2 class="text-2xl font-semibold mb-6">Junliang MA</h2>
+      <h2 class="text-2xl font-semibold mb-6">Junliang Ma</h2>
 
       <p>
-        Au commencement était le croquis…
+        Né en 1986 en Chine, Junliang Ma est diplômé de l'Académie des Beaux-Arts de Chine (Hangzhou) en 2008. Après
+        avoir fondé son premier atelier à Hangzhou en 2014, il s'installe à Strasbourg où il vit et travaille
+        aujourd'hui.
         <br /><br />
-        Artiste multidisciplinaire, Christophe croque la vie de son trait rapide et vibrant. Ces croquis dansent dans des
-        carnets dont l’empilement au fil des années forme une tour penchée. 
+        Sa création s'enracine dans la céramique chinoise traditionnelle, dont il a patiemment maîtrisé les techniques — pétrissage
+        de l'argile, tournage, courbes de cuisson au gaz, étude comparative des formes représentatives des différentes dynasties.
+        De cet apprentissage rigoureux, il dit avoir acquis « la capacité d'entendre la parole du matériau ».
         <br /><br />
-        De ces croquis naissent des gravures, des monotypes, des céramiques, des tableaux, des sculptures, des photographies,
-        des trophées, des assises... Explorateur insatiable de la matière, il la façonne du geste souple et décomplexé de
-        celui qui la découvre. Et ses croquis prennent vie à l’image de ses déliés d’encre. Partition sérielle où chaque motif
-        est unique.
+        Sa recherche sur les émaux constitue le cœur de son travail : à partir du céladon, l'émail le plus emblématique de
+        la tradition chinoise, il en étend peu à peu le spectre — blanc cyan, céladon ciel, vert carapace de crabe, ocre bambou,
+        rouge kaki, bleu jade, taches brunes, noir huilé. Ses sculptures explorent la limite entre dispersion et cohésion,
+        entre fragment et totalité, et donnent à la céramique une vitalité résolument contemporaine.
         <br /><br />
-        Chaque exploration est un chapitre écrit au fil de la matière et du geste, tension palpable entre la joie enfantine
-        du défrichage et les exigences intérieures de l’adulte. La chorégraphie du lâcher prise est un tango houleux, jouissif
-        et douloureux. Cette recherche s’amourache de techniques désuètes comme la porcelaine de Sèvres, la dinanderie, la
-        pyrogravure et la vannerie.
-        <br /><br />
-        Les dernières créations explorent le bois dans un flirt d’équilibriste entre mobilier et sculpture d’art. Toujours,
-        le croquis originel s’inscrit en filigrane. Il inspire les courbes et les rythmes, la sensualité, le modelé. Alors
-        naissent des formes justes, surprenantes, intrigantes, parfois burlesques mais d’une indéniable beauté. Une mystique
-        qui rappelle les univers tremblants de la Belle et la bête de Cocteau où la poésie dispute à la fonction.
-        <br /><br />
-        Hors de toute étiquette, il y a en Christophe et en ses œuvres un panache à la Don Quichotte, un rêve de liberté échappé
-        d’une enfance ourdie de conventions, un hold-up incrédule où pourtant la vérité se révèle. En ce royaume, rien n’est
-        usurpé. C’est une leçon recommencée où toujours, il s’éveille stupéfait. Pour notre plus grand enchantement…
+        Lauréat de plusieurs prix récents, il a notamment été distingué au Marché des potiers de Melun et au Festival Bandol
+        Céramique en 2025.
       </p>
+
+      <h3 class="text-xl font-semibold mt-10 mb-4">Sélection d'expositions et prix</h3>
+
+      <h4 class="font-semibold mt-6">2025</h4>
+      <ul>
+        <li>13ᵉ édition du salon Résonances, Strasbourg</li>
+        <li>Salon d'art en artisans, Montigny-lès-Metz</li>
+        <li>21ᵉ édition du salon C14 Paris</li>
+        <li>Prix du jury — Marché des potiers, Melun</li>
+        <li>Prix « Lumière sur 2025 » Solargil — Festival Bandol Céramique</li>
+      </ul>
+
+      <h4 class="font-semibold mt-6">2024</h4>
+      <ul>
+        <li>12ᵉ édition du salon Résonances, Strasbourg</li>
+        <li>20ᵉ édition du salon C14 Paris</li>
+        <li>Terralha, Festival Européen de Céramique, Saint-Quentin-la-Poterie</li>
+        <li>Exposition « Sortie de résidence », Saint-Quentin-la-Poterie</li>
+      </ul>
+
+      <h4 class="font-semibold mt-6">2023</h4>
+      <ul>
+        <li>Résidence à Saint-Quentin-la-Poterie</li>
+      </ul>
+
+      <h4 class="font-semibold mt-6">2019 – 2021</h4>
+      <ul>
+        <li>Exposition personnelle 《青山重》, Wan gallery, Shanghai (2021)</li>
+        <li>Exposition personnelle 《青绿间 浅斟低唱》, Melfish gallery, Pékin (2020)</li>
+        <li>Exposition personnelle 《餐桌上的青瓷》 (« Céladon sur la table »), Wan gallery, Shanghai (2019)</li>
+      </ul>
+
+      <h4 class="font-semibold mt-6">2012 – 2013</h4>
+      <ul>
+        <li>Young Talents, Messe Frankfurt (Allemagne)</li>
+        <li>Exposition d'ouverture du Musée d'art de l'Himalaya, Shanghai</li>
+        <li>8ᵉ Biennale des jeunes artistes — céramistes chinois contemporains, Hangzhou</li>
+      </ul>
     </div>
   </div>
 
-  <!-- ═══ PANNEAU PLAGISTES ══════════════════════════════════════════ -->
-  <div data-tab-panel="plagistes" data-tab-group="cb" class="hidden">
+  <!-- ═══ PANNEAU ŒUVRES ══════════════════════════════════════════ -->
+  <div data-tab-panel="oeuvres" data-tab-group="jlm">
     <hr class="mx-5 lg:mx-32 border-t border-gray-200 mt-0" />
 
-    <div class="m-5 lg:m-13">
-      {
-        Plagistes && (
-          <Image
-            src={Plagistes}
-            alt="Plagistes, Junliang MA"
-            format="webp"
-            widths={[320, 480, 768, 1024, 1280, 1600, 1920]}
-            sizes="(max-width: 600px) 40vw, (max-width: 1200px) 50vw, 33vw"
-            layout="constrained"
-            width={Plagistes.width}
-            height={Plagistes.height}
-            quality={60}
-            class="w-full h-auto"
-          />
-        )
-      }
-
-      <div class="w-full p-8">
-        <h1 class="text-3xl pb-3 italic">Plagistes</h1>
-        <p>
-          Avec <span class="italic">Plagistes</span>, Christophe nous offre une anthologie joyeuse de 10 ans de
-          farniente à croquer les foules des plages, sélection de 160 dessins parmi plus de 800 croquis réalisés sur le
-          motif. Une édition d'artiste en 150 exemplaires. Une sélection de dessins originaux sont également proposés
-          pour une édition
-          <span class="italic">augmentée</span>.
-        </p>
-        <br />
-        <span class="font-bold">Édition limitée à 150 exemplaires</span><br />
-        160 dessins inédits <br />
-        Format 21 x 30 cm <br />
-        Livre relié-cousu<br />
-        Prix : 40€ (hors frais de port)<br />
-        <a
-          href="/contact"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300">
-          Acheter ce livre <span class="text-lg">→</span>
-        </a>
-      </div>
-    </div>
-
-    <hr class="mx-5 lg:mx-32 border-t border-gray-300 mt-5" />
+    <ArtworkCard
+      image={imgC01}
+      alt="Sculpture céramique Pic Camouflé n°3 de Junliang Ma, grès noir aux reflets dorés sur racine, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Pic Camouflé n°3"
+      technique="Grès noir"
+      dimensions="21 x 18 x 8 cm"
+      reference="JLM-C01"
+      price="500 €"
+      contactUrl="/contact"
+    />
 
     <ArtworkCard
-      image={imgD01}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Tchin-Tchin"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D01"
-      price="130€"
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD02}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Bambin aux brassards"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D02"
-      price="130€"
+      image={imgC02}
+      alt="Sculpture céramique Pic Camouflé n°8 de Junliang Ma, grès noir mat ponctué de touches dorées, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Pic Camouflé n°8"
+      technique="Grès noir"
+      dimensions="20 x 17 x 8 cm"
+      reference="JLM-C02"
+      price="500 €"
       reverse={true}
       contactUrl="/contact"
     />
-    <ArtworkCard
-      image={imgD03}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Footballeur"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D03"
-      price="130€"
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD04}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Tête rouge I"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D04"
-      price="130€"
-      reverse={true}
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD05}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Tête rouge II"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D05"
-      price="130€"
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD06}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Tête rouge III"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D06"
-      price="130€"
-      reverse={true}
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD07}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Costaud"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D07"
-      price="130€"
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD08}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Barbe rouge"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D08"
-      price="130€"
-      reverse={true}
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD09}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Costaud au poil !"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D09"
-      price="130€"
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD10}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Les deux amis"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D10"
-      price="130€"
-      reverse={true}
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD11}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Marin à la casquette"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D11"
-      price="130€"
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD12}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Le pêcheur de moules"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D12"
-      price="130€"
-      reverse={true}
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD14}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Le mangeur d'huître"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D14"
-      price="130€"
-      contactUrl="/contact"
-    />
-    <ArtworkCard
-      image={imgD13}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Bambin aux brassards jaunes"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D13"
-      price="130€"
-      reverse={true}
-      contactUrl="/contact"
-    />
-  </div>
-  <!-- ═══ PANNEAU REMUE-MENINE ══════════════════════════════════════════ -->
-  <div data-tab-panel="remue-menines" data-tab-group="cb">
-    <hr class="mx-5 lg:mx-32 border-t border-gray-200 mt-0" />
-
-    <div class="m-5 lg:m-13">
-      {
-        Plagistes && (
-          <Image
-            src={Plagistes}
-            alt="Plagistes, Junliang MA"
-            format="webp"
-            widths={[320, 480, 768, 1024, 1280, 1600, 1920]}
-            sizes="(max-width: 600px) 40vw, (max-width: 1200px) 50vw, 33vw"
-            layout="constrained"
-            width={Plagistes.width}
-            height={Plagistes.height}
-            quality={60}
-            class="w-full h-auto"
-          />
-        )
-      }
-
-      <div class="w-full p-8">
-        <h1 class="text-3xl pb-3 italic">Plagistes</h1>
-        <p>
-          Avec <span class="italic">Plagistes</span>, Christophe nous offre une anthologie joyeuse de 10 ans de
-          farniente à croquer les foules des plages, sélection de 160 dessins parmi plus de 800 croquis réalisés sur le
-          motif. Une édition d'artiste en 150 exemplaires. Une sélection de dessins originaux sont également proposés
-          pour une édition
-          <span class="italic">augmentée</span>.
-        </p>
-        <br />
-        <span class="font-bold">Édition limitée à 150 exemplaires</span><br />
-        160 dessins inédits <br />
-        Format 21 x 30 cm <br />
-        Livre relié-cousu<br />
-        Prix : 40€ (hors frais de port)<br />
-        <a
-          href="/contact"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300">
-          Acheter ce livre <span class="text-lg">→</span>
-        </a>
-      </div>
-    </div>
-
-    <hr class="mx-5 lg:mx-32 border-t border-gray-300 mt-5" />
 
     <ArtworkCard
-      image={imgD01}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Tchin-Tchin"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D01"
-      price="130€"
+      image={imgC03}
+      alt="Sculpture céramique Pic Camouflé n°9 de Junliang Ma, grès noir et bois brut, surface ovale émaillée, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Pic Camouflé n°9"
+      technique="Grès noir"
+      dimensions="29 x 24 x 9 cm"
+      reference="JLM-C03"
+      price="600 €"
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD02}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Bambin aux brassards"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D02"
-      price="130€"
+      image={imgC04}
+      alt="Sculpture céramique Jardin n°1 de Junliang Ma, couronne ajourée en grès noir aux textures organiques, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Jardin n°1"
+      technique="Grès noir"
+      dimensions="33 x 33 x 22 cm"
+      reference="JLM-C04"
+      price="1 500 €"
       reverse={true}
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD03}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Footballeur"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D03"
-      price="130€"
+      image={imgC05}
+      alt="Sculpture céramique Une Chute de 1,7 m n°1 de Junliang Ma, grès et porcelaine bleu et ocre sur base blanche, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Une Chute de 1,7 m n°1"
+      technique="Grès et porcelaine"
+      dimensions="28 x 24 x 15 cm"
+      reference="JLM-C05"
+      price="1 200 €"
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD04}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Tête rouge I"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D04"
-      price="130€"
+      image={imgC06}
+      alt="Sculpture céramique Une Chute de 1,7 m n°2 de Junliang Ma, grès et porcelaine orange et bleu, forme horizontale, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Une Chute de 1,7 m n°2"
+      technique="Grès et porcelaine"
+      dimensions="30 x 17 x 13 cm"
+      reference="JLM-C06"
+      price="1 200 €"
       reverse={true}
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD05}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Tête rouge II"
+      image={imgC07}
+      alt="Sculpture céramique La Déchirure n°3 de Junliang Ma (2025), grès et porcelaine bleu profond et gris, forme en croissant, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="La Déchirure n°3"
       year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D05"
-      price="130€"
+      technique="Grès et porcelaine"
+      dimensions="30 x 31 x 15 cm"
+      reference="JLM-C07"
+      price="1 500 €"
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD06}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Tête rouge III"
+      image={imgC08}
+      alt="Sculpture céramique La Déchirure n°4 de Junliang Ma (2025), grès et porcelaine ocre tachetée de bleu, forme circulaire, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="La Déchirure n°4"
       year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D06"
-      price="130€"
+      technique="Grès et porcelaine"
+      dimensions="32 x 32 x 15 cm"
+      reference="JLM-C08"
+      price="1 500 €"
       reverse={true}
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD07}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Costaud"
+      image={imgC09}
+      alt="Sculpture céramique La Déchirure n°5 de Junliang Ma (2025), grès et porcelaine bleu profond, forme allongée déchiquetée, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="La Déchirure n°5"
       year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D07"
-      price="130€"
+      technique="Grès et porcelaine"
+      dimensions="37 x 22 x 15 cm"
+      reference="JLM-C09"
+      price="1 200 €"
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD08}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Barbe rouge"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D08"
-      price="130€"
+      image={imgC10}
+      alt="Sculpture céramique La Déchirure n°1 de Junliang Ma (2026), grès et porcelaine bleu sur socle terrazzo, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="La Déchirure n°1"
+      year="2026"
+      technique="Grès et porcelaine"
+      dimensions="26 x 17 x 24 cm"
+      reference="JLM-C10"
+      price="1 500 €"
       reverse={true}
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD09}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Costaud au poil !"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D09"
-      price="130€"
+      image={imgC11}
+      alt="Sculpture céramique La Déchirure n°2 de Junliang Ma (2026), grès et porcelaine bleu sur socle de gravats, forme verticale, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="La Déchirure n°2"
+      year="2026"
+      technique="Grès et porcelaine"
+      dimensions="20 x 20 x 31 cm"
+      reference="JLM-C11"
+      price="1 500 €"
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD10}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Les deux amis"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D10"
-      price="130€"
+      image={imgC12}
+      alt="Sculpture céramique La Déchirure n°3 de Junliang Ma (2026), grès et porcelaine ocre piqueté de bleu, forme verticale, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="La Déchirure n°3"
+      year="2026"
+      technique="Grès et porcelaine"
+      dimensions="18 x 31 x 26 cm"
+      reference="JLM-C12"
+      price="1 200 €"
       reverse={true}
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD11}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Marin à la casquette"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D11"
-      price="130€"
+      image={imgC13}
+      alt="Sculpture céramique La Déchirure n°4 de Junliang Ma (2026), grès émaillé bleu et ocre, format horizontal allongé, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="La Déchirure n°4"
+      year="2026"
+      technique="Grès"
+      dimensions="17 x 35 x 18 cm"
+      reference="JLM-C13"
+      price="1 200 €"
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD12}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Le pêcheur de moules"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D12"
-      price="130€"
+      image={imgC14}
+      alt="Sculpture murale céramique Ma Mémoire n°18 de Junliang Ma, grès émaillé ocre et bleu en forme de feuille, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Ma Mémoire n°18"
+      technique="Grès"
+      dimensions="33 x 15 x 10 cm"
+      reference="JLM-C14"
+      price="600 €"
       reverse={true}
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD14}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Le mangeur d'huître"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D14"
-      price="130€"
+      image={imgC15}
+      alt="Sculpture murale céramique Ma Mémoire n°21 de Junliang Ma, porcelaine émaillée bleu et ocre en forme de feuille, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Ma Mémoire n°21"
+      technique="Porcelaine"
+      dimensions="32 x 9 x 13 cm"
+      reference="JLM-C15"
+      price="600 €"
       contactUrl="/contact"
     />
+
     <ArtworkCard
-      image={imgD13}
-      alt="Plagiste, dessin original, Junliang MA, Villa Sonneville"
-      title="Bambin aux brassards jaunes"
-      year="2025"
-      technique="Encre, aquarelle, pastel sur papier"
-      dimensions="30 x 40 cm"
-      reference="CB-D13"
-      price="130€"
+      image={imgC16}
+      alt="Coupelle en porcelaine émaillée de Junliang Ma, finitions dorées, collection multi-émaux, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Coupelle en divers émaux"
+      technique="Porcelaine"
+      dimensions="12 x 10 x 5 cm (environ)"
+      reference="JLM-C16"
+      price="70 € — 90 € (dorées)"
       reverse={true}
+      contactUrl="/contact"
+    />
+
+    <ArtworkCard
+      image={imgC17}
+      alt="Saladier en grès émaillé bleu et ocre de Junliang Ma, céramique d'art utilitaire, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Saladier"
+      technique="Grès"
+      dimensions="31 x 31 x 8 cm"
+      reference="JLM-C17"
+      price="300 €"
+      contactUrl="/contact"
+    />
+
+    <ArtworkCard
+      image={imgC18}
+      alt="Petit vase en porcelaine émaillée bleu et ocre de Junliang Ma, intérieur ocre, base bleue, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Vase petit"
+      technique="Porcelaine"
+      dimensions="11 x H 22 cm"
+      reference="JLM-C18"
+      price="150 €"
+      reverse={true}
+      contactUrl="/contact"
+    />
+
+    <ArtworkCard
+      image={imgC18}
+      alt="Grand vase en porcelaine émaillée bleu et ocre de Junliang Ma, intérieur ocre, base bleue, Villa Sonneville, Le Fil rouge, Roubaix"
+      title="Vase grand"
+      technique="Porcelaine"
+      dimensions="16 x H 29 cm"
+      reference="JLM-C19"
+      price="300 €"
       contactUrl="/contact"
     />
   </div>
