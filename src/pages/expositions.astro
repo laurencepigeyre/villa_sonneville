@@ -1,0 +1,88 @@
+---
+import EventBlock from '../components/EventBlock.astro';
+import img3 from '../assets/img/image3.jpg';
+import img1 from '../assets/img/image1.jpeg';
+import img2 from '../assets/img/image2.webp';
+import remue from '../assets/img/CB-menine-hero Grande.jpeg';
+import imgC15 from '../assets/img/Junliang-MA-C15-Ma-Memoire-n21.jpg';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Expositions';
+---
+
+<BaseLayout
+  title={title}
+  description="Découvrez les expositions en cours et à venir à la Villa Sonneville, maison-galerie d'art à Roubaix : une programmation riche et éclectique d'art contemporain, avec des artistes émergents et confirmés, dans un cadre historique exceptionnel.">
+  <h1 class="text-6xl font-bold m-10">
+    {title}
+  </h1>
+  <EventBlock
+    statut="En cours"
+    reverse={true}
+    image={remue}
+    caption=""
+    date="21 mai 2026 - 19 juil. 2026"
+    title="Remue-Ménines"
+    subtitle="Christophe Boulanger"
+    category="PEINTURE"
+    description={`Pari espiègle avec Remue-Ménines : Christophe Boulanger s'attaque à l'un des monuments de l'histoire de l'art, Les Ménines de Velázquez (1656). Loin de toute révérence intimidée, l'artiste saisit l'Infante Marguerite-Thérèse par la main pour la libérer de sa crinoline et de ses conventions. Grisailles éclaboussées de couleurs, motifs-prisons, toiles-fleurs explosives : une ode joyeuse à l'enfance, à la couleur et à la liberté.`}
+    link="/artiste/christophe-boulanger"
+    linkLabel="Découvrir les œuvres"
+  />
+  <EventBlock
+    statut="En cours"
+    reverse={false}
+    image={imgC15}
+    caption=""
+    date="21 mai 2026 - 19 juil. 2026"
+    title="Moments suspendus"
+    subtitle="Juliang MA"
+    category="CERAMIQUE"
+    description={`Et si la beauté naissait de la déchirure ? Junliang MA, céramiste chinois installé à Strasbourg, tourne ses pièces avant de les fragmenter pour mieux les recomposer. Du Pic Camouflé aux sculptures de La Déchirure, ses œuvres en grès et porcelaine portent les traces de leur métamorphose, dans une palette d'émaux qui prolonge la tradition millénaire du céladon.`}
+    link="/artiste/junliang-ma"
+    linkLabel="Découvrir les œuvres"
+  />
+  <EventBlock
+    statut="En cours"
+    reverse={true}
+    image={img2}
+    caption=""
+    date="11 déc. 2025 - 25 avr. 2026"
+    title="Plagistes"
+    subtitle="Christophe Boulanger"
+    category="DESSIN, LIVRE D'ART"
+    description={`Avec Plagistes, anthologie joyeuse de 10 ans de farniente à croquer les foules des plages, Christophe Boulanger nous offre une sélection parmi plus de 800 dessins sous forme de livre d'art en édition limitée à 150 exemplaires.
+Christophe a choisi Villa Sonneville pour le lancement de son ouvrage.`}
+    link="/artiste/christophe-boulanger"
+    linkLabel="Découvrir les œuvres"
+  />
+  <EventBlock
+    statut="Passée"
+    reverse={true}
+    image={img3}
+    caption="Photo : Laurence Pigeyre"
+    date="11 déc. 2025 - 25 avr. 2026"
+    title="Ellipses"
+    subtitle="Cédric Carré"
+    category="PEINTURE, GRAVURE"
+    description={`Voyage dans l'œuvre du peintre Cédric Carré au travers d'une sélection et d'une mise en espace de Sylvette Gaudichon, comme dans une collection privée, en dialogue avec les céramiques de Jean-Claude Legrand.
+    
+Visite sur RDV`}
+    link="/artiste/cedric-carre"
+    linkLabel="Découvrir les œuvres"
+  />
+  <EventBlock
+    statut="Passée"
+    reverse={false}
+    image={img1}
+    caption="Jean-Claude Legrand, Couple, Oxydes et engobes sur grès, 16,5 x 59 x 9,2 cm — Photo Michel Lefrancq"
+    date="11 déc. 2025 - 25 avr. 2026"
+    title="Carrés de terre"
+    subtitle="Jean-Claude Legrand"
+    category="CÉRAMIQUE"
+    description={`Résidente permanente à Villa Sonneville, la galerie de céramique contemporaine Le Fil rouge présente une série d'œuvres du céramiste Jean-Claude Legrand.
+
+Visite sur RDV`}
+    link="/artiste/jean-claude-legrand"
+    linkLabel="Découvrir les œuvres"
+  />
+</BaseLayout>

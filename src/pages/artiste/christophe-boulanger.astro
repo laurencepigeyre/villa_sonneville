@@ -1,5 +1,7 @@
 ---
 export const title = 'Christophe Boulanger';
+export const description =
+  '';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Citation from '../../components/Citation.astro';
 import HeroBanner from '../../components/HeroBanner.astro';
@@ -40,7 +42,7 @@ import imgTriptyque from '../../assets/img/CB_Triptyque-200x300cm.jpg';
 import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
   <HeroBanner
     image={Portrait}
     alt="Portrait de Christophe Boulanger"

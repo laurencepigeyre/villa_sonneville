@@ -6,7 +6,6 @@ import EventBlock from "../components/EventBlock.astro";
 import img3 from "../assets/img/image3.jpg";
 import img1 from "../assets/img/image1.jpeg";
 import img2 from "../assets/img/image2.webp";
-import imgPrintemps from "../assets/img/printemps.jpg";
 import SejourArty from "../components/SejourArty.astro";    
 const title = "Accueil";
 ---
@@ -18,68 +17,6 @@ const title = "Accueil";
     subtitle="Maison - Galerie d'art • Chambres d'hôtes"
     alt="Photo de la Villa Sonneville, galerie d'art à Roubaix"
   />
-  <EventBlock
-    reverse={true}
-    image={img3}
-    caption="Photo : Laurence Pigeyre"
-    date="11 déc. 2025 - 25 avr. 2026"
-    title="Ellipses"
-    subtitle="Cédric Carré"
-    category="PEINTURE, GRAVURE"
-    description={`Voyage dans l'œuvre du peintre Cédric Carré au travers d'une sélection et d'une mise en espace de Sylvette Gaudichon, comme dans une collection privée, en dialogue avec les céramiques de Jean-Claude Legrand.
-    
-Visite sur RDV`}
-    link="/artiste/cedric-carre"
-    linkLabel="Découvrir les œuvres"
-  />
-  <EventBlock
-    reverse={false}
-    image={img1}
-    caption="Jean-Claude Legrand, Couple, Oxydes et engobes sur grès, 16,5 x 59 x 9,2 cm — Photo Michel Lefrancq"
-    date="11 déc. 2025 - 25 avr. 2026"
-    title="Carrés de terre"
-    subtitle="Jean-Claude Legrand"
-    category="CÉRAMIQUE"
-    description={`Résidente permanente à Villa Sonneville, la galerie de céramique contemporaine Le Fil rouge présente une série d'œuvres du céramiste Jean-Claude Legrand.
-
-Visite sur RDV`}
-    link="/artiste/jean-claude-legrand"
-    linkLabel="Découvrir les œuvres"
-  />
-  <EventBlock
-    reverse={true}
-    image={img2}
-    caption=""
-    date="11 déc. 2025 - 25 avr. 2026"
-    title="Plagistes"
-    subtitle="Christophe Boulanger"
-    category="DESSIN, LIVRE D'ART"
-    description={`Avec Plagistes, anthologie joyeuse de 10 ans de farniente à croquer les foules des plages, Christophe Boulanger nous offre une sélection parmi plus de 800 dessins sous forme de livre d'art en édition limitée à 150 exemplaires.
-Christophe a choisi Villa Sonneville pour le lancement de son ouvrage.`}
-    link="/artiste/christophe-boulanger"
-    linkLabel="Découvrir les œuvres"
-  />
-  <EventBlock
-    reverse={false}
-    image={imgPrintemps}
-    caption="Photo : Áris Messínis, agence France-Presse"
-    date="Samedi 28 mars 2026, Enfants : 14h-16h, Adultes & Ados : 16h30-19h30"
-    title="Le Printemps des Poètes"
-    subtitle="Ateliers d'autolouange Enfants et Adultes & ados "
-    category="POÉSIE"
-    description={`Dans le cadre du Printemps des Poètes qui a pour thème Liberté. Force vive, déployée, Villa Sonneville accueille un événement exceptionnel : deux ateliers poétiques de découverte de l'autolouange.
-
-Durant ces ateliers, vous découvrirez cette pratique comme lieu de libération d'une parole qui monte en direct du cœur à la plume.
-
-Les ateliers sont animés par Marie Milis et Florence Cadot.
-
-Par l'écriture et le collage vous serez à l'écoute d'une poétique spontanée qui vous parle de vous !
-
-Cet événement est proposé par Villa Sonneville et L'Institut de l'Autolouange.
-
-Samedi 28 mars 2026 : Enfants : 14h-16h, Adultes & Ados : 16h30-19h30
-
-Contactez-nous pour tous renseignements et inscriptions. ` }
-  link="https://www.institutdelautolouange.com/" linkLabel="En savoir plus sur l'Autolouange" target="_blank"/>
+  
 <SejourArty />
 </BaseLayout>

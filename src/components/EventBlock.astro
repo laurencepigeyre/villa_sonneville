@@ -1,21 +1,22 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 const {
   reverse = false, // true → md:flex-row-reverse
   image, // import via Astro Assets
-  caption = "",
-  date = "",
-  title = "",
-  subtitle = "",
-  category = "",
-  description = "",
-  link = "#",
-  linkLabel = "Découvrir",
-  target = "_self", // allows _blank
+  caption = '',
+  date = '',
+  title = '',
+  subtitle = '',
+  category = '',
+  description = '',
+  link = '#',
+  linkLabel = 'Découvrir',
+  target = '_self', // allows _blank
+  statut,
 } = Astro.props;
 
-const flexDirection = reverse ? "md:flex-row-reverse" : "md:flex-row";
+const flexDirection = reverse ? 'md:flex-row-reverse' : 'md:flex-row';
 ---
 
 <div class={`flex flex-col ${flexDirection} items-center m-10`}>
@@ -38,15 +39,12 @@ const flexDirection = reverse ? "md:flex-row-reverse" : "md:flex-row";
       )
     }
 
-    {
-      caption && (
-        <figcaption class="text-gray-500 text-sm py-3">{caption}</figcaption>
-      )
-    }
+    {caption && <figcaption class="text-gray-500 text-sm py-3">{caption}</figcaption>}
   </div>
 
   <!-- Texte -->
   <div class="w-full md:w-1/2 p-4 sm:p-6 md:p-8">
+    {statut && <p>{statut}</p>}
     {date && <p>{date}</p>}
 
     {title && <h1 class="text-4xl font-bold">{title}</h1>}
@@ -55,13 +53,12 @@ const flexDirection = reverse ? "md:flex-row-reverse" : "md:flex-row";
 
     {category && <p class="uppercase tracking-wide text-sm">{category}</p>}
 
-    {description && <p class="mt-4 whitespace-pre-line" set:html={description}></p>}
+    {description && <p class="mt-4 whitespace-pre-line" set:html={description} />}
 
     <a
       href={link}
       target={target}
-      class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300"
-    >
+      class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300">
       {linkLabel}
       <span class="text-lg">→</span>
     </a>
