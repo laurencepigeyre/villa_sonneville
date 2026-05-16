@@ -28,7 +28,6 @@ const {
   price = '',
   contactUrl = '/contact',
   reference = '',
-  variant = 'full',
   details,
   detailsAlt,
 } = Astro.props;
@@ -53,7 +52,6 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
 ---
 
 <div class="m-13">
-  <!-- IMAGE PRINCIPALE + THUMBNAILS -->
   {
     image && (
       <div class="relative">
@@ -73,14 +71,11 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
             width={image.width}
             height={image.height}
             quality={60}
-            class="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+            class="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.02] pointer-events-none"
           />
-          {/* Voile sombre au survol */}
-          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
-
-          {/* Badge "X vues" */}
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none" />
           {hasDetails && (
-            <span class="absolute top-3 right-3 bg-black/50 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur-md flex items-center gap-1.5 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+            <span class="absolute top-3 right-3 bg-black/50 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur-md flex items-center gap-1.5 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out pointer-events-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"
@@ -101,7 +96,6 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
           )}
         </button>
 
-        {/* Thumbnails sous l'image */}
         {hasDetails && (
           <div class="flex gap-2 mt-4 flex-wrap">
             {allImages.map((img, i) => (
@@ -120,7 +114,7 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
                   width={img.width}
                   height={img.height}
                   quality={60}
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-110"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-110 pointer-events-none"
                 />
               </button>
             ))}
@@ -130,7 +124,6 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
     )
   }
 
-  <!-- TEXTE -->
   <div class="w-full p-8">
     <h1 class="text-3xl pb-3 italic">{title}</h1>
     <p>
@@ -149,11 +142,12 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       )
     }
     <br />
-<a
-    href={contactUrl}
-    class="group/cta inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300 transition-colors
-    duration-300" > Cette œuvre m'intéresse
-    <span class="text-lg transition-transform duration-300 group-hover/cta:translate-x-1">→</span></a>
+    <a 
+      href={contactUrl}
+      class="group/cta inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300 transition-colors
+      duration-300" > Cette œuvre m'intéresse
+      <span class="text-lg transition-transform duration-300 group-hover/cta:translate-x-1">→</span>
+    </a>
   </div>
 </div>
 
@@ -166,13 +160,13 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
   aria-label="Visionneuse d'images">
   <button
     type="button"
-    class="lightbox-close absolute top-4 right-4 text-white hover:bg-white/10 rounded-full w-12 h-12 flex items-center justify-center text-2xl transition-all duration-200 hover:rotate-90 z-10"
+    class="lightbox-close absolute top-4 right-4 z-20 text-white hover:bg-white/10 rounded-full w-12 h-12 flex items-center justify-center text-2xl transition-all duration-200 hover:rotate-90"
     aria-label="Fermer">
     ✕
   </button>
 
   <div
-    class="lightbox-counter absolute top-4 left-4 text-white/80 text-sm bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">
+    class="lightbox-counter absolute top-4 left-4 z-20 text-white/80 text-sm bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">
     <span class="lightbox-current">1</span> / <span>{allImages.length}</span>
   </div>
 
@@ -180,14 +174,14 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
     allImages.length > 1 && (
       <button
         type="button"
-        class="lightbox-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/25 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl transition-all duration-300 hover:-translate-x-1 backdrop-blur-sm"
+        class="lightbox-prev hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white rounded-full w-12 h-12 items-center justify-center text-2xl transition-all duration-300 hover:-translate-x-1 backdrop-blur-sm"
         aria-label="Image précédente">
         ←
       </button>
     )
   }
 
-  <div class="lightbox-content max-w-[90vw] max-h-[85vh] flex items-center justify-center">
+  <div class="lightbox-content relative z-10 max-w-[90vw] max-h-[85vh] flex items-center justify-center">
     {
       allImages.map((img, i) => (
         <div class="lightbox-slide hidden w-full h-full items-center justify-center" data-index={i}>
@@ -201,7 +195,7 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
             width={img.width}
             height={img.height}
             quality={85}
-            class="max-w-full max-h-[85vh] w-auto h-auto object-contain"
+            class="max-w-full max-h-[85vh] w-auto h-auto object-contain pointer-events-none"
           />
         </div>
       ))
@@ -212,7 +206,7 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
     allImages.length > 1 && (
       <button
         type="button"
-        class="lightbox-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/25 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl transition-all duration-300 hover:translate-x-1 backdrop-blur-sm"
+        class="lightbox-next absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/25 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl transition-all duration-300 hover:translate-x-1 backdrop-blur-sm"
         aria-label="Image suivante">
         →
       </button>
@@ -221,7 +215,7 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
 
   {
     allImages.length > 1 && (
-      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {allImages.map((_, i) => (
           <button
             type="button"
@@ -240,7 +234,6 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
     display: flex;
     animation: lightboxFadeIn 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
-
   @keyframes lightboxFadeIn {
     from {
       background-color: rgba(0, 0, 0, 0);
@@ -253,13 +246,11 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       -webkit-backdrop-filter: blur(8px);
     }
   }
-
   .lightbox.is-closing {
     display: flex;
     animation: lightboxFadeOut 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
     pointer-events: none;
   }
-
   @keyframes lightboxFadeOut {
     from {
       background-color: rgba(0, 0, 0, 0.92);
@@ -272,12 +263,10 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       -webkit-backdrop-filter: blur(0);
     }
   }
-
   .lightbox-slide.is-active.is-opening {
     display: flex;
     animation: imageOpen 550ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
-
   @keyframes imageOpen {
     from {
       opacity: 0;
@@ -288,11 +277,9 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       transform: scale(1);
     }
   }
-
   .lightbox.is-closing .lightbox-slide.is-active {
     animation: imageClose 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
   }
-
   @keyframes imageClose {
     from {
       opacity: 1;
@@ -303,12 +290,10 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       transform: scale(0.85);
     }
   }
-
   .lightbox-slide.is-active.from-right {
     display: flex;
     animation: imageSlideFromRight 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
-
   @keyframes imageSlideFromRight {
     from {
       opacity: 0;
@@ -319,12 +304,10 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       transform: translateX(0) scale(1);
     }
   }
-
   .lightbox-slide.is-active.from-left {
     display: flex;
     animation: imageSlideFromLeft 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
-
   @keyframes imageSlideFromLeft {
     from {
       opacity: 0;
@@ -335,17 +318,14 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       transform: translateX(0) scale(1);
     }
   }
-
   .lightbox-dot.is-active {
     background-color: white;
     transform: scale(1.4);
   }
-
   .thumbnail {
     opacity: 0;
     animation: thumbFadeIn 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
-
   @keyframes thumbFadeIn {
     from {
       opacity: 0;
@@ -356,7 +336,6 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       transform: translateY(0);
     }
   }
-
   @media (prefers-reduced-motion: reduce) {
     .lightbox.is-open,
     .lightbox.is-closing,
@@ -394,15 +373,38 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
       const nextBtn = lightbox.querySelector<HTMLButtonElement>('.lightbox-next');
       const closeBtn = lightbox.querySelector<HTMLButtonElement>('.lightbox-close');
       const currentEl = lightbox.querySelector<HTMLElement>('.lightbox-current');
+      const content = lightbox.querySelector<HTMLElement>('.lightbox-content');
       const total = slides.length;
       let current = 0;
       let isAnimating = false;
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      content?.addEventListener(
+        'touchstart',
+        (e) => {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        },
+        { passive: true },
+      );
+
+      content?.addEventListener(
+        'touchend',
+        (e) => {
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          const dy = e.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+          if (dx < 0) show(current + 1, 'right');
+          else show(current - 1, 'left');
+        },
+        { passive: true },
+      );
 
       const show = (index: number, direction: 'left' | 'right' = 'right') => {
         const newIndex = (index + total) % total;
         if (newIndex === current && slides[current].classList.contains('is-active')) return;
         current = newIndex;
-
         slides.forEach((slide, i) => {
           slide.classList.remove('is-active', 'from-left', 'from-right', 'is-opening');
           if (i === current) {
@@ -411,7 +413,6 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
             slide.classList.add(direction === 'left' ? 'from-left' : 'from-right');
           }
         });
-
         dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
         if (currentEl) currentEl.textContent = String(current + 1);
       };
@@ -427,7 +428,6 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
         });
         dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
         if (currentEl) currentEl.textContent = String(current + 1);
-
         lightbox.classList.remove('is-closing');
         lightbox.classList.add('is-open');
         document.body.style.overflow = 'hidden';
@@ -447,8 +447,7 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
 
       document.querySelectorAll<HTMLElement>(`[data-lightbox="${id}"]`).forEach((trigger) => {
         trigger.addEventListener('click', () => {
-          const index = parseInt(trigger.dataset.index ?? '0', 10);
-          open(index);
+          open(parseInt(trigger.dataset.index ?? '0', 10));
         });
       });
 
@@ -461,11 +460,9 @@ const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
         });
       });
       closeBtn?.addEventListener('click', close);
-
       lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) close();
       });
-
       document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('is-open')) return;
         if (e.key === 'Escape') close();
