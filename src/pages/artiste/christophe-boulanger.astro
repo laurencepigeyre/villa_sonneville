@@ -1,7 +1,6 @@
 ---
 export const title = 'Christophe Boulanger';
-export const description =
-  '';
+export const description = '';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Citation from '../../components/Citation.astro';
 import HeroBanner from '../../components/HeroBanner.astro';
@@ -11,6 +10,7 @@ import Plagistes from '../../assets/img/Christophe-Boulanger-Plagistes-Couvertur
 import Remue from '../../assets/img/CB-menine-hero Grande.jpeg';
 import { Image } from 'astro:assets';
 import ArtworkCard from '../../components/ArtworkCard.astro';
+import ArtworkCardFull from '../../components/ArtworkCardFull.astro';
 
 import imgD01 from '../../assets/img/01_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D01-IMG_8140.webp';
 import imgD02 from '../../assets/img/02_5-7-MD-Christophe-Boulanger-Plagistes-CB-PLAGISTES-D02-IMG_8143.webp';
@@ -31,15 +31,19 @@ import imgCrinolines from '../../assets/img/02_CB_97x147cm_crinolines-campement.
 import imgCrinoline1 from '../../assets/img/01_CB-Crinoline-1-80x100cm.jpg';
 import imgCrinoline2 from '../../assets/img/02_CB-Crinoline-2-80x100cm.jpg';
 import imgCrinoline3 from '../../assets/img/03_CB-Crinoline-3-80x100cm.jpg';
-import imgCrinoline4 from '../../assets/img/04_CB-Crinoline-4-80x100cm-Ecossaise.jpg';
+import imgCrinoline4 from '../../assets/img/04_CB-Crinoline-4-80x100cm.jpg';
 import imgCrinoline5 from '../../assets/img/05_CB-Crinoline-5-80x100cm.jpg';
+import imgCrinoline6 from '../../assets/img/06_CB-Crinoline-6-80x100cm.jpg';
 import imgFloresBleu from '../../assets/img/01-CB-las-flores-salvajes-bleu-86x112cm.jpg';
 import imgFloresJaune from '../../assets/img/02-CB-las-flores-salvajes-jaune-90x70cm.jpg';
 import imgFloresNoire from '../../assets/img/03-CB-las-flores-salvajes-noire-70x115cm.jpg';
 import imgFloresRose from '../../assets/img/04-CB-las-flores-salvajes-rose-100x100cm.jpg';
+import imgFloresRoseDetail from '../../assets/img/Christophe-Boulanger-Menine-Las-Flores-04-02-Rose-93x110cm-Detail.jpg';
 import imgFloresNina from '../../assets/img/05-CB-las-flores-salvajes-la-nina-40x70cm.jpg';
 import imgTriptyque from '../../assets/img/CB_Triptyque-200x300cm.jpg';
+import imgTriptyqueDetail from '../../assets/img/Christophe-Boulanger-Menine-Songes-03-Detail.jpg';
 import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
+import ImageBain from '../../assets/img/07-CB-menine-au-bain-52x53cm.jpg';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -320,12 +324,12 @@ import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
             src={Remue}
             alt="Remue-Ménines, Christophe Boulanger"
             format="webp"
-            widths={[320, 480, 768, 1024, 1280, 1600, 1920]}
-            sizes="(max-width: 600px) 40vw, (max-width: 1200px) 50vw, 33vw"
+            widths={[640, 960, 1280, 1600, 1920, 2560]}
+            sizes="100vw"
             layout="constrained"
             width={Remue.width}
             height={Remue.height}
-            quality={60}
+            quality={75}
             class="w-full h-auto"
           />
         )
@@ -390,13 +394,25 @@ import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
     </div>
 
     <hr class="mx-5 lg:mx-32 border-t border-gray-300 mt-5" />
-
+    <ArtworkCardFull
+      image={imgTriptyque}
+      alt="Ménine, Songes, Tryptique, Christophe Boulanger, Pastel sur toile"
+      title="Ménine, Songes (Triptyque)"
+      year="2026"
+      technique="Pastel sur toile"
+      dimensions="285 x 190 cm"
+      reference="CB-P14"
+      price="10 500 €"
+      contactUrl="/contact"
+      details={imgTriptyqueDetail}
+      detailsAlt="Détail du triptyque"
+    />
     <ArtworkCard
       image={imgCollerette}
-      alt="Collerette-monté, Christophe Boulanger, pigments sur papier Kozo"
+      alt="Collerette-monté, Christophe Boulanger, Pastel sur papier Kozo"
       title="Collerette-monté"
       year="2026"
-      technique="Pigments sur papier Kozo"
+      technique="Pastel sur papier Kozo"
       dimensions="97 x 147 cm"
       reference="CB-P01"
       price="4 500 €"
@@ -405,10 +421,10 @@ import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
 
     <ArtworkCard
       image={imgCrinolines}
-      alt="Crinolines, Christophe Boulanger, pigments sur papier Kozo"
+      alt="Crinolines, Christophe Boulanger, Pastel sur papier Kozo"
       title="Crinolines"
       year="2026"
-      technique="Pigments sur papier Kozo"
+      technique="Pastel sur papier Kozo"
       dimensions="97 x 147 cm"
       reference="CB-P02"
       price="4 500 €"
@@ -418,10 +434,10 @@ import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
 
     <ArtworkCard
       image={imgCrinoline1}
-      alt="Crinoline 1, Christophe Boulanger, pigments sur papier Kozo"
+      alt="Crinoline 1, Christophe Boulanger, Pastel sur papier Kozo"
       title="Crinoline 1"
       year="2026"
-      technique="Pigments sur papier Kozo"
+      technique="Pastel sur papier Kozo"
       dimensions="80 x 100 cm"
       reference="CB-P03"
       price="1 500 €"
@@ -430,10 +446,10 @@ import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
 
     <ArtworkCard
       image={imgCrinoline2}
-      alt="Crinoline 2, Christophe Boulanger, pigments sur papier Kozo"
+      alt="Crinoline 2, Christophe Boulanger, Pastel sur papier Kozo"
       title="Crinoline 2"
       year="2026"
-      technique="Pigments sur papier Kozo"
+      technique="Pastel sur papier Kozo"
       dimensions="80 x 100 cm"
       reference="CB-P04"
       price="1 500 €"
@@ -443,10 +459,10 @@ import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
 
     <ArtworkCard
       image={imgCrinoline3}
-      alt="Crinoline 3, Christophe Boulanger, pigments sur papier Kozo"
+      alt="Crinoline 3, Christophe Boulanger, Pastel sur papier Kozo"
       title="Crinoline 3"
       year="2026"
-      technique="Pigments sur papier Kozo"
+      technique="Pastel sur papier Kozo"
       dimensions="80 x 100 cm"
       reference="CB-P05"
       price="1 500 €"
@@ -455,10 +471,10 @@ import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
 
     <ArtworkCard
       image={imgCrinoline4}
-      alt="Crinoline 4 L'écossaise, Christophe Boulanger, pigments sur papier Kozo"
-      title="Crinoline 4 (L'écossaise)"
+      alt="Crinoline 4, Christophe Boulanger, Pastel sur papier Kozo"
+      title="Crinoline 4"
       year="2026"
-      technique="Pigments sur papier Kozo"
+      technique="Pastel sur papier Kozo"
       dimensions="80 x 100 cm"
       reference="CB-P06"
       price="1 500 €"
@@ -468,101 +484,113 @@ import imgFlores6 from '../../assets/img/06-CB-las-flores-salvajes-6.jpg';
 
     <ArtworkCard
       image={imgCrinoline5}
-      alt="Crinoline 5, Christophe Boulanger, pigments sur papier Kozo marouflé sur toile"
+      alt="Crinoline 5, Christophe Boulanger, Pastel sur papier Kozo"
       title="Crinoline 5"
       year="2026"
-      technique="Pigments sur papier Kozo marouflé sur toile"
+      technique="Pastel sur papier Kozo"
       dimensions="80 x 100 cm"
       reference="CB-P07"
+      price="1 500 €"
+      contactUrl="/contact"
+    />
+    <ArtworkCard
+      image={imgCrinoline6}
+      alt="Crinoline 6, Christophe Boulanger, Pastel sur papier Kozo marouflé sur toile"
+      title="Crinoline 6"
+      year="2026"
+      technique="Pastel sur papier Kozo marouflé sur toile"
+      dimensions="80 x 100 cm"
+      reference="CB-P08"
       price="1 900 €"
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgFloresBleu}
-      alt="Las flores salvajes La bleu, Christophe Boulanger, pigments sur toile"
-      title="Las flores salvajes (La bleu)"
+      alt="Las flores La bleu, Christophe Boulanger, Pastel sur toile"
+      title="Las flores 1"
       year="2026"
-      technique="Pigments sur toile"
-      dimensions="86 x 112 cm"
-      reference="CB-P08"
-      price="2 100 €"
-      reverse={true}
+      technique="Pastel sur toile"
+      dimensions="85 x 110 cm"
+      reference="CB-P09"
+      price="2 300 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgFloresJaune}
-      alt="Las flores salvajes La jaune, Christophe Boulanger, pigments sur toile"
-      title="Las flores salvajes (La jaune)"
+      alt="Las flores La jaune, Christophe Boulanger, Pastel sur toile"
+      title="Las flores 2"
       year="2026"
-      technique="Pigments sur toile"
-      dimensions="90 x 70 cm"
-      reference="CB-P09"
-      price="1 700 €"
+      technique="Pastel sur toile"
+      dimensions="90 x 73 cm"
+      reference="CB-P10"
+      price="2 100 €"
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgFloresNoire}
-      alt="Las flores salvajes La noire, Christophe Boulanger, pigments sur toile"
-      title="Las flores salvajes (La noire)"
+      alt="Las flores La noire, Christophe Boulanger, Pastel sur toile"
+      title="Las flores 3"
       year="2026"
-      technique="Pigments sur toile"
-      dimensions="70 x 115 cm"
-      reference="CB-P10"
+      technique="Pastel sur toile"
+      dimensions="70 x 107 cm"
+      reference="CB-P11"
       price="1 900 €"
-      reverse={true}
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgFloresRose}
-      alt="Las flores salvajes La rose, Christophe Boulanger, pigments sur toile"
-      title="Las flores salvajes (La rose)"
+      alt="Las flores La rose, Christophe Boulanger, Pastel sur toile"
+      title="Las flores 4"
       year="2026"
-      technique="Pigments sur toile"
-      dimensions="100 x 100 cm"
-      reference="CB-P11"
-      price="2 100 €"
+      technique="Pastel sur toile"
+      dimensions="93 x 110 cm"
+      reference="CB-P12"
+      price="2 300 €"
       contactUrl="/contact"
+      details={imgFloresRoseDetail}
+      detailsAlt="Détail du tableau Las flores 4"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgFloresNina}
-      alt="Las flores salvajes La Nina, Christophe Boulanger, pigments sur toile"
-      title="Las flores salvajes (La Nina)"
+      alt="Las flores La Nina, Christophe Boulanger, Pastel sur toile"
+      title="Las flores 5"
       year="2026"
-      technique="Pigments sur toile"
-      dimensions="40 x 70 cm"
-      reference="CB-P12"
-      price="1 300 €"
-      reverse={true}
-      contactUrl="/contact"
-    />
-
-    <ArtworkCard
-      image={imgTriptyque}
-      alt="Tryptique, Christophe Boulanger, pigments sur toile"
-      title="Tryptique"
-      year="2026"
-      technique="Pigments sur toile"
-      dimensions="200 x 300 cm"
+      technique="Pastel sur toile"
+      dimensions="54 x 65 cm"
       reference="CB-P13"
-      price="8 500 €"
+      price="1 300 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgFlores6}
-      alt="Le pas fait - Las flores salvajes 6, Christophe Boulanger, pigments sur toile"
-      title="Le pas fait - Las flores salvajes 6"
+      alt="Las flores 6, Christophe Boulanger, Pastel sur toile"
+      title="Las flores 6"
       year="2026"
-      technique="Pigments sur toile"
+      technique="Pastel sur toile"
       dimensions="130 x 130 cm"
-      reference="CB-P14"
-      price="2 900 €"
+      reference="CB-P15"
+      price="3 200 €"
+      contactUrl="/contact"
       reverse={true}
+    />
+    <ArtworkCard
+      image={ImageBain}
+      alt="Ménine au bain, Christophe Boulanger, Fusain et acrylique sur toile"
+      title="Ménine au bain"
+      year="2026"
+      technique="Fusain et acrylique sur toile"
+      dimensions="52 x 53 cm"
+      reference="CB-P16"
+      price="1 300 €"
       contactUrl="/contact"
     />
   </div>

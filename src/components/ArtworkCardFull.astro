@@ -10,10 +10,12 @@ export interface Props {
   format?: string;
   price?: string;
   contactUrl?: string;
-  variant?: "full" | "thumb";
+  variant?: 'full' | 'thumb';
+  details?: any | any[];
+  detailsAlt?: string | string[];
 }
 
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 const {
   image,
@@ -22,45 +24,113 @@ const {
   year,
   technique,
   dimensions,
-  format = "",
-  price = "",
-  contactUrl = "/contact",
-  reference = "",
-  variant = "full",
+  format = '',
+  price = '',
+  contactUrl = '/contact',
+  reference = '',
+  variant = 'full',
+  details,
+  detailsAlt,
 } = Astro.props;
 
 const formatStyles: Record<string, string> = {
-  "Très Grand Format": "bg-indigo-200/60 border-indigo-300",
-  "Grand Format": "bg-lime-200/60 border-lime-300",
-  "Moyen Format": "bg-orange-200/60 border-orange-300",
-  "Petit Format": "bg-sky-200/60 border-sky-300",
+  'Très Grand Format': 'bg-indigo-200/60 border-indigo-300',
+  'Grand Format': 'bg-lime-200/60 border-lime-300',
+  'Moyen Format': 'bg-orange-200/60 border-orange-300',
+  'Petit Format': 'bg-sky-200/60 border-sky-300',
 };
-const formatClass = formatStyles[format] ?? "bg-zinc-200/60 border-zinc-300";
 
-// Variant-specific settings
-const isThumb = variant === "thumb";
+const formatClass = formatStyles[format] ?? 'bg-zinc-200/60 border-zinc-300';
+
+const detailsArray = details ? (Array.isArray(details) ? details : [details]) : [];
+const detailsAltArray = detailsAlt ? (Array.isArray(detailsAlt) ? detailsAlt : [detailsAlt]) : [];
+
+const allImages = [image, ...detailsArray];
+const allAlts = [alt, ...detailsAltArray];
+const hasDetails = detailsArray.length > 0;
+
+const lightboxId = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
 ---
 
 <div class="m-13">
+  <!-- IMAGE PRINCIPALE + THUMBNAILS -->
   {
     image && (
-      <Image
-        src={image}
-        alt={alt}
-        format="webp"
-        widths={[320, 480, 768, 1024, 1280, 1600, 1920]}
-        sizes="(max-width: 600px) 50vw,
-         (min-width: 1224px) 1224px,
-         calc(100vw - 6.5rem)"
-        layout="constrained"
-        width={image.width}
-        height={image.height}
-        quality={60}
-        class="w-full h-auto"
-      />
+      <div class="relative">
+        <button
+          type="button"
+          class="artwork-trigger group relative w-full cursor-zoom-in overflow-hidden"
+          data-lightbox={lightboxId}
+          data-index="0"
+          aria-label={`Agrandir l'image : ${alt}`}>
+          <Image
+            src={image}
+            alt={alt}
+            format="webp"
+            widths={[320, 480, 768, 1024, 1280, 1600, 1920]}
+            sizes="(max-width: 600px) 50vw, (min-width: 1224px) 1224px, calc(100vw - 6.5rem)"
+            layout="constrained"
+            width={image.width}
+            height={image.height}
+            quality={60}
+            class="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+          />
+          {/* Voile sombre au survol */}
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
+
+          {/* Badge "X vues" */}
+          {hasDetails && (
+            <span class="absolute top-3 right-3 bg-black/50 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur-md flex items-center gap-1.5 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                <line x1="11" y1="8" x2="11" y2="14" />
+                <line x1="8" y1="11" x2="14" y2="11" />
+              </svg>
+              {allImages.length} vues
+            </span>
+          )}
+        </button>
+
+        {/* Thumbnails sous l'image */}
+        {hasDetails && (
+          <div class="flex gap-2 mt-4 flex-wrap">
+            {allImages.map((img, i) => (
+              <button
+                type="button"
+                class="thumbnail group/thumb w-16 h-16 rounded-md overflow-hidden border-2 border-zinc-200 hover:border-zinc-700 transition-all duration-300 cursor-pointer hover:-translate-y-0.5 hover:shadow-md"
+                style={`animation-delay: ${i * 60}ms`}
+                data-lightbox={lightboxId}
+                data-index={i}
+                aria-label={`Voir l'image ${i + 1}`}>
+                <Image
+                  src={img}
+                  alt={allAlts[i] ?? `${alt} - vue ${i + 1}`}
+                  format="webp"
+                  widths={[128, 160]}
+                  width={img.width}
+                  height={img.height}
+                  quality={60}
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-110"
+                />
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
     )
   }
 
+  <!-- TEXTE -->
   <div class="w-full p-8">
     <h1 class="text-3xl pb-3 italic">{title}</h1>
     <p>
@@ -69,17 +139,7 @@ const isThumb = variant === "thumb";
       {dimensions}<br />
       {reference && <>Réf. {reference}</>}
     </p>
-
-    {
-      format && (
-        <div
-          class={`px-3 py-1 border rounded-full text-sm mt-3 w-fit ${formatClass}`}
-        >
-          {format}
-        </div>
-      )
-    }
-
+    {format && <div class={`px-3 py-1 border rounded-full text-sm mt-3 w-fit ${formatClass}`}>{format}</div>}
     {
       price && (
         <>
@@ -89,11 +149,332 @@ const isThumb = variant === "thumb";
       )
     }
     <br />
-    <a
-      href={contactUrl}
-      class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300"
-    >
-      Cette œuvre m'intéresse <span class="text-lg">→</span>
-    </a>
+<a
+    href={contactUrl}
+    class="group/cta inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300 transition-colors
+    duration-300" > Cette œuvre m'intéresse
+    <span class="text-lg transition-transform duration-300 group-hover/cta:translate-x-1">→</span></a>
   </div>
 </div>
+
+<!-- LIGHTBOX -->
+<div
+  id={lightboxId}
+  class="lightbox fixed inset-0 z-50 hidden items-center justify-center bg-black/0 p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Visionneuse d'images">
+  <button
+    type="button"
+    class="lightbox-close absolute top-4 right-4 text-white hover:bg-white/10 rounded-full w-12 h-12 flex items-center justify-center text-2xl transition-all duration-200 hover:rotate-90 z-10"
+    aria-label="Fermer">
+    ✕
+  </button>
+
+  <div
+    class="lightbox-counter absolute top-4 left-4 text-white/80 text-sm bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">
+    <span class="lightbox-current">1</span> / <span>{allImages.length}</span>
+  </div>
+
+  {
+    allImages.length > 1 && (
+      <button
+        type="button"
+        class="lightbox-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/25 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl transition-all duration-300 hover:-translate-x-1 backdrop-blur-sm"
+        aria-label="Image précédente">
+        ←
+      </button>
+    )
+  }
+
+  <div class="lightbox-content max-w-[90vw] max-h-[85vh] flex items-center justify-center">
+    {
+      allImages.map((img, i) => (
+        <div class="lightbox-slide hidden w-full h-full items-center justify-center" data-index={i}>
+          <Image
+            src={img}
+            alt={allAlts[i] ?? `${alt} - vue ${i + 1}`}
+            format="webp"
+            widths={[640, 1024, 1280, 1600]}
+            sizes="90vw"
+            layout="constrained"
+            width={img.width}
+            height={img.height}
+            quality={85}
+            class="max-w-full max-h-[85vh] w-auto h-auto object-contain"
+          />
+        </div>
+      ))
+    }
+  </div>
+
+  {
+    allImages.length > 1 && (
+      <button
+        type="button"
+        class="lightbox-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/25 text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl transition-all duration-300 hover:translate-x-1 backdrop-blur-sm"
+        aria-label="Image suivante">
+        →
+      </button>
+    )
+  }
+
+  {
+    allImages.length > 1 && (
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+        {allImages.map((_, i) => (
+          <button
+            type="button"
+            class="lightbox-dot w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300"
+            data-index={i}
+            aria-label={`Aller à l'image ${i + 1}`}
+          />
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .lightbox.is-open {
+    display: flex;
+    animation: lightboxFadeIn 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes lightboxFadeIn {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+      backdrop-filter: blur(0);
+      -webkit-backdrop-filter: blur(0);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  }
+
+  .lightbox.is-closing {
+    display: flex;
+    animation: lightboxFadeOut 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
+    pointer-events: none;
+  }
+
+  @keyframes lightboxFadeOut {
+    from {
+      background-color: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0);
+      backdrop-filter: blur(0);
+      -webkit-backdrop-filter: blur(0);
+    }
+  }
+
+  .lightbox-slide.is-active.is-opening {
+    display: flex;
+    animation: imageOpen 550ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes imageOpen {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .lightbox.is-closing .lightbox-slide.is-active {
+    animation: imageClose 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
+  }
+
+  @keyframes imageClose {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+  }
+
+  .lightbox-slide.is-active.from-right {
+    display: flex;
+    animation: imageSlideFromRight 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes imageSlideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(60px) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  .lightbox-slide.is-active.from-left {
+    display: flex;
+    animation: imageSlideFromLeft 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes imageSlideFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-60px) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  .lightbox-dot.is-active {
+    background-color: white;
+    transform: scale(1.4);
+  }
+
+  .thumbnail {
+    opacity: 0;
+    animation: thumbFadeIn 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes thumbFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lightbox.is-open,
+    .lightbox.is-closing,
+    .lightbox-slide.is-active,
+    .lightbox.is-closing .lightbox-slide.is-active,
+    .thumbnail {
+      animation: none !important;
+    }
+    .lightbox.is-open {
+      background-color: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(8px);
+    }
+    .lightbox.is-closing {
+      display: none;
+    }
+    .lightbox-slide.is-active {
+      opacity: 1;
+      display: flex;
+    }
+    .thumbnail {
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  function initLightboxes() {
+    const lightboxes = document.querySelectorAll<HTMLElement>('.lightbox');
+
+    lightboxes.forEach((lightbox) => {
+      const id = lightbox.id;
+      const slides = lightbox.querySelectorAll<HTMLElement>('.lightbox-slide');
+      const dots = lightbox.querySelectorAll<HTMLElement>('.lightbox-dot');
+      const prevBtn = lightbox.querySelector<HTMLButtonElement>('.lightbox-prev');
+      const nextBtn = lightbox.querySelector<HTMLButtonElement>('.lightbox-next');
+      const closeBtn = lightbox.querySelector<HTMLButtonElement>('.lightbox-close');
+      const currentEl = lightbox.querySelector<HTMLElement>('.lightbox-current');
+      const total = slides.length;
+      let current = 0;
+      let isAnimating = false;
+
+      const show = (index: number, direction: 'left' | 'right' = 'right') => {
+        const newIndex = (index + total) % total;
+        if (newIndex === current && slides[current].classList.contains('is-active')) return;
+        current = newIndex;
+
+        slides.forEach((slide, i) => {
+          slide.classList.remove('is-active', 'from-left', 'from-right', 'is-opening');
+          if (i === current) {
+            void slide.offsetWidth;
+            slide.classList.add('is-active');
+            slide.classList.add(direction === 'left' ? 'from-left' : 'from-right');
+          }
+        });
+
+        dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
+        if (currentEl) currentEl.textContent = String(current + 1);
+      };
+
+      const open = (index: number) => {
+        current = index;
+        slides.forEach((slide, i) => {
+          slide.classList.remove('is-active', 'from-left', 'from-right', 'is-opening');
+          if (i === current) {
+            void slide.offsetWidth;
+            slide.classList.add('is-active', 'is-opening');
+          }
+        });
+        dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
+        if (currentEl) currentEl.textContent = String(current + 1);
+
+        lightbox.classList.remove('is-closing');
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const close = () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        lightbox.classList.remove('is-open');
+        lightbox.classList.add('is-closing');
+        setTimeout(() => {
+          lightbox.classList.remove('is-closing');
+          document.body.style.overflow = '';
+          isAnimating = false;
+        }, 300);
+      };
+
+      document.querySelectorAll<HTMLElement>(`[data-lightbox="${id}"]`).forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          const index = parseInt(trigger.dataset.index ?? '0', 10);
+          open(index);
+        });
+      });
+
+      prevBtn?.addEventListener('click', () => show(current - 1, 'left'));
+      nextBtn?.addEventListener('click', () => show(current + 1, 'right'));
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          if (i === current) return;
+          show(i, i > current ? 'right' : 'left');
+        });
+      });
+      closeBtn?.addEventListener('click', close);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) close();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(current - 1, 'left');
+        if (e.key === 'ArrowRight') show(current + 1, 'right');
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initLightboxes);
+  document.addEventListener('astro:page-load', initLightboxes);
+</script>
