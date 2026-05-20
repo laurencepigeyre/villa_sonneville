@@ -1,6 +1,7 @@
 ---
 export const title = 'Junliang Ma';
-export const description = "Découvrez les œuvres de Junliang Ma, céramiste contemporain mêlant tradition chinoise et innovation, à la Villa Sonneville : sculptures en grès et porcelaine aux émaux variés, explorant la frontière entre fragment et totalité.";
+export const description =
+  'Découvrez les œuvres de Junliang Ma, céramiste contemporain mêlant tradition chinoise et innovation, à la Villa Sonneville : sculptures en grès et porcelaine aux émaux variés, explorant la frontière entre fragment et totalité.';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Citation from '../../components/Citation.astro';
 import HeroBanner from '../../components/HeroBanner.astro';
@@ -16,17 +17,19 @@ import imgC04 from '../../assets/img/Junliang-MA-C04-Jardin-n1.jpg';
 import imgC05 from '../../assets/img/Junliang-MA-C05-Une-Chute-de-1m70-n1.jpg';
 import imgC06 from '../../assets/img/Junliang-MA-C06-Une-Chute-de-1m70-n2.jpg';
 import imgC07 from '../../assets/img/Junliang-MA-C07-La-Dechirure-2025-n3.jpg';
-import imgC08 from '../../assets/img/Junliang-MA-C08-La-Dechirure-2025-n4.jpg';
-import imgC09 from '../../assets/img/Junliang-MA-C09-La-Dechirure-2025-n5.jpg';
-import imgC10 from '../../assets/img/Junliang-MA-C10-La-Dechirure-2026-n1.jpg';
-import imgC11 from '../../assets/img/Junliang-MA-C11-La-Dechirure-2026-n2.jpg';
-import imgC12 from '../../assets/img/Junliang-MA-C12-La-Dechirure-2026-n3.jpg';
-import imgC13 from '../../assets/img/Junliang-MA-C13-La-Dechirure-2026-n4.jpg';
-import imgC14 from '../../assets/img/Junliang-MA-C14-Ma-Memoire-n18.jpg';
-import imgC15 from '../../assets/img/Junliang-MA-C15-Ma-Memoire-n21.jpg';
-import imgC16 from '../../assets/img/Junliang-MA-C16-Coupelles-ensemble.jpg';
-import imgC17 from '../../assets/img/Junliang-MA-C17-Saladier-vue1.jpg';
-import imgC18 from '../../assets/img/Junliang-MA-C18-Vase.jpg';
+import imgC08 from '../../assets/img/Junliang-MA-C08-La-Dechirure-2026-n7.jpg';
+import imgC09 from '../../assets/img/Junliang-MA-C09-La-Dechirure-2026-n1.jpg';
+import imgC10 from '../../assets/img/Junliang-MA-C10-La-Dechirure-2026-n2.jpg';
+import imgC11 from '../../assets/img/Junliang-MA-C11-La-Dechirure-2026-n3.jpg';
+import imgC12 from '../../assets/img/Junliang-MA-C12-La-Dechirure-2026-n4.jpg';
+import imgC13 from '../../assets/img/Junliang-MA-C13-La-Dechirure-2026-n5.jpg';
+import imgC14 from '../../assets/img/Junliang-MA-C14-La-Dechirure-2026-n6.jpg';
+import imgC15 from '../../assets/img/Junliang-MA-C15-Ma-Memoire-n18.jpg';
+import imgC16 from '../../assets/img/Junliang-MA-C16-Ma-Memoire-n21.jpg';
+import imgC17 from '../../assets/img/Junliang-MA-C17-Coupelle-divers-emaux.jpg';
+import imgC18 from '../../assets/img/Junliang-MA-C18-Grande-coupe.jpg';
+import imgC19 from '../../assets/img/Junliang-MA-C19-Grande-coupe-XL.jpg';
+import imgC20 from '../../assets/img/Junliang-MA-C20-Petit-vase.jpg';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -116,227 +119,240 @@ import imgC18 from '../../assets/img/Junliang-MA-C18-Vase.jpg';
 
     <ArtworkCard
       image={imgC01}
-      alt="Sculpture céramique Pic Camouflé n°3 de Junliang Ma, grès noir aux reflets dorés sur racine, Villa Sonneville, Le Fil rouge, Roubaix"
+      alt="Pic Camouflé n°3, Junliang Ma, Grès noir"
       title="Pic Camouflé n°3"
       technique="Grès noir"
       dimensions="21 x 18 x 8 cm"
-      reference="JLM-C01"
+      reference="JM-C01"
       price="500 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgC02}
-      alt="Sculpture céramique Pic Camouflé n°8 de Junliang Ma, grès noir mat ponctué de touches dorées, Villa Sonneville, Le Fil rouge, Roubaix"
+      alt="Pic Camouflé n°8, Junliang Ma, Grès noir"
       title="Pic Camouflé n°8"
       technique="Grès noir"
       dimensions="20 x 17 x 8 cm"
-      reference="JLM-C02"
+      reference="JM-C02"
       price="500 €"
-      reverse={true}
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgC03}
-      alt="Sculpture céramique Pic Camouflé n°9 de Junliang Ma, grès noir et bois brut, surface ovale émaillée, Villa Sonneville, Le Fil rouge, Roubaix"
+      alt="Pic Camouflé n°9, Junliang Ma, Grès noir"
       title="Pic Camouflé n°9"
       technique="Grès noir"
       dimensions="29 x 24 x 9 cm"
-      reference="JLM-C03"
+      reference="JM-C03"
       price="600 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgC04}
-      alt="Sculpture céramique Jardin n°1 de Junliang Ma, couronne ajourée en grès noir aux textures organiques, Villa Sonneville, Le Fil rouge, Roubaix"
+      alt="Jardin n°1, Junliang Ma, Grès noir"
       title="Jardin n°1"
       technique="Grès noir"
       dimensions="33 x 33 x 22 cm"
-      reference="JLM-C04"
+      reference="JM-C04"
       price="1 500 €"
-      reverse={true}
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgC05}
-      alt="Sculpture céramique Une Chute de 1,7 m n°1 de Junliang Ma, grès et porcelaine bleu et ocre sur base blanche, Villa Sonneville, Le Fil rouge, Roubaix"
+      alt="Une Chute de 1,7 m n°1, Junliang Ma, Grès et porcelaine"
       title="Une Chute de 1,7 m n°1"
-      technique="Grès et porcelaine"
+      technique="Grès, porcelaine"
       dimensions="28 x 24 x 15 cm"
-      reference="JLM-C05"
+      reference="JM-C05"
       price="1 200 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgC06}
-      alt="Sculpture céramique Une Chute de 1,7 m n°2 de Junliang Ma, grès et porcelaine orange et bleu, forme horizontale, Villa Sonneville, Le Fil rouge, Roubaix"
+      alt="Une Chute de 1,7 m n°2, Junliang Ma, Grès et porcelaine"
       title="Une Chute de 1,7 m n°2"
-      technique="Grès et porcelaine"
+      technique="Grès, porcelaine"
       dimensions="30 x 17 x 13 cm"
-      reference="JLM-C06"
+      reference="JM-C06"
       price="1 200 €"
-      reverse={true}
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgC07}
-      alt="Sculpture céramique La Déchirure n°3 de Junliang Ma (2025), grès et porcelaine bleu profond et gris, forme en croissant, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="La Déchirure n°3"
+      alt="La Déchirure en 2025 n°3, Junliang Ma, Grès et porcelaine"
+      title="La Déchirure en 2025 n°3"
       year="2025"
-      technique="Grès et porcelaine"
+      technique="Grès, porcelaine"
       dimensions="30 x 31 x 15 cm"
-      reference="JLM-C07"
+      reference="JM-C07"
       price="1 500 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgC08}
-      alt="Sculpture céramique La Déchirure n°4 de Junliang Ma (2025), grès et porcelaine ocre tachetée de bleu, forme circulaire, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="La Déchirure n°4"
-      year="2025"
-      technique="Grès et porcelaine"
-      dimensions="32 x 32 x 15 cm"
-      reference="JLM-C08"
+      alt="La Déchirure en 2026 n°7, Junliang Ma, Grès et porcelaine"
+      title="La Déchirure en 2026 n°7"
+      year="2026"
+      technique="Grès, porcelaine"
+      dimensions="29 x 27 x 14 cm"
+      reference="JM-C08"
       price="1 500 €"
-      reverse={true}
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgC09}
-      alt="Sculpture céramique La Déchirure n°5 de Junliang Ma (2025), grès et porcelaine bleu profond, forme allongée déchiquetée, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="La Déchirure n°5"
-      year="2025"
-      technique="Grès et porcelaine"
-      dimensions="37 x 22 x 15 cm"
-      reference="JLM-C09"
-      price="1 200 €"
+      alt="La Déchirure en 2026 n°1, Junliang Ma, Grès, porcelaine et plâtre"
+      title="La Déchirure en 2026 n°1"
+      year="2026"
+      technique="Grès, porcelaine, plâtre"
+      dimensions="26 x 17 x 24 cm"
+      reference="JM-C09"
+      price="1 500 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgC10}
-      alt="Sculpture céramique La Déchirure n°1 de Junliang Ma (2026), grès et porcelaine bleu sur socle terrazzo, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="La Déchirure n°1"
+      alt="La Déchirure en 2026 n°2, Junliang Ma, Grès et porcelaine"
+      title="La Déchirure en 2026 n°2"
       year="2026"
-      technique="Grès et porcelaine"
-      dimensions="26 x 17 x 24 cm"
-      reference="JLM-C10"
+      technique="Grès, porcelaine"
+      dimensions="20 x 20 x 31 cm"
+      reference="JM-C10"
       price="1 500 €"
-      reverse={true}
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgC11}
-      alt="Sculpture céramique La Déchirure n°2 de Junliang Ma (2026), grès et porcelaine bleu sur socle de gravats, forme verticale, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="La Déchirure n°2"
+      alt="La Déchirure en 2026 n°3, Junliang Ma, Grès et porcelaine"
+      title="La Déchirure en 2026 n°3"
       year="2026"
-      technique="Grès et porcelaine"
-      dimensions="20 x 20 x 31 cm"
-      reference="JLM-C11"
-      price="1 500 €"
+      technique="Grès, porcelaine"
+      dimensions="17 x 30 x 28 cm"
+      reference="JM-C11"
+      price="1 200 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgC12}
-      alt="Sculpture céramique La Déchirure n°3 de Junliang Ma (2026), grès et porcelaine ocre piqueté de bleu, forme verticale, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="La Déchirure n°3"
+      alt="La Déchirure en 2026 n°4, Junliang Ma, Grès"
+      title="La Déchirure en 2026 n°4"
       year="2026"
-      technique="Grès et porcelaine"
-      dimensions="18 x 31 x 26 cm"
-      reference="JLM-C12"
+      technique="Grès"
+      dimensions="17 x 35 x 18 cm"
+      reference="JM-C12"
       price="1 200 €"
-      reverse={true}
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgC13}
-      alt="Sculpture céramique La Déchirure n°4 de Junliang Ma (2026), grès émaillé bleu et ocre, format horizontal allongé, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="La Déchirure n°4"
+      alt="La Déchirure en 2026 n°5, Junliang Ma, Grès, porcelaine et plâtre"
+      title="La Déchirure en 2026 n°5"
       year="2026"
-      technique="Grès"
-      dimensions="17 x 35 x 18 cm"
-      reference="JLM-C13"
-      price="1 200 €"
+      technique="Grès, porcelaine, plâtre"
+      dimensions="19 x 20 x 46 cm"
+      reference="JM-C13"
+      price="1 500 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgC14}
-      alt="Sculpture murale céramique Ma Mémoire n°18 de Junliang Ma, grès émaillé ocre et bleu en forme de feuille, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="Ma Mémoire n°18"
-      technique="Grès"
-      dimensions="33 x 15 x 10 cm"
-      reference="JLM-C14"
-      price="600 €"
-      reverse={true}
+      alt="La Déchirure en 2026 n°6, Junliang Ma, Grès, porcelaine et plâtre"
+      title="La Déchirure en 2026 n°6"
+      year="2026"
+      technique="Grès, porcelaine, plâtre"
+      dimensions="26 x 33 x 44 cm"
+      reference="JM-C14"
+      price="1 500 €"
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgC15}
-      alt="Sculpture murale céramique Ma Mémoire n°21 de Junliang Ma, porcelaine émaillée bleu et ocre en forme de feuille, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="Ma Mémoire n°21"
-      technique="Porcelaine"
-      dimensions="32 x 9 x 13 cm"
-      reference="JLM-C15"
+      alt="Ma Mémoire n°18, Junliang Ma, Grès, pièce murale"
+      title="Ma Mémoire n°18 (pièce murale)"
+      technique="Grès"
+      dimensions="33 x 15 x 10 cm"
+      reference="JM-C15"
       price="600 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
       image={imgC16}
-      alt="Coupelle en porcelaine émaillée de Junliang Ma, finitions dorées, collection multi-émaux, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="Coupelle en divers émaux"
+      alt="Ma Mémoire n°21, Junliang Ma, Porcelaine, pièce murale"
+      title="Ma Mémoire n°21 (pièce murale)"
       technique="Porcelaine"
-      dimensions="12 x 10 x 5 cm (environ)"
-      reference="JLM-C16"
-      price="70 € — 90 € (dorées)"
-      reverse={true}
+      dimensions="32 x 9 x 13 cm"
+      reference="JM-C16"
+      price="600 €"
       contactUrl="/contact"
+      reverse={true}
     />
 
     <ArtworkCard
       image={imgC17}
-      alt="Saladier en grès émaillé bleu et ocre de Junliang Ma, céramique d'art utilitaire, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="Saladier"
+      alt="Coupelle en divers émaux, Junliang Ma, Grès et porcelaine"
+      title="Coupelle en divers émaux"
+      technique="Grès, porcelaine"
+      dimensions="14 x 17 x 8 cm (environ)"
+      reference="JM-C17"
+      price="70 €"
+      contactUrl="/contact"
+    />
+
+    <ArtworkCard
+      image={imgC18}
+      alt="Grande coupe, Junliang Ma, Grès"
+      title="Grande coupe"
       technique="Grès"
-      dimensions="31 x 31 x 8 cm"
-      reference="JLM-C17"
-      price="300 €"
+      dimensions="24 x 28 x 8 cm (environ)"
+      reference="JM-C18"
+      price="200 €"
       contactUrl="/contact"
-    />
-
-    <ArtworkCard
-      image={imgC18}
-      alt="Petit vase en porcelaine émaillée bleu et ocre de Junliang Ma, intérieur ocre, base bleue, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="Vase petit"
-      technique="Porcelaine"
-      dimensions="11 x H 22 cm"
-      reference="JLM-C18"
-      price="150 €"
       reverse={true}
+    />
+
+    <ArtworkCard
+      image={imgC19}
+      alt="Grande coupe XL, Junliang Ma, Grès"
+      title="Grande coupe XL"
+      technique="Grès"
+      dimensions="35 x 38 x 11 cm (environ)"
+      reference="JM-C19"
+      price="350 €"
       contactUrl="/contact"
     />
 
     <ArtworkCard
-      image={imgC18}
-      alt="Grand vase en porcelaine émaillée bleu et ocre de Junliang Ma, intérieur ocre, base bleue, Villa Sonneville, Le Fil rouge, Roubaix"
-      title="Vase grand"
-      technique="Porcelaine"
-      dimensions="16 x H 29 cm"
-      reference="JLM-C19"
-      price="300 €"
+      image={imgC20}
+      alt="Petit vase, Junliang Ma, Grès et porcelaine"
+      title="Petit vase"
+      technique="Grès, porcelaine"
+      dimensions="9 x H 21 cm"
+      reference="JM-C20"
+      price="150 €"
       contactUrl="/contact"
+      reverse={true}
     />
   </div>
 </BaseLayout>
