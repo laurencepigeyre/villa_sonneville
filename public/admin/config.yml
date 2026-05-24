@@ -2,42 +2,33 @@
 
 backend:
   name: github
-  repo: olam/villasonneville
+  repo: olam11/villa_sonneville
   branch: main
   # Avec un Personal Access Token, l'utilisateur cliquera sur
   # "Sign In with Token" sur l'écran de connexion (aucune config OAuth nécessaire).
 
-# Dossier média GLOBAL (fallback, peu utilisé ici car on définit
-# media_folder/public_folder au niveau de chaque collection).
 media_folder: src/assets/img
 public_folder: /src/assets/img
 
-# Workflow simple : publication directe (pas de brouillons en PR).
 publish_mode: simple
-
-# Affichage en français dans l'interface.
 locale: fr
 
 collections:
+  # ═══════════════════════════════════════════════════════════
+  # EXPOSITIONS
+  # ═══════════════════════════════════════════════════════════
   - name: expositions
     label: Expositions
     label_singular: Exposition
     folder: src/content/expositions
     create: true
     delete: true
-    # Format des fichiers : Markdown avec frontmatter YAML.
     format: frontmatter
     extension: md
-    # Tri par défaut dans l'admin : par date de début, descendant.
     sortable_fields: [date_debut, title, statut]
-    # Slug auto-généré à partir du titre.
     slug: '{{slug}}'
-    # Chemin du média RELATIF AU FICHIER : Sveltia écrira par exemple
-    # ../../assets/img/mon-image.jpg dans le frontmatter, ce qui est
-    # exactement ce qu'attend le helper image() d'Astro Content Collections.
     media_folder: ../../assets/img
     public_folder: ../../assets/img
-    # Aperçu dans l'admin (URL relative du site déployé).
     preview_path: expositions
     fields:
       - { label: 'Titre', name: title, widget: string }
@@ -78,12 +69,7 @@ collections:
           choose_url: false,
           hint: 'L''image sera stockée dans src/assets/img',
         }
-      - {
-          label: 'Légende de l''image',
-          name: caption,
-          widget: string,
-          required: false,
-        }
+      - { label: 'Légende de l''image', name: caption, widget: string, required: false }
       - {
           label: 'Description',
           name: description,
@@ -119,3 +105,190 @@ collections:
           default: false,
           hint: 'Si coché, l''exposition apparaîtra aussi sur la home.',
         }
+
+  # ═══════════════════════════════════════════════════════════
+  # ARTISTES
+  # ═══════════════════════════════════════════════════════════
+  - name: artistes
+    label: Artistes
+    label_singular: Artiste
+    folder: src/content/artistes
+    create: true
+    delete: true
+    format: frontmatter
+    extension: md
+    sortable_fields: [sort_order, name]
+    slug: '{{slug}}'
+    media_folder: ../../assets/img
+    public_folder: ../../assets/img
+    preview_path: artiste/{{slug}}
+    fields:
+      - { label: 'Nom de l''artiste', name: name, widget: string }
+      - {
+          label: 'Sous-titre du hero',
+          name: subtitle,
+          widget: string,
+          required: false,
+          hint: 'Ex: Peinture, Céramiste, Artiste multidisciplinaire…',
+        }
+      - {
+          label: 'Description SEO',
+          name: description,
+          widget: text,
+          required: false,
+          hint: 'Meta-description pour le référencement (optionnel)',
+        }
+      - { label: 'Image hero', name: hero_image, widget: image }
+      - { label: 'Texte alternatif du hero', name: hero_alt, widget: string, required: false }
+      - {
+          label: 'Ordre d''apparition dans la nav',
+          name: sort_order,
+          widget: number,
+          required: false,
+          default: 999,
+          hint: 'Plus petit = affiché en premier. Laisser à 999 pour un tri alphabétique.',
+        }
+
+      - {
+          label: 'Citation — texte',
+          name: quote_text,
+          widget: text,
+          required: false,
+          hint: 'Citation affichée sous le hero (optionnelle)',
+        }
+      - {
+          label: 'Citation — auteur',
+          name: quote_author,
+          widget: string,
+          required: false,
+        }
+
+      # Sections : c'est le cœur de la page
+      - label: 'Sections de la page'
+        name: sections
+        widget: list
+        required: false
+        label_singular: 'Section'
+        summary: '{{fields.tab_label}}{{fields.section_title}} ({{fields.artworks | length}} œuvre(s))'
+        hint: |
+          Une section = un bloc de contenu sur la page de l'artiste.
+          Si vous renseignez "Libellé d'onglet", la section devient un onglet en haut de page.
+          Si TOUTES les sections ont un libellé d'onglet, une barre d'onglets apparaît.
+          Sinon, les sections sont simplement empilées.
+        fields:
+          - {
+              label: 'Libellé d''onglet (laisser vide pour ne pas créer d''onglet)',
+              name: tab_label,
+              widget: string,
+              required: false,
+              hint: 'Si toutes les sections ont un libellé, des onglets s''affichent. Le premier onglet de la liste est l''onglet actif par défaut — réordonnez les sections par glisser-déposer pour changer cela.',
+            }
+          - {
+              label: 'Titre de section (optionnel)',
+              name: section_title,
+              widget: string,
+              required: false,
+              hint: 'Titre affiché en haut de la section, centré.',
+            }
+          - {
+              label: 'Image d''intro (optionnel)',
+              name: intro_image,
+              widget: image,
+              required: false,
+              hint: 'Image affichée en haut de la section (avant les œuvres).',
+            }
+          - {
+              label: 'Alt de l''image d''intro',
+              name: intro_image_alt,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: 'Sous-titre d''intro',
+              name: intro_subtitle,
+              widget: string,
+              required: false,
+              hint: 'Titre en italique au-dessus du texte d''intro.',
+            }
+          - {
+              label: 'Texte d''intro (Markdown)',
+              name: intro_text,
+              widget: markdown,
+              required: false,
+              hint: 'Texte introductif. Vous pouvez utiliser du Markdown (italique, gras, liens, paragraphes).',
+            }
+          - {
+              label: 'Libellé du bouton CTA (optionnel)',
+              name: cta_label,
+              widget: string,
+              required: false,
+              hint: 'Ex: « Acheter ce livre », « Nous contacter »…',
+            }
+          - {
+              label: 'URL du bouton CTA',
+              name: cta_url,
+              widget: string,
+              required: false,
+              default: '/contact',
+            }
+
+          - label: 'Œuvres de cette section'
+            name: artworks
+            widget: list
+            required: false
+            label_singular: 'Œuvre'
+            summary: '{{fields.title}} — {{fields.reference}}'
+            fields:
+              - {
+                  label: 'Disposition',
+                  name: layout,
+                  widget: select,
+                  default: 'alternating',
+                  options:
+                    [
+                      { label: 'Image à côté du texte (alternance auto)', value: 'alternating' },
+                      { label: 'Image pleine largeur', value: 'full' },
+                      { label: 'Vignette dans une grille', value: 'grid' },
+                    ],
+                  hint: 'Les œuvres "Vignette dans une grille" consécutives sont regroupées dans une même grille.',
+                }
+              - { label: 'Image', name: image, widget: image }
+              - { label: 'Texte alternatif de l''image', name: alt, widget: string }
+              - { label: 'Titre', name: title, widget: string }
+              - { label: 'Année', name: year, widget: string, required: false }
+              - { label: 'Technique', name: technique, widget: string, required: false }
+              - { label: 'Dimensions', name: dimensions, widget: string, required: false }
+              - { label: 'Référence', name: reference, widget: string, required: false }
+              - {
+                  label: 'Format',
+                  name: format,
+                  widget: select,
+                  required: false,
+                  default: '',
+                  options:
+                    [
+                      { label: '— Aucun —', value: '' },
+                      { label: 'Très Grand Format', value: 'Très Grand Format' },
+                      { label: 'Grand Format', value: 'Grand Format' },
+                      { label: 'Moyen Format', value: 'Moyen Format' },
+                      { label: 'Petit Format', value: 'Petit Format' },
+                    ],
+                }
+              - { label: 'Prix', name: price, widget: string, required: false }
+              - {
+                  label: 'URL du bouton contact',
+                  name: contact_url,
+                  widget: string,
+                  required: false,
+                  default: '/contact',
+                }
+              - label: 'Images de détail (optionnel)'
+                name: details
+                widget: list
+                required: false
+                label_singular: 'Détail'
+                summary: '{{fields.alt}}'
+                hint: 'Vues supplémentaires affichées sous forme de vignettes (cliquables → lightbox).'
+                fields:
+                  - { label: 'Image', name: image, widget: image }
+                  - { label: 'Texte alternatif', name: alt, widget: string, required: false }

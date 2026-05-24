@@ -1,23 +1,20 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import logo from '../assets/img/logo.webp';
 
-interface ArtistePage {
-  url: string;
-  title?: string;
-}
-
-const modules = import.meta.glob<ArtistePage>('../pages/artiste/*.astro');
-
-const artistPages = await Promise.all(Object.values(modules).map((loader) => loader()));
-
-const artists = artistPages
-  .map((page) => {
-    const slug = page.url.split('/').filter(Boolean).pop() ?? '';
-    const name = page.title ?? slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
-    return { url: page.url, name };
-  })
-  .sort((a, b) => a.name.localeCompare(b.name));
+// Liste des artistes depuis la collection : triée par sort_order ASC,
+// puis par nom alphabétiquement. sort_order par défaut = 999 → tri alphabétique.
+const artists = (await getCollection('artistes'))
+  .map((entry) => ({
+    url: `/artiste/${entry.id}`,
+    name: entry.data.name,
+    sortOrder: entry.data.sort_order,
+  }))
+  .sort((a, b) => {
+    if (a.sortOrder !== b.sortOrder) return a.sortOrder - b.sortOrder;
+    return a.name.localeCompare(b.name);
+  });
 ---
 
 <nav class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-sm">
@@ -32,8 +29,8 @@ const artists = artistPages
 
       <!-- Desktop links -->
       <div class="hidden md:flex md:items-center md:space-x-6">
-        <!-- Dropdown Artistes -->
         <a href="/expositions" class="text-gray-700 hover:text-gray-900">Expositions</a>
+        <!-- Dropdown Artistes -->
         <div class="relative">
           <button id="dropdown-toggle" class="text-gray-700 hover:text-gray-900 flex items-center gap-1">
             Artistes

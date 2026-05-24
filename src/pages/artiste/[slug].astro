@@ -1,0 +1,213 @@
+---
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroBanner from '../../components/HeroBanner.astro';
+import Citation from '../../components/Citation.astro';
+import TabNav from '../../components/TabNav.astro';
+import ArtworkCard from '../../components/ArtworkCard.astro';
+import ArtworkCardFull from '../../components/ArtworkCardFull.astro';
+import ArtworkGridCard from '../../components/ArtworkGridCard.astro';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const artistes = await getCollection('artistes');
+  return artistes.map((artiste) => ({
+    params: { slug: artiste.id },
+    props: { artiste },
+  }));
+}
+
+const { artiste } = Astro.props;
+const { data } = artiste;
+
+// ── Onglets ────────────────────────────────────────────────────
+// Une section devient un onglet si elle a un `tab_label` non vide.
+// Si TOUTES les sections ont un tab_label → on affiche la TabNav.
+const sectionsWithTab = data.sections.filter((s) => s.tab_label);
+const hasTabs = sectionsWithTab.length > 0 && sectionsWithTab.length === data.sections.length;
+
+// Slugifie un libellé pour en faire une clé d'onglet stable
+const slugify = (str: string) =>
+  str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+const tabs = hasTabs
+  ? data.sections.map((s) => ({ label: s.tab_label, key: slugify(s.tab_label) }))
+  : [];
+
+const groupId = `art-${artiste.id}`;
+// L'onglet actif par défaut = le PREMIER onglet de la liste.
+// Pour le changer, l'éditeur réordonne les sections (drag-and-drop dans Sveltia).
+const defaultKey = hasTabs ? slugify(data.sections[0].tab_label) : '';
+
+// ── Helper : regroupe les œuvres consécutives de layout 'grid' ─
+// Renvoie une liste d'items : soit une œuvre seule, soit un groupe d'œuvres grid.
+type Artwork = (typeof data.sections)[number]['artworks'][number];
+type RenderItem =
+  | { kind: 'single'; artwork: Artwork; alternatingIndex: number }
+  | { kind: 'gridGroup'; artworks: Artwork[] };
+
+function buildRenderItems(artworks: Artwork[]): RenderItem[] {
+  const items: RenderItem[] = [];
+  let gridBuffer: Artwork[] = [];
+  let alternatingIndex = 0;
+
+  const flushGrid = () => {
+    if (gridBuffer.length) {
+      items.push({ kind: 'gridGroup', artworks: gridBuffer });
+      gridBuffer = [];
+    }
+  };
+
+  for (const art of artworks) {
+    if (art.layout === 'grid') {
+      gridBuffer.push(art);
+    } else {
+      flushGrid();
+      items.push({
+        kind: 'single',
+        artwork: art,
+        alternatingIndex: art.layout === 'alternating' ? alternatingIndex++ : 0,
+      });
+    }
+  }
+  flushGrid();
+  return items;
+}
+
+// Pré-calcule les items pour chaque section
+const renderedSections = data.sections.map((section) => ({
+  ...section,
+  tabKey: section.tab_label ? slugify(section.tab_label) : '',
+  introHtml: section.intro_text ? marked.parse(section.intro_text) : '',
+  items: buildRenderItems(section.artworks),
+}));
+---
+
+<BaseLayout title={data.name} description={data.description}>
+  <HeroBanner
+    image={data.hero_image}
+    alt={data.hero_alt || `Portrait de ${data.name}`}
+    title={data.name}
+    subtitle={data.subtitle}
+  />
+
+  {data.quote_text && <Citation text={data.quote_text} author={data.quote_author} />}
+
+  {hasTabs && <TabNav tabs={tabs} defaultKey={defaultKey} groupId={groupId} />}
+
+  {
+    renderedSections.map((section) => (
+      <section
+        data-tab-panel={hasTabs ? section.tabKey : undefined}
+        data-tab-group={hasTabs ? groupId : undefined}
+        class:list={[hasTabs && section.tabKey !== defaultKey ? 'hidden' : '']}>
+        <hr class="mx-5 lg:mx-32 border-t border-gray-200 mt-0" />
+
+        {section.section_title && (
+          <p class="text-center mx-13 mt-10">
+            <span class="text-4xl">{section.section_title}</span>
+          </p>
+        )}
+
+        {(section.intro_image || section.introHtml || section.intro_subtitle) && (
+          <div class="m-5 lg:m-13">
+            {section.intro_image && (
+              <Image
+                src={section.intro_image}
+                alt={section.intro_image_alt || section.intro_subtitle || data.name}
+                format="webp"
+                widths={[320, 480, 768, 1024, 1280, 1600, 1920]}
+                sizes="(max-width: 600px) 40vw, (max-width: 1200px) 50vw, 33vw"
+                layout="constrained"
+                width={section.intro_image.width}
+                height={section.intro_image.height}
+                quality={60}
+                class="w-full h-auto"
+              />
+            )}
+
+            {(section.intro_subtitle || section.introHtml || section.cta_label) && (
+              <div class="w-full p-8">
+                {section.intro_subtitle && (
+                  <h2 class="text-3xl pb-3 italic">{section.intro_subtitle}</h2>
+                )}
+                {section.introHtml && (
+                  <div class="prose prose-lg max-w-none" set:html={section.introHtml} />
+                )}
+                {section.cta_label && (
+                  <a
+                    href={section.cta_url || '/contact'}
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-200 rounded-lg mt-5 hover:bg-zinc-300">
+                    {section.cta_label} <span class="text-lg">→</span>
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {section.items.length > 0 && (
+          <hr class="mx-5 lg:mx-32 border-t border-gray-300 mt-5" />
+        )}
+
+        {section.items.map((item) =>
+          item.kind === 'gridGroup' ? (
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-8">
+              {item.artworks.map((art) => (
+                <ArtworkGridCard
+                  image={art.image}
+                  alt={art.alt}
+                  title={art.title}
+                  year={art.year}
+                  technique={art.technique}
+                  dimensions={art.dimensions}
+                  reference={art.reference}
+                  format={art.format}
+                  price={art.price}
+                  contactUrl={art.contact_url}
+                />
+              ))}
+            </div>
+          ) : item.artwork.layout === 'full' ? (
+            <ArtworkCardFull
+              image={item.artwork.image}
+              alt={item.artwork.alt}
+              title={item.artwork.title}
+              year={item.artwork.year}
+              technique={item.artwork.technique}
+              dimensions={item.artwork.dimensions}
+              reference={item.artwork.reference}
+              format={item.artwork.format}
+              price={item.artwork.price}
+              contactUrl={item.artwork.contact_url}
+              details={item.artwork.details.map((d) => d.image)}
+              detailsAlt={item.artwork.details.map((d) => d.alt)}
+            />
+          ) : (
+            <ArtworkCard
+              image={item.artwork.image}
+              alt={item.artwork.alt}
+              title={item.artwork.title}
+              year={item.artwork.year}
+              technique={item.artwork.technique}
+              dimensions={item.artwork.dimensions}
+              reference={item.artwork.reference}
+              format={item.artwork.format}
+              price={item.artwork.price}
+              contactUrl={item.artwork.contact_url}
+              reverse={item.alternatingIndex % 2 === 1}
+              details={item.artwork.details.map((d) => d.image)}
+              detailsAlt={item.artwork.details.map((d) => d.alt)}
+            />
+          ),
+        )}
+      </section>
+    ))
+  }
+</BaseLayout>
