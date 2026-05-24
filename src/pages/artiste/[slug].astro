@@ -107,7 +107,7 @@ const renderedSections = data.sections.map((section) => ({
         data-tab-panel={hasTabs ? section.tabKey : undefined}
         data-tab-group={hasTabs ? groupId : undefined}
         class:list={[hasTabs && section.tabKey !== defaultKey ? 'hidden' : '']}>
-        <hr class="mx-5 lg:mx-32 border-t border-gray-200 mt-0" />
+        
 
         {section.section_title && (
           <p class="text-center mx-13 mt-10">
@@ -152,9 +152,7 @@ const renderedSections = data.sections.map((section) => ({
           </div>
         )}
 
-        {section.items.length > 0 && (
-          <hr class="mx-5 lg:mx-32 border-t border-gray-300 mt-5" />
-        )}
+
 
         {section.items.map((item) =>
           item.kind === 'gridGroup' ? (
