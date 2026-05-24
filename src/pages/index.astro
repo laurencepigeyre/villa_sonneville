@@ -1,11 +1,21 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroBanner from '../components/HeroBanner.astro';
-import heroImg from '../assets/img/HD-H_DSC9840-Villa-Sonneville-Vue-.jpeg';
 import EventBlock from '../components/EventBlock.astro';
-import imgC15 from '../assets/img/Junliang-MA-C15-Ma-Memoire-n18.jpg';
-import remue from '../assets/img/CB-menine-hero Grande.jpeg';
+import heroImg from '../assets/img/HD-H_DSC9840-Villa-Sonneville-Vue-.jpeg';
+
 const title = 'Accueil';
+
+// On ne récupère que les expositions marquées "à mettre en avant sur la home"
+// via la case à cocher du CMS (champ "featured").
+const featuredExpos = (
+  await getCollection('expositions', ({ data }) => data.featured === true)
+).sort((a, b) => {
+  const dA = a.data.date_debut ? a.data.date_debut.getTime() : 0;
+  const dB = b.data.date_debut ? b.data.date_debut.getTime() : 0;
+  return dB - dA;
+});
 ---
 
 <BaseLayout title={title}>
@@ -16,30 +26,22 @@ const title = 'Accueil';
     alt="Photo de la Villa Sonneville, galerie d'art à Roubaix"
   />
 
-  <EventBlock
-    statut="En cours"
-    reverse={true}
-    image={remue}
-    caption=""
-    date="21 mai 2026 - 19 juil. 2026"
-    title="Remue-Ménines"
-    subtitle="Christophe Boulanger"
-    category="PEINTURE"
-    description={`Pari espiègle avec Remue-Ménines : Christophe Boulanger s'attaque à l'un des monuments de l'histoire de l'art, Les Ménines de Velázquez (1656). Loin de toute révérence intimidée, l'artiste saisit l'Infante Marguerite-Thérèse par la main pour la libérer de sa crinoline et de ses conventions. Grisailles éclaboussées de couleurs, motifs-prisons, toiles-fleurs explosives : une ode joyeuse à l'enfance, à la couleur et à la liberté.`}
-    link="/artiste/christophe-boulanger"
-    linkLabel="Découvrir les œuvres"
-  />
-  <EventBlock
-    statut="En cours"
-    reverse={false}
-    image={imgC15}
-    caption=""
-    date="21 mai 2026 - 19 juil. 2026"
-    title="Moments suspendus"
-    subtitle="Junliang MA"
-    category="CERAMIQUE"
-    description={`Et si la beauté naissait de la déchirure ? Junliang MA, céramiste chinois installé à Strasbourg, tourne ses pièces avant de les fragmenter pour mieux les recomposer. Du Pic Camouflé aux sculptures de La Déchirure, ses œuvres en grès et porcelaine portent les traces de leur métamorphose, dans une palette d'émaux qui prolonge la tradition millénaire du céladon.`}
-    link="/artiste/junliang-ma"
-    linkLabel="Découvrir les œuvres"
-  />
+  {
+    featuredExpos.map((expo, i) => (
+      <EventBlock
+        statut={expo.data.statut}
+        reverse={i % 2 === 1}
+        image={expo.data.image}
+        caption={expo.data.caption}
+        date={expo.data.date}
+        title={expo.data.title}
+        subtitle={expo.data.subtitle}
+        category={expo.data.category}
+        description={expo.data.description}
+        link={expo.data.link}
+        linkLabel={expo.data.linkLabel}
+        target_blank={expo.data.target_blank}
+      />
+    ))
+  }
 </BaseLayout>

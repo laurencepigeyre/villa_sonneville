@@ -1,0 +1,121 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: olam/villasonneville
+  branch: main
+  # Avec un Personal Access Token, l'utilisateur cliquera sur
+  # "Sign In with Token" sur l'écran de connexion (aucune config OAuth nécessaire).
+
+# Dossier média GLOBAL (fallback, peu utilisé ici car on définit
+# media_folder/public_folder au niveau de chaque collection).
+media_folder: src/assets/img
+public_folder: /src/assets/img
+
+# Workflow simple : publication directe (pas de brouillons en PR).
+publish_mode: simple
+
+# Affichage en français dans l'interface.
+locale: fr
+
+collections:
+  - name: expositions
+    label: Expositions
+    label_singular: Exposition
+    folder: src/content/expositions
+    create: true
+    delete: true
+    # Format des fichiers : Markdown avec frontmatter YAML.
+    format: frontmatter
+    extension: md
+    # Tri par défaut dans l'admin : par date de début, descendant.
+    sortable_fields: [date_debut, title, statut]
+    # Slug auto-généré à partir du titre.
+    slug: '{{slug}}'
+    # Chemin du média RELATIF AU FICHIER : Sveltia écrira par exemple
+    # ../../assets/img/mon-image.jpg dans le frontmatter, ce qui est
+    # exactement ce qu'attend le helper image() d'Astro Content Collections.
+    media_folder: ../../assets/img
+    public_folder: ../../assets/img
+    # Aperçu dans l'admin (URL relative du site déployé).
+    preview_path: expositions
+    fields:
+      - { label: 'Titre', name: title, widget: string }
+      - { label: 'Sous-titre (artiste)', name: subtitle, widget: string, required: false }
+      - {
+          label: 'Statut',
+          name: statut,
+          widget: select,
+          options: ['En cours', 'À venir', 'Passée'],
+          default: 'En cours',
+        }
+      - {
+          label: 'Catégorie',
+          name: category,
+          widget: string,
+          required: false,
+          hint: 'Ex: PEINTURE, CÉRAMIQUE, DESSIN, LIVRE D''ART…',
+        }
+      - {
+          label: 'Date affichée',
+          name: date,
+          widget: string,
+          hint: 'Ex: 21 mai 2026 - 19 juil. 2026',
+        }
+      - {
+          label: 'Date de début',
+          name: date_debut,
+          widget: datetime,
+          date_format: 'YYYY-MM-DD',
+          time_format: false,
+          format: 'YYYY-MM-DD',
+          hint: 'Sert au tri chronologique (n''apparaît pas sur le site)',
+        }
+      - {
+          label: 'Image principale',
+          name: image,
+          widget: image,
+          choose_url: false,
+          hint: 'L''image sera stockée dans src/assets/img',
+        }
+      - {
+          label: 'Légende de l''image',
+          name: caption,
+          widget: string,
+          required: false,
+        }
+      - {
+          label: 'Description',
+          name: description,
+          widget: text,
+          hint: 'Les sauts de ligne sont préservés à l''affichage.',
+        }
+      - {
+          label: 'Lien (URL ou chemin interne)',
+          name: link,
+          widget: string,
+          required: false,
+          default: '#',
+        }
+      - {
+          label: 'Libellé du lien',
+          name: linkLabel,
+          widget: string,
+          required: false,
+          default: 'Découvrir les œuvres',
+        }
+      - {
+          label: 'Ouvrir le lien dans un nouvel onglet',
+          name: target_blank,
+          widget: boolean,
+          required: false,
+          default: false,
+        }
+      - {
+          label: 'Afficher sur la page d''accueil',
+          name: featured,
+          widget: boolean,
+          required: false,
+          default: false,
+          hint: 'Si coché, l''exposition apparaîtra aussi sur la home.',
+        }
