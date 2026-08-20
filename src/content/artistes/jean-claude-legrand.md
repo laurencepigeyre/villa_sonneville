@@ -2,7 +2,7 @@
 name: Jean-Claude Legrand
 subtitle: Sculpteur, céramiste
 description: ''
-hero_image: ../../assets/img/HD2_DOMUS, oxydes et engobes sur grès, cuissons multiples, 20x24x22cm, photo Anthony Girardi.jpeg
+hero_image: ../../assets/img/jean-claude-legrand-hero-domus.jpeg
 hero_alt: Céramique de Jean-Claude Legrand
 sort_order: 999
 quote_text: |-
@@ -24,7 +24,7 @@ sections:
     cta_url: ''
     artworks:
       - layout: alternating
-        image: ../../assets/img/HD2-07-H-villa-sonneville-jean-claude-legrand_DSC10027.jpeg
+        image: ../../assets/img/jean-claude-legrand-carre-de-terre-c01.jpeg
         alt: 1. Carré de terre, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 1. Carré de terre
         year: '2025'
@@ -33,7 +33,7 @@ sections:
         reference: JCL-C01
         price: 3 200€
       - layout: alternating
-        image: ../../assets/img/HD2-11-H-villa-sonneville-jean-claude-legrand_DSC10072.jpeg
+        image: ../../assets/img/jean-claude-legrand-carre-de-terre-c02.jpeg
         alt: 2. Carré de terre, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 2. Carré de terre
         year: '2025'
@@ -42,7 +42,7 @@ sections:
         reference: JCL-C02
         price: 3 300€
       - layout: alternating
-        image: ../../assets/img/HD2-12-H-villa-sonneville-jean-claude-legrand_DSC10078.jpeg
+        image: ../../assets/img/jean-claude-legrand-carre-de-terre-c03.jpeg
         alt: 3. Carré de terre, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 3. Carré de terre
         year: '2025'
@@ -51,7 +51,7 @@ sections:
         reference: JCL-C03
         price: 3 200€
       - layout: alternating
-        image: ../../assets/img/HD2-06-H-villa-sonneville-jean-claude-legrand_DSC10024.jpeg
+        image: ../../assets/img/jean-claude-legrand-carre-de-terre-c04.jpeg
         alt: 4. Carré de terre, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 4. Carré de terre
         year: '2011'
@@ -60,7 +60,7 @@ sections:
         reference: JCL-C04
         price: 2 400€
       - layout: alternating
-        image: ../../assets/img/HD-JCL-C05-Carre-de-terre_IMG_4394.jpeg
+        image: ../../assets/img/jean-claude-legrand-carre-de-terre-c05.jpeg
         alt: 5. Carré de terre, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 5. Carré de terre
         year: '2025'
@@ -69,7 +69,7 @@ sections:
         reference: JCL-C05
         price: 2 500€
       - layout: alternating
-        image: ../../assets/img/HD2-10-H-villa-sonneville-jean-claude-legrand_DSC10076.jpeg
+        image: ../../assets/img/jean-claude-legrand-contraintes-c06.jpeg
         alt: 6. Contraintes, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 6. Contraintes
         year: '2025'
@@ -78,7 +78,7 @@ sections:
         reference: JCL-C06
         price: 3 600€
       - layout: alternating
-        image: ../../assets/img/HD2-09-H-villa-sonneville-jean-claude-legrand_DSC10031.jpeg
+        image: ../../assets/img/jean-claude-legrand-contraintes-c07.jpeg
         alt: 7. Contraintes, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 7. Contraintes
         year: '2025'
@@ -87,7 +87,7 @@ sections:
         reference: JCL-C07
         price: 2 800€
       - layout: alternating
-        image: ../../assets/img/HD2-13-H-villa-sonneville-jean-claude-legrand_DSC10083.jpeg
+        image: ../../assets/img/jean-claude-legrand-contraintes-c08.jpeg
         alt: 8. Contraintes, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 8. Contraintes
         year: '2025'
@@ -96,7 +96,7 @@ sections:
         reference: JCL-C08
         price: 2 800€
       - layout: alternating
-        image: ../../assets/img/HD2-08-H-villa-sonneville-jean-claude-legrand_DSC10040.jpeg
+        image: ../../assets/img/jean-claude-legrand-contraintes-c09.jpeg
         alt: 9. Contraintes, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 9. Contraintes
         year: '2025'
@@ -105,7 +105,7 @@ sections:
         reference: JCL-C09
         price: 2 800€
       - layout: alternating
-        image: ../../assets/img/HD2-14-V-villa-sonneville-jean-claude-legrand_DSC10088.jpeg
+        image: ../../assets/img/jean-claude-legrand-domus-c10.jpeg
         alt: 10. Domus, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 10. Domus
         year: '2011'
@@ -114,7 +114,7 @@ sections:
         reference: JCL-C10
         price: 3 000€
       - layout: alternating
-        image: ../../assets/img/HD2-03-H-villa-sonneville-jean-claude-legrand_DSC10003.jpeg
+        image: ../../assets/img/jean-claude-legrand-domus-c11.jpeg
         alt: 11. Domus, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 11. Domus
         year: '2021'
@@ -123,7 +123,7 @@ sections:
         reference: JCL-C11
         price: 2 400€
       - layout: alternating
-        image: ../../assets/img/12-DOMUS_IMG_4483.jpeg
+        image: ../../assets/img/jean-claude-legrand-domus-c12.jpeg
         alt: 12. Domus, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 12. Domus
         year: '2021'
@@ -132,7 +132,7 @@ sections:
         reference: JCL-12
         price: 2 300€
       - layout: alternating
-        image: ../../assets/img/HD2-18-V-villa-sonneville-jean-claude-legrand_DSC9998.jpeg
+        image: ../../assets/img/jean-claude-legrand-domus-c13.jpeg
         alt: 13. Domus, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 13. Domus
         year: '2021'
@@ -141,7 +141,7 @@ sections:
         reference: JCL-C13
         price: 2 300€
       - layout: alternating
-        image: ../../assets/img/HD-JCL-C14-Domus-17x20x17.jpeg
+        image: ../../assets/img/jean-claude-legrand-domus-c14.jpeg
         alt: 14. Domus, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 14. Domus
         year: '2020'
@@ -150,7 +150,7 @@ sections:
         reference: JCL-C14
         price: 2 200€
       - layout: alternating
-        image: ../../assets/img/HD-JCL-C15-Domus_IMG_4401.jpeg
+        image: ../../assets/img/jean-claude-legrand-domus-c15.jpeg
         alt: 15. Domus, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 15. Domus
         year: '2021'
@@ -159,7 +159,7 @@ sections:
         reference: JCL-C15
         price: 2 200€
       - layout: alternating
-        image: ../../assets/img/HD2-04-V-villa-sonneville-jean-claude-legrand_DSC10015.jpeg
+        image: ../../assets/img/jean-claude-legrand-couple-c16.jpeg
         alt: 16. Couple, céramique, Jean-Claude Legrand, Villa Sonneville
         title: 16. Couple
         year: '2010'
@@ -168,7 +168,7 @@ sections:
         reference: JCL-C16
         price: 2 400€
       - layout: alternating
-        image: ../../assets/img/IMG_4477.jpeg
+        image: ../../assets/img/jean-claude-legrand-intra-muros-c17.jpeg
         alt: 17. Intra-muros, céramique, Jean-Claude Legrand, Villa Sonneville
         title: 17. Intra-muros
         year: '2024'
@@ -177,7 +177,7 @@ sections:
         reference: JCL-C17
         price: 1 500€
       - layout: alternating
-        image: ../../assets/img/20-FAILLES_IMG_4481.jpeg
+        image: ../../assets/img/jean-claude-legrand-failles-c20.jpeg
         alt: 20. Failles, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 20. Failles
         year: '2023'
@@ -186,7 +186,7 @@ sections:
         reference: JCL-C20
         price: 900€
       - layout: alternating
-        image: ../../assets/img/21-FAILLES_IMG_4479.jpeg
+        image: ../../assets/img/jean-claude-legrand-failles-c21.jpeg
         alt: 21. Failles, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 21. Failles
         year: '2023'
@@ -195,7 +195,7 @@ sections:
         reference: JCL-C21
         price: 900€
       - layout: alternating
-        image: ../../assets/img/HD-JCL-C22-Traces.jpeg
+        image: ../../assets/img/jean-claude-legrand-traces-c22.jpeg
         alt: 22. Traces, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 22. Traces
         year: '2025'
@@ -204,14 +204,14 @@ sections:
         reference: JCL-C22
         price: 1 500€
       - layout: alternating
-        image: ../../assets/img/HD2-15-H-villa-sonneville-jean-claude-legrand_DSC10094.jpeg
+        image: ../../assets/img/jean-claude-legrand-bols-c23.jpeg
         alt: 23. Bols, Céramique, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 23. Bols
         technique: Céladon, porcelaine
         reference: JCL-CBOLS23
         price: 225€ (L'unité)
       - layout: alternating
-        image: ../../assets/img/HD2-02-V-villa-sonneville-jean-claude-legrand_DSC9993.jpeg
+        image: ../../assets/img/jean-claude-legrand-intersections-c24.jpeg
         alt: 24. Intersections, Jean-Claude Legrand, Villa Sonneville, Le Fil Rouge, Roubaix
         title: 24. Intersections
         year: '2025'

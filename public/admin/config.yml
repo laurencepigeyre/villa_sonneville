@@ -12,6 +12,12 @@ public_folder: /src/assets/img
 
 publish_mode: simple
 locale: fr
+logo:
+  src: /android-chrome-512x512.png
+  show_in_header: true
+
+app_title: Villa Sonneville Admin
+
 
 collections:
   # ═══════════════════════════════════════════════════════════
@@ -19,6 +25,7 @@ collections:
   # ═══════════════════════════════════════════════════════════
   - name: expositions
     label: Expositions
+    icon: slide_library
     label_singular: Exposition
     folder: src/content/expositions
     create: true
@@ -111,6 +118,7 @@ collections:
   # ═══════════════════════════════════════════════════════════
   - name: artistes
     label: Artistes
+    icon : person
     label_singular: Artiste
     folder: src/content/artistes
     create: true

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { marked } from 'marked';
+marked.setOptions({ breaks: true });
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroBanner from '../../components/HeroBanner.astro';
 import Citation from '../../components/Citation.astro';
@@ -36,9 +37,7 @@ const slugify = (str: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 
-const tabs = hasTabs
-  ? data.sections.map((s) => ({ label: s.tab_label, key: slugify(s.tab_label) }))
-  : [];
+const tabs = hasTabs ? data.sections.map((s) => ({ label: s.tab_label, key: slugify(s.tab_label) })) : [];
 
 const groupId = `art-${artiste.id}`;
 // L'onglet actif par défaut = le PREMIER onglet de la liste.
@@ -107,8 +106,6 @@ const renderedSections = data.sections.map((section) => ({
         data-tab-panel={hasTabs ? section.tabKey : undefined}
         data-tab-group={hasTabs ? groupId : undefined}
         class:list={[hasTabs && section.tabKey !== defaultKey ? 'hidden' : '']}>
-        
-
         {section.section_title && (
           <p class="text-center mx-13 mt-10">
             <span class="text-4xl">{section.section_title}</span>
@@ -123,23 +120,19 @@ const renderedSections = data.sections.map((section) => ({
                 alt={section.intro_image_alt || section.intro_subtitle || data.name}
                 format="webp"
                 widths={[320, 480, 768, 1024, 1280, 1600, 1920]}
-                sizes="(max-width: 600px) 40vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="(max-width: 1024px) 90vw, 1600px"
                 layout="constrained"
                 width={section.intro_image.width}
                 height={section.intro_image.height}
-                quality={60}
+                quality={80}
                 class="w-full h-auto"
               />
             )}
 
             {(section.intro_subtitle || section.introHtml || section.cta_label) && (
               <div class="w-full p-8">
-                {section.intro_subtitle && (
-                  <h2 class="text-3xl pb-3 italic">{section.intro_subtitle}</h2>
-                )}
-                {section.introHtml && (
-                  <div class="prose prose-lg max-w-none" set:html={section.introHtml} />
-                )}
+                {section.intro_subtitle && <h2 class="text-3xl pb-3 italic">{section.intro_subtitle}</h2>}
+                {section.introHtml && <div class="prose prose-lg max-w-none [&_p]:mb-4" set:html={section.introHtml} />}
                 {section.cta_label && (
                   <a
                     href={section.cta_url || '/contact'}
@@ -151,8 +144,6 @@ const renderedSections = data.sections.map((section) => ({
             )}
           </div>
         )}
-
-
 
         {section.items.map((item) =>
           item.kind === 'gridGroup' ? (

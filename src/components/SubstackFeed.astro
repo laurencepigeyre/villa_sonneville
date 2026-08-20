@@ -1,0 +1,92 @@
+---
+interface Props {
+  url: string;
+  count?: number;
+}
+const { url, count = 5 } = Astro.props;
+---
+
+<section class="substack-feed m-5" data-url={url} data-count={count}>
+  <div class="grid gap-4" data-feed-list>
+    {/* Skeleton de chargement */}
+    {
+      Array.from({ length: count }).map(() => (
+        <div class="card card-side bg-base-100 shadow-sm">
+          <div class="skeleton w-24 h-24 shrink-0 rounded-lg m-4" />
+          <div class="card-body gap-2">
+            <div class="skeleton h-4 w-2/3" />
+            <div class="skeleton h-3 w-full" />
+            <div class="skeleton h-3 w-5/6" />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  type Article = {
+    title: string;
+    link: string;
+    excerpt: string;
+    image: string | null;
+    pubDate: string | null;
+  };
+
+  const esc = (s: string) => {
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  };
+
+  const fmtDate = (iso: string | null) => {
+    if (!iso) return '';
+    const d = new Date(iso);
+    return isNaN(d.getTime()) ? '' : d.toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' });
+  };
+
+  async function initFeed(root: HTMLElement) {
+    const list = root.querySelector<HTMLElement>('[data-feed-list]')!;
+    const url = root.dataset.url!;
+    const count = root.dataset.count || '5';
+
+    try {
+      const res = await fetch(`/api/substack-feed?url=${encodeURIComponent(url)}&count=${count}`);
+      const data = await res.json();
+      const articles: Article[] = data.articles || [];
+
+      if (!articles.length) {
+        list.innerHTML = `<div class="alert">Aucun article trouvé.</div>`;
+        return;
+      }
+
+      list.innerHTML = articles
+        .map(
+          (a) => `
+        <a href="${esc(a.link)}" target="_blank" rel="noopener noreferrer"
+           class="card card-side bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+          ${
+            a.image
+              ? `
+            <figure class="shrink-0 p-4">
+              <img src="${esc(a.image)}" alt="${esc(a.title)}" loading="lazy"
+                   class="w-24 h-24 object-cover rounded-lg" />
+            </figure>`
+              : ``
+          }
+          <div class="card-body gap-1">
+            <h3 class="card-title text-base">${esc(a.title)}</h3>
+            ${a.pubDate ? `<time class="text-xs opacity-60">${fmtDate(a.pubDate)}</time>` : ``}
+            <p class="text-sm opacity-80 line-clamp-2">${esc(a.excerpt)}</p>
+          </div>
+        </a>
+      `,
+        )
+        .join('');
+    } catch {
+      list.innerHTML = `<div class="alert alert-error">Impossible de charger les articles.</div>`;
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('.substack-feed').forEach(initFeed);
+</script>

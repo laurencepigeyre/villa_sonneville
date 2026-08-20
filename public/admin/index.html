@@ -1,12 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Villa Sonneville — Admin</title>
-  </head>
-  <body>
-    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
-  </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/ico" href="/favicon.ico" />
+<link rel="alternate icon" href="/favicon.ico" />
+<title>Villa Sonneville — Admin</title>
+</head>
+<body>
+<script>
+  function loadScript(src, onFail) {
+    const script = document.createElement('script');
+    script.src = src;
+    if (onFail) script.onerror = onFail;
+    document.body.appendChild(script);
+  }
+
+  loadScript(
+    "https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js",
+    function () {
+      console.warn("unpkg indisponible, chargement de la version locale de Sveltia CMS");
+      loadScript("/admin/sveltia-cms.js");
+    }
+  );
+</script>
+</body>
 </html>

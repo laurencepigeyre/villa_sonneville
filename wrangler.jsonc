@@ -1,0 +1,7 @@
+{
+  "name": "villa-sonneville",
+  "compatibility_date": "2026-07-09",
+  "assets": {
+    "directory": "./dist"
+  }
+}

@@ -51,10 +51,21 @@ const artists = (await getCollection('artistes'))
             }
           </div>
         </div>
+        <a href="/collection-permanente" class="text-gray-700 hover:text-gray-900">Collection permanente</a>
         <a href="/about" class="text-gray-700 hover:text-gray-900">À propos</a>
         <a href="/contact" class="text-gray-700 hover:text-gray-900">Contact</a>
+        
+        <!-- <a
+          href="https://koalendar.com/e/visite-sur-rendez-vous"
+          data-koalendar-widget
+          data-koa-type="link"
+          class="text-gray-700 hover:text-gray-900"
+          style="text-decoration: none; font-family: inherit; font-size: inherit; font-weight: inherit; line-height: inherit;">
+          Visite sur rdv
+        </a> -->
+
         <a href="https://www.villasonneville.com/fr" class="text-gray-700 hover:text-gray-900">Chambres d'hôtes</a>
-        <a href="https://uh5.fr/" class="text-gray-700 hover:text-gray-900">UH5</a>
+        <!-- <a href="https://uh5.fr/" class="text-gray-700 hover:text-gray-900">UH5</a> -->
       </div>
 
       <!-- Mobile burger -->
@@ -118,6 +129,15 @@ const artists = (await getCollection('artistes'))
       <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
         Contact
       </a>
+      <!-- <a
+        href="https://koalendar.com/e/visite-sur-rendez-vous"
+        data-koalendar-widget
+        data-koa-type="link"
+        class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+        style="text-decoration: none; font-family: inherit; font-size: 1rem; font-weight: 500; line-height: 1.5rem;">
+        Visite sur rdv
+      </a> -->
+
       <a
         href="https://www.villasonneville.com/fr"
         class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
@@ -131,3 +151,19 @@ const artists = (await getCollection('artistes'))
     </div>
   </div>
 </nav>
+
+<!-- Koalendar Link Widget
+<script is:inline>
+  window.Koalendar =
+    window.Koalendar ||
+    function () {
+      (Koalendar.props = Koalendar.props || []).push(arguments);
+    };
+  if (!document.querySelector('script[src^="https://koalendar.com/assets/widget.js"]')) {
+    var koaScript = document.createElement('script');
+    koaScript.async = true;
+    koaScript.src = 'https://koalendar.com/assets/widget.js';
+    document.head.appendChild(koaScript);
+  }
+  Koalendar('init');
+</script> -->

@@ -2,7 +2,7 @@
 name: Junliang Ma
 subtitle: Céramiste
 description: 'Découvrez les œuvres de Junliang Ma, céramiste contemporain mêlant tradition chinoise et innovation, à la Villa Sonneville : sculptures en grès et porcelaine aux émaux variés, explorant la frontière entre fragment et totalité.'
-hero_image: ../../assets/img/hero-junliangma.jpg
+hero_image: ../../assets/img/junliang-ma-portrait.jpg
 hero_alt: Portrait de Junliang Ma
 sort_order: 999
 quote_text: Mon approche a été de me familiariser avec la céramique traditionnelle chinoise tout d'abord par la maîtrise de ses techniques. Par ce travail, j'ai acquis la capacité d'entendre la parole de ce matériau.
@@ -17,7 +17,7 @@ sections:
     cta_url: ''
     artworks:
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C01-Pic-Camoufle-n3.jpg
+        image: ../../assets/img/junliang-ma-pic-camoufle-n3.jpg
         alt: Pic Camouflé n°3, Junliang Ma, Grès noir
         title: Pic Camouflé n°3
         year: ''
@@ -26,7 +26,7 @@ sections:
         reference: JM-C01
         price: 500 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C02-Pic-Camoufle-n8.jpg
+        image: ../../assets/img/junliang-ma-pic-camoufle-n8.jpg
         alt: Pic Camouflé n°8, Junliang Ma, Grès noir
         title: Pic Camouflé n°8
         technique: Grès noir
@@ -34,7 +34,7 @@ sections:
         reference: JM-C02
         price: 500 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C03-Pic-Camoufle-n9.jpg
+        image: ../../assets/img/junliang-ma-pic-camoufle-n9.jpg
         alt: Pic Camouflé n°9, Junliang Ma, Grès noir
         title: Pic Camouflé n°9
         technique: Grès noir
@@ -42,7 +42,7 @@ sections:
         reference: JM-C03
         price: 600 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C04-Jardin-n1.jpg
+        image: ../../assets/img/junliang-ma-jardin-n1.jpg
         alt: Jardin n°1, Junliang Ma, Grès noir
         title: Jardin n°1
         technique: Grès noir
@@ -50,7 +50,7 @@ sections:
         reference: JM-C04
         price: 1 500 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C05-Une-Chute-de-1m70-n1.jpg
+        image: ../../assets/img/junliang-ma-une-chute-1m70-n1.jpg
         alt: Une Chute de 1,7 m n°1, Junliang Ma, Grès et porcelaine
         title: Une Chute de 1,7 m n°1
         technique: Grès, porcelaine
@@ -58,7 +58,7 @@ sections:
         reference: JM-C05
         price: 1 200 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C06-Une-Chute-de-1m70-n2.jpg
+        image: ../../assets/img/junliang-ma-une-chute-1m70-n2.jpg
         alt: Une Chute de 1,7 m n°2, Junliang Ma, Grès et porcelaine
         title: Une Chute de 1,7 m n°2
         technique: Grès, porcelaine
@@ -66,7 +66,7 @@ sections:
         reference: JM-C06
         price: 1 200 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C07-La-Dechirure-2025-n3.jpg
+        image: ../../assets/img/junliang-ma-la-dechirure-2025-n3.jpg
         alt: La Déchirure en 2025 n°3, Junliang Ma, Grès et porcelaine
         title: La Déchirure en 2025 n°3
         year: '2025'
@@ -76,7 +76,7 @@ sections:
         price: Vendue
         contact_url: ''
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C08-La-Dechirure-2026-n7.jpg
+        image: ../../assets/img/junliang-ma-la-dechirure-2026-n7.jpg
         alt: La Déchirure en 2026 n°7, Junliang Ma, Grès et porcelaine
         title: La Déchirure en 2026 n°7
         year: '2026'
@@ -85,7 +85,7 @@ sections:
         reference: JM-C08
         price: 1 500 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C09-La-Dechirure-2026-n1.jpg
+        image: ../../assets/img/junliang-ma-la-dechirure-2026-n1.jpg
         alt: La Déchirure en 2026 n°1, Junliang Ma, Grès, porcelaine et plâtre
         title: La Déchirure en 2026 n°1
         year: '2026'
@@ -94,7 +94,7 @@ sections:
         reference: JM-C09
         price: 1 500 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C10-La-Dechirure-2026-n2.jpg
+        image: ../../assets/img/junliang-ma-la-dechirure-2026-n2.jpg
         alt: La Déchirure en 2026 n°2, Junliang Ma, Grès et porcelaine
         title: La Déchirure en 2026 n°2
         year: '2026'
@@ -103,7 +103,7 @@ sections:
         reference: JM-C10
         price: Vendue
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C11-La-Dechirure-2026-n3.jpg
+        image: ../../assets/img/junliang-ma-la-dechirure-2026-n3.jpg
         alt: La Déchirure en 2026 n°3, Junliang Ma, Grès et porcelaine
         title: La Déchirure en 2026 n°3
         year: '2026'
@@ -112,7 +112,7 @@ sections:
         reference: JM-C11
         price: 1 200 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C12-La-Dechirure-2026-n4.jpg
+        image: ../../assets/img/junliang-ma-la-dechirure-2026-n4.jpg
         alt: La Déchirure en 2026 n°4, Junliang Ma, Grès
         title: La Déchirure en 2026 n°4
         year: '2026'
@@ -121,7 +121,7 @@ sections:
         reference: JM-C12
         price: 1 200 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C13-La-Dechirure-2026-n5.jpg
+        image: ../../assets/img/junliang-ma-la-dechirure-2026-n5.jpg
         alt: La Déchirure en 2026 n°5, Junliang Ma, Grès, porcelaine et plâtre
         title: La Déchirure en 2026 n°5
         year: '2026'
@@ -130,7 +130,7 @@ sections:
         reference: JM-C13
         price: 1 500 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C14-La-Dechirure-2026-n6.jpg
+        image: ../../assets/img/junliang-ma-la-dechirure-2026-n6.jpg
         alt: La Déchirure en 2026 n°6, Junliang Ma, Grès, porcelaine et plâtre
         title: La Déchirure en 2026 n°6
         year: '2026'
@@ -139,7 +139,7 @@ sections:
         reference: JM-C14
         price: Vendue
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C15-Ma-Memoire-n18.jpg
+        image: ../../assets/img/junliang-ma-ma-memoire-n18.jpg
         alt: Ma Mémoire n°18, Junliang Ma, Grès, pièce murale
         title: Ma Mémoire n°18 (pièce murale)
         technique: Grès
@@ -147,7 +147,7 @@ sections:
         reference: JM-C15
         price: 600 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C16-Ma-Memoire-n21.jpg
+        image: ../../assets/img/junliang-ma-ma-memoire-n21.jpg
         alt: Ma Mémoire n°21, Junliang Ma, Porcelaine, pièce murale
         title: Ma Mémoire n°21 (pièce murale)
         technique: Porcelaine
@@ -155,7 +155,7 @@ sections:
         reference: JM-C16
         price: 600 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C17-Coupelle-divers-emaux.jpg
+        image: ../../assets/img/junliang-ma-coupelle-divers-emaux.jpg
         alt: Coupelle en divers émaux, Junliang Ma, Grès et porcelaine
         title: Coupelle en divers émaux
         technique: Grès, porcelaine
@@ -163,7 +163,7 @@ sections:
         reference: JM-C17
         price: 70 €
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C18-Grande-coupe.jpg
+        image: ../../assets/img/junliang-ma-grande-coupe.jpg
         alt: Grande coupe, Junliang Ma, Grès
         title: Grande coupe
         technique: Grès
@@ -171,7 +171,7 @@ sections:
         reference: JM-C18
         price: Vendue
       - layout: alternating
-        image: ../../assets/img/Grande coupe-1.jpg
+        image: ../../assets/img/junliang-ma-grande-coupe-02.jpg
         alt: Grande coupe, Junliang Ma, Grès
         title: Grande coupe
         technique: Grès
@@ -179,7 +179,7 @@ sections:
         reference: JM-C18
         price: Vendue
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C19-Grande-coupe-XL.jpg
+        image: ../../assets/img/junliang-ma-grande-coupe-xl.jpg
         alt: Grande coupe XL, Junliang Ma, Grès
         title: Grande coupe XL
         year: ''
@@ -189,7 +189,7 @@ sections:
         price: Vendue
         contact_url: ''
       - layout: alternating
-        image: ../../assets/img/Grande coupe XL-1.jpg
+        image: ../../assets/img/junliang-ma-grande-coupe-xl-02.jpg
         alt: Grande coupe XL, Junliang Ma, Grès
         title: Grande coupe XL
         year: ''
@@ -199,7 +199,7 @@ sections:
         price: Vendue
         contact_url: ''
       - layout: alternating
-        image: ../../assets/img/Junliang-MA-C20-Petit-vase.jpg
+        image: ../../assets/img/junliang-ma-petit-vase.jpg
         alt: Petit vase, Junliang Ma, Grès et porcelaine
         title: Petit vase
         year: ''

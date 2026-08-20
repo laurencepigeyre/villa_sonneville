@@ -2,7 +2,7 @@
 name: Cédric Carré
 subtitle: Peinture
 description: ''
-hero_image: ../../assets/img/MD-JPG-PORTRAIT-01-HORIZONTAL-CEDRIC_CARRE_3024x2268px-72DPI.webp
+hero_image: ../../assets/img/cedric-carre-portrait.webp
 hero_alt: Portrait de Cédric Carré
 sort_order: 999
 quote_text: "La peinture c'est quelqu'un qui entre chez toi par la fenêtre et qui dit : je t'attendais."
@@ -11,7 +11,7 @@ sections:
   # À fleur
   - artworks:
       - layout: full
-        image: ../../assets/img/23_HDJPG-Villa-Sonneville-Fleurs-05-XXL-Cedric-Carre.jpg
+        image: ../../assets/img/cedric-carre-a-fleur-2020-2024.jpg
         alt: 'À fleur, huile sur toile, Cédric Carré, Villa Sonneville'
         title: À fleur
         year: 2020 - 2024
@@ -20,7 +20,7 @@ sections:
         format: Très Grand Format
         price: 15 000€
       - layout: alternating
-        image: ../../assets/img/10-HD-JPEG-Villa-sonneville-fleur-01-cedric-carre_recadre_DSC10136.webp
+        image: ../../assets/img/cedric-carre-a-fleur-inv355.webp
         alt: 'À fleur, huile sur toile, Cédric Carré, Villa Sonneville'
         title: À fleur
         reference: Inv355
@@ -30,7 +30,7 @@ sections:
         format: Petit Format
         price: 590€
       - layout: alternating
-        image: ../../assets/img/06-A-FLEUR-INV3354-92x73cm-Cedric-Carre-_IMG_8913.jpeg
+        image: ../../assets/img/cedric-carre-a-fleur-inv3342.jpeg
         alt: 'À fleur, huile sur toile, Cédric Carré, Villa Sonneville'
         title: À fleur
         reference: Inv3342
@@ -40,7 +40,7 @@ sections:
         format: Moyen Format
         price: 2 200€
       - layout: alternating
-        image: ../../assets/img/22-HDJPG-Villa-Sonneville-Fleurs-04-Rose-Cedric-Carre-IMG_8203.webp
+        image: ../../assets/img/cedric-carre-a-fleur-inv2679.webp
         alt: 'À fleur, huile sur toile, Cédric Carré, Villa Sonneville'
         title: À fleur
         reference: Inv2679
@@ -50,7 +50,7 @@ sections:
         format: Moyen Format
         price: 2 200€
       - layout: alternating
-        image: ../../assets/img/A-fleur-INV3354-Cedric-Carre_IMG_8277.jpg
+        image: ../../assets/img/cedric-carre-a-fleur-inv3354.jpg
         alt: 'À fleur, huile sur toile, Cédric Carré, Villa Sonneville'
         title: À fleur
         reference: Inv3354
@@ -63,7 +63,7 @@ sections:
   # GRAND STADE
   - artworks:
       - layout: full
-        image: ../../assets/img/18-Img13-Cedric-Carre-Grand-stade-diptyque-Villa-Sonneville.jpeg
+        image: ../../assets/img/cedric-carre-grand-stade-diptyque-noir-inv3845-3846.jpeg
         alt: 'Grand stade dit noir (diptyque), huile sur toile, Cédric Carré, Villa Sonneville'
         title: GRAND STADE (Diptyque noir)
         year: 2023 - 2024
@@ -76,7 +76,7 @@ sections:
   # CARTE
   - artworks:
       - layout: full
-        image: ../../assets/img/19-Carte-Img14-bleu-Villa-Sonneville-cedric-carre_DSC9805.jpeg
+        image: ../../assets/img/cedric-carre-carte-bleue-noire-inv3269.jpeg
         alt: 'CARTE (bleue noire), huile sur toile, Cédric Carré, Villa Sonneville'
         title: CARTE (bleue noire)
         year: 2020 - 2025
@@ -89,7 +89,7 @@ sections:
   # Tour de Babel
   - artworks:
       - layout: full
-        image: ../../assets/img/16-HDJPG-Villa-Sonneville-Fleur-02-Cedric-Carre_DSC9913-2.jpeg
+        image: ../../assets/img/cedric-carre-tour-de-babel-inv2897.jpeg
         alt: 'Tour de Babel, huile sur toile, Cédric Carré, Villa Sonneville'
         title: Tour de Babel
         year: 2011 - 2023
@@ -102,7 +102,7 @@ sections:
   # Bassines (grid + 2 fulls/alt)
   - artworks:
       - layout: grid
-        image: ../../assets/img/01_Villa-sonneville-bassine-01-73x60-Cedric-Carre-recadre-IMG_8183.webp
+        image: ../../assets/img/cedric-carre-paysage-bassine-b01.webp
         alt: 'Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB01'
         title: PAYSAGE (bassine)
         year: 2023 - 2024
@@ -112,7 +112,7 @@ sections:
         format: Moyen Format
         price: 1 800€
       - layout: grid
-        image: ../../assets/img/02_Villa-sonneville-bassine-02-73x60-Cedric-Carre-recadre-IMG_8182.webp
+        image: ../../assets/img/cedric-carre-paysage-bassine-b02.webp
         alt: 'Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB02'
         title: PAYSAGE (bassine)
         year: 2023 - 2024
@@ -122,7 +122,7 @@ sections:
         format: Moyen Format
         price: 1 800€
       - layout: grid
-        image: ../../assets/img/03_Villa-sonneville-bassine-03-73x60-Cedric-Carre-recadre-IMG_8181.webp
+        image: ../../assets/img/cedric-carre-paysage-bassine-b03.webp
         alt: 'Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB03'
         title: PAYSAGE (bassine)
         year: 2023 - 2024
@@ -132,7 +132,7 @@ sections:
         format: Moyen Format
         price: 1 800€
       - layout: grid
-        image: ../../assets/img/04_Villa-sonneville-bassine-04-73x60-Cedric-Carre-recadre-IMG_8180.webp
+        image: ../../assets/img/cedric-carre-paysage-bassine-b04.webp
         alt: 'Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB04'
         title: PAYSAGE (bassine)
         year: 2023 - 2024
@@ -142,7 +142,7 @@ sections:
         format: Moyen Format
         price: 1 800€
       - layout: grid
-        image: ../../assets/img/05_Villa-sonneville-bassine-05-73x60-Cedric-Carre-recadre-IMG_8178.webp
+        image: ../../assets/img/cedric-carre-paysage-bassine-b05.webp
         alt: 'Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB05'
         title: PAYSAGE (bassine)
         year: 2023 - 2024
@@ -152,7 +152,7 @@ sections:
         format: Moyen Format
         price: 1 800€
       - layout: grid
-        image: ../../assets/img/06_Villa-sonneville-bassine-06-73x60-Cedric-Carre-recadre-IMG_8179.webp
+        image: ../../assets/img/cedric-carre-paysage-bassine-b06.webp
         alt: 'Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB06'
         title: PAYSAGE (bassine)
         year: 2023 - 2024
@@ -162,7 +162,7 @@ sections:
         format: Moyen Format
         price: 1 800€
       - layout: grid
-        image: ../../assets/img/07_Villa-sonneville-bassine-07-73x60-Cedric-Carre-recadre-IMG_8179.webp
+        image: ../../assets/img/cedric-carre-paysage-bassine-b07.webp
         alt: 'Paysage (Bassine), Huile sur toile, 73x60cm, Cedric Carre, Villa Sonneville, refB07'
         title: PAYSAGE (bassine)
         year: 2023 - 2024
@@ -172,7 +172,7 @@ sections:
         format: Moyen Format
         price: 1 800€
       - layout: grid
-        image: ../../assets/img/14-HDJPG-Villa-Sonneville-BassineEncadree_Cedric-Carre_DSC9933.webp
+        image: ../../assets/img/cedric-carre-paysage-bassine-encadree-b08.webp
         alt: "Paysage (Bassine), Huile sur toile, encadrement d'art, Cedric Carre, Villa Sonneville, refB08"
         title: PAYSAGE (bassine)
         technique: "Huile sur toile — Encadrement d'art"
@@ -180,7 +180,7 @@ sections:
         format: Moyen Format
         price: 2 100€ (encadrement inclus)
       - layout: grid
-        image: ../../assets/img/17-HDJPG-Villa-Sonneville-Gravure-bassine-01-Cedric-Carre_DSC9926.webp
+        image: ../../assets/img/cedric-carre-gravure-bassine-g01.webp
         alt: 'Gravure Bassine, eau-forte, Cedric Carre, Villa Sonneville, refG01'
         title: PAYSAGE (bassine)
         technique: "Eau-forte papier — Encadrement d'art noyer massif italien — Verre musée anti-reflet"
@@ -188,7 +188,7 @@ sections:
         format: Petit Format
         price: 480€ (avec encadrement)
       - layout: grid
-        image: ../../assets/img/20-HDJPG-Villa-Sonneville-Gravure-Stade-01-Cedric-Carre_DSC9956.webp
+        image: ../../assets/img/cedric-carre-gravure-stade-g02.webp
         alt: 'Gravure Stade, eau-forte, Cedric Carre, Villa Sonneville, refG02'
         title: STADE
         technique: "Eau-forte papier — Encadrement d'art noyer massif italien — Verre musée anti-reflet"
@@ -196,7 +196,7 @@ sections:
         format: Petit Format
         price: 460€ (avec encadrement)
       - layout: full
-        image: ../../assets/img/09-Villa-sonneville-bassine-grande-bassine-01-Inv449-Cedric-Carre.jpg
+        image: ../../assets/img/cedric-carre-paysage-bassine-inv910.jpg
         alt: 'PAYSAGE (Bassine), huile sur toile, Cédric Carré, Villa Sonneville'
         title: PAYSAGE (Bassine)
         year: 2002 - 2008
@@ -206,7 +206,7 @@ sections:
         format: Grand Format
         price: 4 400€
       - layout: alternating
-        image: ../../assets/img/08_villa-sonneville-bassine-grande-bassine-02-195x130-Cedric-Carre-recadre-02DSC9939.jpg
+        image: ../../assets/img/cedric-carre-paysage-bassine-inv449.jpg
         alt: 'PAYSAGE (Bassine), huile sur toile'
         title: PAYSAGE (Bassine)
         year: 2023 - 2024
@@ -219,7 +219,7 @@ sections:
   # Venise
   - artworks:
       - layout: alternating
-        image: ../../assets/img/11-HD-JPEG-Villa-sonneville-Grue-01-Cedric-Carre_recadre_DSC10123.webp
+        image: ../../assets/img/cedric-carre-venise-inv954.webp
         alt: 'Venise, Huile sur toile, Cédric Carré, Villa Sonneville'
         title: VENISE
         year: 2022 - 2025
@@ -229,7 +229,7 @@ sections:
         price: 770€
         format: Petit Format
       - layout: alternating
-        image: ../../assets/img/04-VENISE-INV3190-2020-24-chassis-Cedric-Carre_IMG_8932.jpeg
+        image: ../../assets/img/cedric-carre-venise-inv3190.jpeg
         alt: 'Venise, Huile sur toile, Cédric Carré, Villa Sonneville'
         title: VENISE
         year: 2020-2024
@@ -239,7 +239,7 @@ sections:
         price: 930€
         format: Petit Format
       - layout: alternating
-        image: ../../assets/img/02-VENISE-INV958-02-09-Bois-Cedric-Carre-27x35-Villa-Sonneville_IMG_8925.jpeg
+        image: ../../assets/img/cedric-carre-venise-inv958.jpeg
         alt: 'Venise, Huile sur toile, Cédric Carré, Villa Sonneville'
         title: VENISE
         year: 2002 - 2009
@@ -249,7 +249,7 @@ sections:
         format: Petit Format
         price: 800€
       - layout: alternating
-        image: ../../assets/img/01-VENISE-INV984-2009-chassis-Cedric-Carre-27x35-Villa-Sonneville_IMG_8923.jpeg
+        image: ../../assets/img/cedric-carre-sans-titre-inv984.jpeg
         alt: 'Venise, Huile sur toile, Cédric Carré, Villa Sonneville'
         title: SANS TITRE
         year: '2009'
@@ -259,7 +259,7 @@ sections:
         price: 800€
         format: Petit Format
       - layout: alternating
-        image: ../../assets/img/03-VENISE-INV3727-2022-25-chassis-41x33cm_IMG_8929.jpeg
+        image: ../../assets/img/cedric-carre-venise-inv3727.jpeg
         alt: 'Venise, Huile sur toile, Cédric Carré, Villa Sonneville'
         title: VENISE
         year: 2022-2025
@@ -269,7 +269,7 @@ sections:
         price: 980€
         format: Petit Format
       - layout: alternating
-        image: ../../assets/img/05-VENISE-INV982-2009-chassis-27x35cm_Cedric-Carre_IMG_8934.jpeg
+        image: ../../assets/img/cedric-carre-venise-inv982.jpeg
         alt: 'Venise, Huile sur toile, Cédric Carré, Villa Sonneville'
         title: VENISE
         year: '2009'
@@ -279,7 +279,7 @@ sections:
         price: 800€
         format: Petit Format
       - layout: alternating
-        image: ../../assets/img/13-HD-JPEG-Villa-Sonneville-Grue-02-Cedric-Carre_recadre_DSC10132.webp
+        image: ../../assets/img/cedric-carre-venise-inv956.webp
         alt: 'Venise, Huile sur toile, Cédric Carré, Villa Sonneville'
         title: VENISE
         year: 2002 - 2009

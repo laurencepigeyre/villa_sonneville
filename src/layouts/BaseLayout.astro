@@ -22,6 +22,10 @@ import { Font } from 'astro:assets';
     <meta property="locale" content="fr_FR" />
     <meta property="title" content="Galerie d'art - Villa Sonnneville" />
     <meta name="description" content={description} />
+    <meta property="og:description" content="Expositions d'art contemporain, résidences d'artistes et événements culturels dans une demeure historique des années 1920, à Roubaix.">
+    <meta property="og:image" content="https://www.villasonneville.art/HD-H_DSC9840-Villa-Sonneville-Vue-.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.villasonneville.art/">
     <!-- Favicon classique -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <!-- PNG haute résolution -->
@@ -32,6 +36,8 @@ import { Font } from 'astro:assets';
     <title>Villa Sonneville - {title}</title>
     <link rel="preload" href={stylesUrl} as="style" />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content="Villa Sonneville | Maison-Galerie d'Art à Roubaix">
+
     <link rel="stylesheet" href={stylesUrl} />
     <Font cssVariable="--font-montserrat" preload />
   </head>

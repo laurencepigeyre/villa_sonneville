@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Collection permanente';
+import ArtworkCardFull from '../components/ArtworkCardFull.astro';
+import magicalPlaceXIX from '../assets/img/david-de-beyter-magical-place-xix-2024-principale.png';
+---
+<BaseLayout title={title}>
+<div>
+    <ArtworkCardFull
+  image={magicalPlaceXIX}
+  alt="Magical Place XIX, photographie de David de Beyter, édition Radiant 2/5"
+  title="David de Beyter — Magical Place XIX"
+  year="2024"
+  technique="Tirage Fine Art, Édition Radiant, Encadrement UH5" 
+  dimensions="4 x 100 x 150 cm"
+  reference="2/5 (édition de 5 + 2 E.A.)"
+  format="Très Grand Format"
+  price="15 000 €"
+  contactUrl="/contact"
+
+/>
+</div>
+</BaseLayout>
+

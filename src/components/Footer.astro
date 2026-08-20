@@ -1,12 +1,13 @@
 ---
-import { Image } from "astro:assets";
-import instagramIcon from "../assets/img/instagram.svg";
-import linkedinIcon from "../assets/img/linkedin.png";
-import NewsletterForm from "./NewsletterForm.astro";
+import { Image } from 'astro:assets';
+import instagramIcon from '../assets/img/instagram.png';
+import linkedinIcon from '../assets/img/linkedin.png';
+import NewsletterForm from './NewsletterForm.astro';
 ---
-  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+
+<hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
 <NewsletterForm />
-  <hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
+<hr class="mx-13 sm:mx-13 md:mx-13 lg:mx-32 border-t border-gray-300 mt-10" />
 <footer class="py-8">
   <div class="text-sm text-gray-500 text-center">
     <p>
@@ -18,36 +19,63 @@ import NewsletterForm from "./NewsletterForm.astro";
     <a href="tel:+33643566355">
       <p>+33 6 43 56 63 55</p>
     </a>
+    <a href="mailto:art@villasonneville.com">
+      <p>art@villasonneville.com</p>
+    </a>
   </div>
 
   <div class="max-w-3xl mx-auto px-6 flex items-center justify-center gap-4 mt-5">
-<a
-  href="https://www.instagram.com/villa_sonneville"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Instagram"
->
-  <Image
-    src={instagramIcon}
-    alt="Instagram"
-    layout="constrained"
-    class="w-10 h-10 grayscale transition-transform duration-300 hover:scale-110 "
-  />
-</a>
+    <a
+      href="https://www.instagram.com/villa_sonneville"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram">
+      <Image
+        src={instagramIcon}
+        alt="Instagram"
+        layout="constrained"
+        class="w-10 h-10 grayscale transition-transform duration-300 hover:scale-110"
+      />
+    </a>
 
-<a
-  href="https://www.linkedin.com/company/villasonneville"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="LinkedIn"
->
-  <Image
-    src={linkedinIcon}
-    alt="LinkedIn"
-    layout="constrained"
-    class="w-10 h-10 opacity-50 transition-transform duration-300 hover:scale-110"
-  />
-</a>
+    <a
+      href="https://www.linkedin.com/company/villasonneville"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn">
+      <Image
+        src={linkedinIcon}
+        alt="LinkedIn"
+        layout="constrained"
+        class="w-10 h-10 opacity-50 transition-transform duration-300 hover:scale-110"
+      />
+    </a>
+  </div>
 
+  <div class="text-center mt-5">
+    <!-- <a
+      href="https://koalendar.com/e/visite-sur-rendez-vous"
+      data-koalendar-widget
+      data-koa-type="link"
+      class="w-10 h-10 opacity-80 transition-transform duration-300 hover:scale-110"
+      style="text-decoration: none; font-family: inherit; font-size: 1rem; font-weight: 500; line-height: 1.5rem;">
+      Visite sur rdv
+    </a> -->
   </div>
 </footer>
+
+<!-- Koalendar Link Widget -->
+<!-- <script is:inline>
+  window.Koalendar =
+    window.Koalendar ||
+    function () {
+      (Koalendar.props = Koalendar.props || []).push(arguments);
+    };
+  if (!document.querySelector('script[src^="https://koalendar.com/assets/widget.js"]')) {
+    var koaScript = document.createElement('script');
+    koaScript.async = true;
+    koaScript.src = 'https://koalendar.com/assets/widget.js';
+    document.head.appendChild(koaScript);
+  }
+  Koalendar('init');
+</script> -->

@@ -3,15 +3,15 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroBanner from '../components/HeroBanner.astro';
 import EventBlock from '../components/EventBlock.astro';
-import heroImg from '../assets/img/HD-H_DSC9840-Villa-Sonneville-Vue-.jpeg';
+import heroImg from '../assets/img/villa-sonneville-hero-accueil.jpeg';
+import '../styles/global.css';
+import SubstackFeed from '../components/SubstackFeed.astro';
 
 const title = 'Accueil';
 
 // On ne récupère que les expositions marquées "à mettre en avant sur la home"
 // via la case à cocher du CMS (champ "featured").
-const featuredExpos = (
-  await getCollection('expositions', ({ data }) => data.featured === true)
-).sort((a, b) => {
+const featuredExpos = (await getCollection('expositions', ({ data }) => data.featured === true)).sort((a, b) => {
   const dA = a.data.date_debut ? a.data.date_debut.getTime() : 0;
   const dB = b.data.date_debut ? b.data.date_debut.getTime() : 0;
   return dB - dA;
@@ -44,4 +44,6 @@ const featuredExpos = (
       />
     ))
   }
+
+  <!-- <SubstackFeed url="https://villasonneville.substack.com/" count={6} /> -->
 </BaseLayout>
