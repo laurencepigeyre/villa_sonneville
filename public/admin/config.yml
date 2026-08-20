@@ -2,8 +2,8 @@
 
 backend:
   name: github
-  repo: olam11/villa_sonneville
-  branch: main
+  repo: laurencepigeyre/villa_sonneville
+  branch: Dev
   # Avec un Personal Access Token, l'utilisateur cliquera sur
   # "Sign In with Token" sur l'écran de connexion (aucune config OAuth nécessaire).
 
