@@ -1,9 +1,10 @@
 ---
 import { Image } from 'astro:assets';
+import { marked } from 'marked';
 
 const {
-  reverse = false, // true → md:flex-row-reverse
-  image, // import via Astro Assets (ImageMetadata)
+  reverse = false,
+  image,
   caption = '',
   date = '',
   title = '',
@@ -12,13 +13,15 @@ const {
   description = '',
   link = '#',
   linkLabel = 'Découvrir',
-  target_blank = false, // boolean piloté par le CMS
+  target_blank = false,
   statut,
 } = Astro.props;
 
 const flexDirection = reverse ? 'md:flex-row-reverse' : 'md:flex-row';
 const target = target_blank ? '_blank' : '_self';
 const rel = target_blank ? 'noopener noreferrer' : undefined;
+
+const descriptionHtml = description ? marked.parse(description, { breaks: true, gfm: true }) : '';
 ---
 
 <div class={`flex flex-col ${flexDirection} items-center m-10`}>
@@ -55,8 +58,7 @@ const rel = target_blank ? 'noopener noreferrer' : undefined;
 
     {category && <p class="uppercase tracking-wide text-sm">{category}</p>}
 
-    {description && <p class="mt-4 whitespace-pre-line" set:html={description} />}
-
+    {description && <div class="mt-4 [&_p]:mb-4" set:html={descriptionHtml} />}
     <a
       href={link}
       target={target}

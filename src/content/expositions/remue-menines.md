@@ -1,7 +1,7 @@
 ---
 title: Remue-Ménines
 subtitle: Christophe Boulanger
-statut: En cours
+statut: Passée
 category: PEINTURE
 date: 21 mai 2026 - 19 juil. 2026
 date_debut: 2026-05-21
@@ -11,5 +11,5 @@ description: "Pari espiègle avec Remue-Ménines : Christophe Boulanger s'attaqu
 link: /artiste/christophe-boulanger
 linkLabel: Découvrir les œuvres
 target_blank: false
-featured: true
+featured: false
 ---

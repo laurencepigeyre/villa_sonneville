@@ -80,7 +80,7 @@ collections:
       - {
           label: 'Description',
           name: description,
-          widget: text,
+          widget: richtext,
           hint: 'Les sauts de ligne sont préservés à l''affichage.',
         }
       - {

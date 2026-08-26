@@ -56,6 +56,7 @@ sections:
         technique: Pastel sur toile
         dimensions: 285 x 190 cm
         reference: CB-P14
+        format: ''
         price: 10 500 €
         contact_url: ''
         details:
@@ -71,6 +72,7 @@ sections:
         technique: Pastel sur papier Kozo
         dimensions: 97 x 147 cm
         reference: CB-P01
+        format: ''
         price: 4 500 €
         contact_url: ''
         details:
@@ -84,12 +86,12 @@ sections:
         technique: Pastel sur papier Kozo
         dimensions: 97 x 147 cm
         reference: CB-P02
+        format: ''
         price: 4 500 €
         contact_url: ''
         details:
           - image: ../../assets/img/christophe-boulanger-crinolines-campement-p02-detail-01.jpg
             alt: ''
-
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-crinoline-1-p03.jpg
         alt: Crinoline 1, Christophe Boulanger, Pastel sur papier Kozo
@@ -98,8 +100,10 @@ sections:
         technique: Pastel sur papier Kozo
         dimensions: 80 x 100 cm
         reference: CB-P03
+        format: ''
         price: 1 500 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-crinoline-2-p04.jpg
         alt: Crinoline 2, Christophe Boulanger, Pastel sur papier Kozo
@@ -108,8 +112,10 @@ sections:
         technique: Pastel sur papier Kozo
         dimensions: 80 x 100 cm
         reference: CB-P04
+        format: ''
         price: 1 500 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-crinoline-3-p05.jpg
         alt: Crinoline 3, Christophe Boulanger, Pastel sur papier Kozo
@@ -118,8 +124,10 @@ sections:
         technique: Pastel sur papier Kozo
         dimensions: 80 x 100 cm
         reference: CB-P05
+        format: ''
         price: 1 500 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-crinoline-4-p06.jpg
         alt: Crinoline 4, Christophe Boulanger, Pastel sur papier Kozo
@@ -128,8 +136,10 @@ sections:
         technique: Pastel sur papier Kozo
         dimensions: 80 x 100 cm
         reference: CB-P06
+        format: ''
         price: Vendue
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-crinoline-5-p07.jpg
         alt: Crinoline 5, Christophe Boulanger, Pastel sur papier Kozo
@@ -138,8 +148,10 @@ sections:
         technique: Pastel sur papier Kozo
         dimensions: 80 x 100 cm
         reference: CB-P07
+        format: ''
         price: 1 500 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-crinoline-6-p08.jpg
         alt: Crinoline 6, Christophe Boulanger, Pastel sur papier Kozo marouflé sur toile
@@ -148,6 +160,7 @@ sections:
         technique: Pastel sur papier Kozo marouflé sur toile
         dimensions: 80 x 100 cm
         reference: CB-P08
+        format: ''
         price: 1 900 €
         contact_url: ''
         details:
@@ -161,8 +174,10 @@ sections:
         technique: Pastel sur toile
         dimensions: 85 x 110 cm
         reference: CB-P09
+        format: ''
         price: 2 300 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-las-flores-2-p10.jpg
         alt: Las flores La jaune, Christophe Boulanger, Pastel sur toile
@@ -171,8 +186,10 @@ sections:
         technique: Pastel sur toile
         dimensions: 90 x 73 cm
         reference: CB-P10
+        format: ''
         price: 2 100 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-las-flores-3-p11.jpg
         alt: Las flores La noire, Christophe Boulanger, Pastel sur toile
@@ -181,8 +198,10 @@ sections:
         technique: Pastel sur toile
         dimensions: 70 x 107 cm
         reference: CB-P11
+        format: ''
         price: 1 900 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-las-flores-4-p12.jpg
         alt: Las flores La rose, Christophe Boulanger, Pastel sur toile
@@ -191,6 +210,7 @@ sections:
         technique: Pastel sur toile
         dimensions: 93 x 110 cm
         reference: CB-P12
+        format: ''
         price: 2 300 €
         contact_url: ''
         details:
@@ -204,8 +224,10 @@ sections:
         technique: Pastel sur toile
         dimensions: 54 x 65 cm
         reference: CB-P13
+        format: ''
         price: 1 300 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-las-flores-6-p15.jpg
         alt: Las flores 6, Christophe Boulanger, Pastel sur toile
@@ -214,8 +236,10 @@ sections:
         technique: Pastel sur toile
         dimensions: 130 x 130 cm
         reference: CB-P15
+        format: ''
         price: 3 200 €
         contact_url: ''
+        details: []
       - layout: full
         image: ../../assets/img/christophe-boulanger-banc-caduc-bois01.jpg
         alt: Banc sculpté Caduc, Christophe Boulanger
@@ -224,8 +248,10 @@ sections:
         technique: Châtaignier - Ebonisation naturelle - finition cirée
         dimensions: Hauteur 55 cm x Largeur 53 x Profondeur 30 cm
         reference: CB-BOIS-01
+        format: ''
         price: 2 800 €
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-menine-au-bain-p16.jpg
         alt: Ménine au bain, Christophe Boulanger, Fusain et acrylique sur toile
@@ -234,6 +260,7 @@ sections:
         technique: Fusain et acrylique sur toile
         dimensions: 52 x 53 cm
         reference: CB-P16
+        format: ''
         price: 1 300 €
         contact_url: ''
         details:
@@ -247,7 +274,10 @@ sections:
         technique: Pastel sur toile tendue sur galet de bois
         dimensions: 35 x 45 cm
         reference: CB-P17
+        format: ''
         price: 1 100 €
+        contact_url: /contact
+        details: []
   - tab_label: Plagistes
     section_title: ''
     intro_image: ../../assets/img/Christophe-Boulanger-Plagistes-Couverture.webp
@@ -276,8 +306,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D01
+        format: ''
         price: 130€
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-bambin-aux-brassards-d02.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -286,8 +318,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D02
+        format: ''
         price: 130€
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-footballeur-d03.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -296,8 +330,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D03
+        format: ''
         price: 130€
         contact_url: ''
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-tete-rouge-1-d04.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -306,7 +342,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D04
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-tete-rouge-2-d05.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -315,7 +354,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D05
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-tete-rouge-3-d06.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -324,7 +366,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D06
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-costaud-d07.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -333,7 +378,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D07
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-barbe-rouge-d08.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -342,7 +390,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D08
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-costaud-au-poil-d09.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -351,7 +402,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D09
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-les-deux-amis-d10.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -360,7 +414,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D10
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-marin-a-la-casquette-d11.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -369,7 +426,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D11
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-le-pecheur-de-moules-d12.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -378,7 +438,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D12
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-le-mangeur-dhuitre-d14.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -387,7 +450,10 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D14
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
       - layout: alternating
         image: ../../assets/img/christophe-boulanger-bambin-aux-brassards-jaunes-d13.webp
         alt: Plagiste, dessin original, Christophe Boulanger, Villa Sonneville
@@ -396,9 +462,13 @@ sections:
         technique: Encre, aquarelle, pastel sur papier
         dimensions: 30 x 40 cm
         reference: CB-D13
+        format: ''
         price: 130€
+        contact_url: /contact
+        details: []
   - tab_label: Biographie
     section_title: ''
+    intro_image: ''
     intro_image_alt: ''
     intro_subtitle: ''
     intro_text: |-
@@ -417,4 +487,5 @@ sections:
       Hors de toute étiquette, il y a en Christophe et en ses œuvres un panache à la Don Quichotte, un rêve de liberté échappé d'une enfance ourdie de conventions, un hold-up incrédule où pourtant la vérité se révèle. En ce royaume, rien n'est usurpé. C'est une leçon recommencée où toujours, il s'éveille stupéfait. Pour notre plus grand enchantement…
     cta_label: ''
     cta_url: ''
+    artworks: []
 ---

@@ -2,12 +2,17 @@
 import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://www.villasonneville.art',
   output: "static",
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   fonts: [
     {
       name: "Montserrat",
@@ -21,4 +26,8 @@ export default defineConfig({
       },
     },
   ],
+
+  integrations: [sitemap({
+  filter: (page) => !page.includes('/confirm/'),
+})],
 });

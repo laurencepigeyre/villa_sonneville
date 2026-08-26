@@ -7,7 +7,7 @@ date: 11 déc. 2025 - 25 avr. 2026
 date_debut: 2025-12-11
 image: ../../assets/img/exposition-plagistes-christophe-boulanger.webp
 caption: ''
-description: |
+description: |-
   Avec Plagistes, anthologie joyeuse de 10 ans de farniente à croquer les foules des plages, Christophe Boulanger nous offre une sélection parmi plus de 800 dessins sous forme de livre d'art en édition limitée à 150 exemplaires.
   Christophe a choisi Villa Sonneville pour le lancement de son ouvrage.
 link: /artiste/christophe-boulanger
