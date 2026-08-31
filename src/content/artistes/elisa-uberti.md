@@ -33,7 +33,7 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-nuit-blanche-30.jpg
         alt: "Sculpture en grès blanc Nuit Blanche #30 d'Elisa Uberti : deux colonnes tubulaires organiques aux extrémités arrondies, de hauteurs inégales, posées côte à côte sur fond clair."
-        title: 'Nuit Blanche #30'
+        title: 'Nuit Blanche #30 Sculpture'
         year: Pièce unique
         technique: Grès blanc (white stoneware)
         dimensions: H. 78 cm
@@ -45,7 +45,7 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-assemblance-1.jpg
         alt: "Sculpture Assemblance #1 d'Elisa Uberti en grès blanc, composition verticale évoquant un cactus stylisé à plusieurs branches, installée dans l'entrée d'une maison ancienne."
-        title: 'Assemblance #1'
+        title: 'Assemblance #1 Sculpture'
         year: Pièce unique
         technique: Grès blanc (white stoneware)
         dimensions: H. env. 144 cm
@@ -57,7 +57,7 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-sculpture-infini-3.jpg
         alt: "Sculpture Infini #3 d'Elisa Uberti en grès gingerbread, silhouette anthropomorphe à la texture martelée, deux jambes arquées et un buste segmenté en boules superposées."
-        title: 'Sculpture Infini #3'
+        title: 'Infini #3 Sculpture'
         year: Pièce unique
         technique: Grès gingerbread (gingerbread stoneware)
         dimensions: H. 127 x L. 38 x P. 19 cm
@@ -67,9 +67,21 @@ sections:
         contact_url: /contact
         details: []
       - layout: alternating
+        image: ../../assets/img/elisa-uberti-lamp-infini-5.jpg
+        alt: "Lampe Infini #5 d'Elisa Uberti en grès blanc, texturé, silhouette anthropomorphe avec une ouverture ronde lumineuse en guise de tête"
+        title: 'Infini #5 Lampe'
+        year: Édition limitée à 2 exemplaires numérotés + 1EA
+        technique: Grès blanc (White stoneware)
+        dimensions: H. env. 85 cm
+        reference: ''
+        format: ''
+        price: 5 300€
+        contact_url: /contact
+        details: []
+      - layout: alternating
         image: ../../assets/img/elisa-uberti-nuee-2.jpg
         alt: "Sculpture Nuée #2 d'Elisa Uberti, tabouret en grès blanc entièrement recouvert de petites sphères en relief, posé sur un parquet ancien."
-        title: 'Nuée #2'
+        title: 'Nuée #2 Sculpture / Assise'
         year: Pièce unique
         technique: Sculpture / assise, Grès blanc (white stoneware)
         dimensions: H. env. 61 cm
@@ -81,7 +93,7 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-artemis-1.jpg
         alt: "Sculpture Artemis #1 d'Elisa Uberti, meuble-cabinet en grès blanc en forme de silhouette debout, avec une petite porte en chêne massif ornée d'un motif végétal incrusté dans le dos."
-        title: 'Artemis #1'
+        title: 'Artemis #1 Little Cabinet'
         year: Pièce unique
         technique: Little Cabinet, Grès blanc et chêne massif
         dimensions: H. env. 125 cm
@@ -91,37 +103,49 @@ sections:
         contact_url: /contact
         details: []
       - layout: alternating
-        image: ../../assets/img/elisa-uberti-nature-boy-2.jpg
-        alt: "Lampe Nature Boy #2 d'Elisa Uberti en grès noir, sculpture en forme de bouquet de feuilles sombres aux volutes sculptées, photographiée en atelier."
-        title: 'Nature Boy #2'
+        image: ../../assets/img/elisa-uberti-nature-boy-1.jpg
+        alt: "Lampe Nature Boy #1 d'Elisa Uberti en grès noir, sculpture évoquant un feuillage dense et sombre, lumière chaude s'échappant de la base."
+        title: 'Nature Boy #1 Lampe'
         year: ''
-        technique: Lampe, Grès noir (black stoneware)
+        technique: Grès noir (black stoneware)
         dimensions: ''
         reference: ''
         format: ''
-        price: 3 400€
+        price: 3 500€
         contact_url: /contact
         details: []
       - layout: alternating
-        image: ../../assets/img/elisa-uberti-nature-boy-1.jpg
-        alt: "Lampe Nature Boy #1 d'Elisa Uberti en grès noir, sculpture évoquant un feuillage dense et sombre, lumière chaude s'échappant de la base."
-        title: 'Nature Boy #1'
+        image: ../../assets/img/elisa-uberti-nature-boy-2.jpg
+        alt: "Lampe Nature Boy #2 d'Elisa Uberti en grès noir, sculpture en forme de bouquet de feuilles sombres aux volutes sculptées, photographiée en atelier."
+        title: 'Nature Boy #2 Lampe'
         year: ''
-        technique: Lampe, Grès noir (black stoneware)
+        technique: Grès noir (black stoneware)
         dimensions: ''
         reference: ''
         format: ''
-        price: 3 400€
+        price: 3 500€
+        contact_url: /contact
+        details: []
+      - layout: alternating
+        image: ../../assets/img/elisa-uberti-nature-boy-3.jpg
+        alt: "Lampe Nature Boy #3 d'Elisa Uberti en grès noir, sculpture en forme bouquet de feuilles aux volutes sculptées, photographiée à l'atelier parmi les croquis"
+        title: 'Nature Boy #3, Lampe'
+        year: ''
+        technique: Grès noir (Black stoneware)
+        dimensions: ''
+        reference: ''
+        format: ''
+        price: 4 300€ TTC
         contact_url: /contact
         details: []
       - layout: alternating
         image: ../../assets/img/elisa-uberti-oria-1.jpg
         alt: "Miroir Oria #1 d'Elisa Uberti en grès blanc, cadre sculpté en forme de visage stylisé aux motifs de plumes et de larmes, adossé à un mur patiné."
-        title: 'Oria #1'
-        year: ''
-        technique: Miroir, Grès blanc (white stoneware)
+        title: 'Oria #1 Miroir'
+        year: 1 exemplaire + 1 EA
+        technique: Grès blanc (white stoneware)
         dimensions: 100 x 70 cm
-        reference: 1 exemplaire + 1 EA
+        reference: ''
         format: ''
         price: 6 900€
         contact_url: /contact
@@ -129,7 +153,7 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-sconce-oree-1.jpg
         alt: "Applique murale Sconce Orée #1 d'Elisa Uberti en grès blanc, forme organique en cactus diffusant une lumière chaude vers le bas."
-        title: 'Sconce Orée #1'
+        title: 'Sconce Orée #1 Applique'
         year: Édition limitée à 4 + 1 EA
         technique: Applique, Grès blanc (white stoneware)
         dimensions: H. env. 70 cm
@@ -141,7 +165,7 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-sconce-oree-3.jpg
         alt: "Applique murale Sconce Orée #3 d'Elisa Uberti en grès blanc, petite forme en cactus fixée au mur, éclairage doux dirigé vers le haut."
-        title: 'Sconce Orée #3'
+        title: 'Sconce Orée #3 Applique'
         year: Édition limitée à 4 + 1 EA
         technique: Applique, Grès blanc (white stoneware)
         dimensions: H. env. 60 cm
@@ -153,7 +177,7 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-refuge-19.jpg
         alt: "Sculpture Refuge #19 d'Elisa Uberti en terre recyclée (porcelaine et grès), forme arquée rosée aux allures de portique organique."
-        title: 'Refuge #19'
+        title: 'Refuge #19 Sculpture'
         year: Pièce unique
         technique: Sculpture, Terre recyclée (porcelaine, grès)
         dimensions: H. 72 cm
@@ -165,9 +189,9 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-fontaine-de-jouvence-4.jpg
         alt: "Fontaine de Jouvence #4 d'Elisa Uberti, sculpture lumineuse en grès blanc composée de sphères empilées et couronnée d'une arche, avec de longues franges de laine crème retombant de chaque côté."
-        title: 'Fontaine de Jouvence #4'
+        title: 'Fontaine de Jouvence #4 Sculpture lumineuse'
         year: Édition limitée à 1 + 1 EA
-        technique: Sculpture lumineuse, Grès blanc (white stoneware)
+        technique: Grès blanc (white stoneware)
         dimensions: H. 190 cm
         reference: ''
         format: ''
@@ -177,9 +201,9 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-fontaine-3.jpg
         alt: "Fontaine #3 d'Elisa Uberti, sculpture lumineuse en grès blanc en forme de double arche tubulaire, franges de laine et lumière intégrée, présentée sur socle."
-        title: 'Fontaine #3'
+        title: 'Fontaine #3 Sculpture lumineuse'
         year: Édition limitée à 3 + 1 EA
-        technique: Sculpture lumineuse, Grès blanc (white stoneware)
+        technique: Grès blanc (white stoneware)
         dimensions: H. 180 cm
         reference: ''
         format: ''
@@ -189,7 +213,7 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-fontaine-4.jpg
         alt: "Fontaine #4 d'Elisa Uberti, sculpture lumineuse en grès blanc à la silhouette bipède, longue chevelure de franges éclairée installée dans une salle de bain."
-        title: 'Fontaine #4'
+        title: 'Fontaine #4 Sculpture lumineuse'
         year: Édition limitée à 3 + 1 EA
         technique: Sculpture lumineuse, Grès blanc (white stoneware)
         dimensions: H. 170 cm
@@ -201,13 +225,85 @@ sections:
       - layout: alternating
         image: ../../assets/img/elisa-uberti-fontaine-1.jpg
         alt: "Applique Fontaine #1 d'Elisa Uberti en grès gingerbread, forme en arche d'où tombe une frange de fils beiges, fixée au mur."
-        title: 'Fontaine #1'
+        title: 'Fontaine #1 Applique'
         year: Édition limitée à 8
         technique: Applique, Grès gingerbread (gingerbread stoneware)
         dimensions: H. env. 40 cm
         reference: ''
         format: ''
         price: 2 600€
+        contact_url: /contact
+        details: []
+      - layout: alternating
+        image: ../../assets/img/elisa-uberti-lamp-zenith-3.jpg
+        alt: "Lampe Zenith #3 d'Elisa Uberti en grès gingerbread, fomr en arche à la crête dentelée et à l'ouverture circulaire photographiée dans un intérieur brut"
+        title: 'Zenith #3 Lampe'
+        year: Édition limitée à 4 exemplaires numérotés
+        technique: Grès gingerbread (Gingerbread stoneware)
+        dimensions: H. env. 56 cm
+        reference: ''
+        format: ''
+        price: 2 400€ TTC
+        contact_url: /contact
+        details: []
+      - layout: alternating
+        image: '../../assets/img/Eruption #1_ElisaUberti_3BD.JPG'
+        alt: "Sculpture Éruption #1 d'Elisa Uberti en grès noir, silhouette à deux jambes arquées. Une longue frange de laine retombant de l'ouverture comme une bouche"
+        title: 'Éruption #1 sculpture'
+        year: Pièce unique
+        technique: Grès noir et laine (Black stoneware and wool)
+        dimensions: H. env. 100 cm
+        reference: ''
+        format: ''
+        price: 6 400€ TTC
+        contact_url: /contact
+        details: []
+      - layout: alternating
+        image: ../../assets/img/elisa-uberti-tiny-2.jpg
+        alt: "Petite sculpture Tiny #2 d'Elisa Uberti en grès émaillé gris, forme sinueuse évoquant un animal stylisé, base en grès brut"
+        title: 'Tiny #2 Sculpture'
+        year: Pièce unique
+        technique: Grès émaillé (Glazed stoneware)
+        dimensions: H. 18 cm
+        reference: ''
+        format: ''
+        price: 400€ TTC
+        contact_url: /contact
+        details: []
+      - layout: alternating
+        image: ../../assets/img/elisa-uberti-tiny-19.jpg
+        alt: "Petite sculpture Tiny #19 d'Elisa Uberti en grès noir grainé, silhouette anthropomorphe aux jambes arquées et à la texture granuleuse"
+        title: 'Tiny #19 Sculpture'
+        year: Pièce unique
+        technique: Grès noir
+        dimensions: H. 19,5 cm
+        reference: ''
+        format: ''
+        price: 500€ TTC
+        contact_url: /contact
+        details: []
+      - layout: alternating
+        image: ../../assets/img/elisa-uberti-tiny-17.jpg
+        alt: "Petite sculpture Tiny #17 d'Elisa Uberti en grès émaillé blanc perforé de multiples trous, silhouette anthropomorphe aux jambes arquées"
+        title: 'Tiny #17 Sculpture'
+        year: Pièce unique
+        technique: ''
+        dimensions: H. 20 cm
+        reference: ''
+        format: ''
+        price: 500€ TTC
+        contact_url: /contact
+        details: []
+      - layout: alternating
+        image: ../../assets/img/elisa-uberti-nuit-blanche-27.jpg
+        alt: "Sculpture Nuit blanche #27 d'Elisa Uberti en grès blanc, petite forme à deux jambes arquées surmontées d'une masse arrondie, posée sur une cheminée"
+        title: 'Nuit blanche #27 Sculpture'
+        year: Pièce unique
+        technique: Grès blanc (White stoneware)
+        dimensions: H. 40 cm
+        reference: ''
+        format: ''
+        price: 1 800€ TTC
         contact_url: /contact
         details: []
       - layout: alternating
