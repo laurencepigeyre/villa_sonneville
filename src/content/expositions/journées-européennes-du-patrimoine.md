@@ -15,7 +15,7 @@ description: |-
   3 créneaux par jour, 14h30–15h30 / 16h–17h / 17h30–18h30, groupes limités à 10 personnes.
 
   Réservation exclusivement auprès de l'Office du tourisme de Roubaix, ouverture des réservations le 1er septembre.
-link: https://www.lilletourism.com/explore/hello-culture/agenda/exposition-et-visite-guidee-de-la-villa-sonneville-roubaix-fr-6678348/
+link: https://reservation.lilletourism.com/la-villa-sonneville-roubaix.html
 linkLabel: Réserver
 target_blank: true
 featured: true
