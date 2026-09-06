@@ -4,7 +4,7 @@ subtitle: Céramique
 description: ''
 hero_image: ../../assets/img/ElisaUberti_Photo_Ibrahim Touhami_3_HD-1.jpeg
 hero_alt: La céramiste Elisa Uberti dans son atelier de céramique
-sort_order: 999
+sort_order: 2
 quote_text: À travers des œuvres façonnées à la main, je cherche à créer des formes intemporelles, pensées pour traverser les époques et s’inscrire à rebours de la consommation de masse.
 quote_author: Elisa Uberti
 sections:
